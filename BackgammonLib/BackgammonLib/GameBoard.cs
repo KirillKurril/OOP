@@ -6,32 +6,27 @@ using System.Threading.Tasks;
 
 namespace BackgammonLib
 {
-    public class GameBoard
+    internal class GameBoard
     {
 
         public Stack<Piece> [] Board;
         public List<Piece> Pieces;
-        public List<int> moveValues;
 
-        private Random randomizer;
-
-        public void ChangePiecePosition(int firstcell, int secondCell) 
+        public GameBoard()
         {
-            
-        }
-
-        public void RollTheDice()
-        {
-            int firstValue = randomizer.Next(1, 6);
-            int secondValue = randomizer.Next(1, 6);
-            moveValues.Add(firstValue);
-            moveValues.Add(secondValue);
-            if (firstValue == secondValue)
+            Board = new Stack<Piece>[24];
+            Pieces = new List<Piece>();
+            for (int i = 0; i < 16; ++i)
             {
-                moveValues.Add(firstValue);
-                moveValues.Add(firstValue);
+                Piece whitePiece = new Piece(0);
+                Piece blackPiece = new Piece(1);
+                Pieces.Add(whitePiece);
+                Pieces.Add(blackPiece);
+                Board[0].Push(whitePiece);
+                Board[23].Push(blackPiece);
             }
         }
+       
 
         public int[] Status()
         {

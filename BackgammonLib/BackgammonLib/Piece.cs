@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BackgammonLib
 {
-    public class Piece
+    internal class Piece
     {
         private int color;
         private int position;
@@ -34,6 +34,5 @@ namespace BackgammonLib
 
         public void MoveTo(int newPosition)
             => position = newPosition;
-
     }
 }

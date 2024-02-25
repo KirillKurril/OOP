@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Uni\\OOP\\BackgammonLib\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|d:\\uni\\oop\\backgammonlib\\backgammonlib\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,52 +34,64 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "BackgammonLib\\ClassDiagram1.cd",
+              "ToolTip": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\ClassDiagram1.cd",
+              "RelativeToolTip": "BackgammonLib\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-02-25T19:04:57.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Piece.cs",
               "DocumentMoniker": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Piece.cs",
               "RelativeDocumentMoniker": "BackgammonLib\\Piece.cs",
               "ToolTip": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Piece.cs",
               "RelativeToolTip": "BackgammonLib\\Piece.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-25T14:54:58.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GameBoard.cs",
               "DocumentMoniker": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\GameBoard.cs",
               "RelativeDocumentMoniker": "BackgammonLib\\GameBoard.cs",
               "ToolTip": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\GameBoard.cs",
               "RelativeToolTip": "BackgammonLib\\GameBoard.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowDIAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-25T14:54:45.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Player.cs",
               "RelativeDocumentMoniker": "BackgammonLib\\Player.cs",
               "ToolTip": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Player.cs",
               "RelativeToolTip": "BackgammonLib\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-25T14:54:24.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Game.cs",
               "RelativeDocumentMoniker": "BackgammonLib\\Game.cs",
               "ToolTip": "D:\\Uni\\OOP\\BackgammonLib\\BackgammonLib\\Game.cs",
               "RelativeToolTip": "BackgammonLib\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-25T14:51:27.02Z",
               "EditorCaption": ""

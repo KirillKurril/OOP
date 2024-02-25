@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackgammonLib
 {
-    public class Player
+    internal class Player
     {
         private int color;
         public int Color
