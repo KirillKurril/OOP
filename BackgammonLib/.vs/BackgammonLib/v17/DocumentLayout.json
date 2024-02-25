@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|c:\\users\\natak\\source\\repos\\backgammonlib\\backgammonlib\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|c:\\users\\natak\\source\\repos\\backgammonlib\\backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|c:\\users\\natak\\source\\repos\\backgammonlib\\backgammonlib\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|c:\\users\\natak\\source\\repos\\backgammonlib\\backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{201644B5-09E8-4480-B331-3A97FCB485A2}|BackgammonLib\\BackgammonLib.csproj|solutionrelative:backgammonlib\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Piece.cs",
+              "DocumentMoniker": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Piece.cs",
+              "RelativeDocumentMoniker": "BackgammonLib\\Piece.cs",
+              "ToolTip": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Piece.cs",
+              "RelativeToolTip": "BackgammonLib\\Piece.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAcwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T14:54:58.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameBoard.cs",
+              "DocumentMoniker": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\GameBoard.cs",
+              "RelativeDocumentMoniker": "BackgammonLib\\GameBoard.cs",
+              "ToolTip": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\GameBoard.cs",
+              "RelativeToolTip": "BackgammonLib\\GameBoard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T14:54:45.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Player.cs",
+              "RelativeDocumentMoniker": "BackgammonLib\\Player.cs",
+              "ToolTip": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Player.cs",
+              "RelativeToolTip": "BackgammonLib\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T14:54:24.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Game.cs",
+              "RelativeDocumentMoniker": "BackgammonLib\\Game.cs",
+              "ToolTip": "C:\\Users\\natak\\source\\repos\\BackgammonLib\\BackgammonLib\\Game.cs",
+              "RelativeToolTip": "BackgammonLib\\Game.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T14:51:27.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
