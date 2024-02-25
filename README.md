@@ -9,4 +9,4 @@
 ##### The project is developed by the second year student of the group 253504 Dmitruk Bogdan.
 
 
-###### _To familiarize yourself with the rules of playing long classical backgammon you can visit the following link: "How to play long classical backgammon correctly"_ (https://h-present.ru/blog/kak-pravilno-igrat-v-dlinnye-klassicheskie-nardy/).
+###### _To familiarize yourself with the rules of playing long classical backgammon you can visit the following link: "How to play long classical backgammon"_ (https://h-present.ru/blog/kak-pravilno-igrat-v-dlinnye-klassicheskie-nardy/).
