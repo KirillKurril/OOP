@@ -7,4 +7,4 @@
 ##### Unity wird als Framework für die Erstellung der Benutzeroberfläche verwendet.
 ##### Wenn die Aufgaben erfolgreich abgeschlossen sind, soll PostgreSQL in den nächsten Patches verwendet werden.
 
-Um sich mit den Regeln des langen klassischen Backgammonspiels vertraut zu machen, können Sie den folgenden Link besuchen: "Wie man langes klassisches Backgammon richtig spielt" (https://h-present.ru/blog/kak-pravilno-igrat-v-dlinnye-klassicheskie-nardy/).
+###### _Um sich mit den Regeln des langen klassischen Backgammonspiels vertraut zu machen, können Sie den folgenden Link besuchen: "Wie man langes klassisches Backgammon richtig spielt"_ (https://h-present.ru/blog/kak-pravilno-igrat-v-dlinnye-klassicheskie-nardy/).
