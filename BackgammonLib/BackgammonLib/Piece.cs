@@ -9,10 +9,9 @@ namespace BackgammonLib
 {
     public class Piece
     {
-        private string color;
+        private int color;
         private int position;
-
-        public string Color
+        public int Color
         {
             get => color;
             private set => color = value; 
@@ -30,7 +29,7 @@ namespace BackgammonLib
             private set { }
         }
 
-        public Piece(string color_)
+        public Piece(int color_)
             => (color, position) = (color_, 1);
 
         public void MoveTo(int newPosition)
