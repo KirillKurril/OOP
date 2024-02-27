@@ -1,0 +1,127 @@
+﻿<Page x:Class="UserInterface.Backgammon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UserInterface"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Backgammon"
+      Style="{StaticResource BackgammonField}">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/BackgammonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.04*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.042*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.085*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="B12" Grid.Row="0" Grid.Column="0" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S12"/>
+                </Button>
+                <Button x:Name="B13" Grid.Row="0" Grid.Column="1" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S13"/>
+                </Button>
+                <Button x:Name="B14"  Grid.Row="0" Grid.Column="2" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S14"/>
+                </Button>
+                <Button x:Name="B15" Grid.Row="0" Grid.Column="3" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S15"/>
+                </Button>
+                <Button x:Name="B16" Grid.Row="0" Grid.Column="4" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S16"/>
+                </Button>
+                <Button x:Name="B17" Grid.Row="0" Grid.Column="5" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S17"/>
+                </Button>
+                <Button x:Name="B18" Grid.Row="0" Grid.Column="7" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S18"/>
+                </Button>
+                <Button x:Name="B19" Grid.Row="0" Grid.Column="8" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S19"/>
+                </Button>
+                <Button x:Name="B20" Grid.Row="0" Grid.Column="9" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S20"/>
+                </Button>
+                <Button x:Name="B21" Grid.Row="0" Grid.Column="10" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S21"/>
+                </Button>
+                <Button x:Name="B22" Grid.Row="0" Grid.Column="11" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S22"/>
+                </Button>
+                <Button x:Name="B23" Grid.Row="0" Grid.Column="12" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S23"/>
+                </Button>
+                <Button x:Name="B0" Grid.Row="1" Grid.Column="0" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S0"/>
+                </Button>
+                <Button x:Name="B1" Grid.Row="1" Grid.Column="1" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S1"/>
+                </Button>
+                <Button x:Name="B2" Grid.Row="1" Grid.Column="2" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S2"/>
+                </Button>
+                <Button x:Name="B3" Grid.Row="1" Grid.Column="3" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S3"/>
+                </Button>
+                <Button x:Name="B4" Grid.Row="1" Grid.Column="4" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S4"/>
+                </Button>
+                <Button x:Name="B5" Grid.Row="1" Grid.Column="5" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S5"/>
+                </Button>
+                <Button x:Name="B6" Grid.Row="1" Grid.Column="7" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S6"/>
+                </Button>
+                <Button x:Name="B7" Grid.Row="1" Grid.Column="8" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S7"/>
+                </Button>
+                <Button x:Name="B8" Grid.Row="1" Grid.Column="9" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S8"/>
+                </Button>
+                <Button x:Name="B9" Grid.Row="1" Grid.Column="10" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S9"/>
+                </Button>
+                <Button x:Name="B10" Grid.Row="1" Grid.Column="11" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S10"/>
+                </Button>
+                <Button x:Name="B11" Grid.Row="1" Grid.Column="12" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S11"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
