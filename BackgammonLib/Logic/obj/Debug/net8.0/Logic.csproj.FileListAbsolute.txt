@@ -1,0 +1,16 @@
+C:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.deps.json
+C:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.dll
+C:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.pdb
+C:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Entities.dll
+C:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Entities.pdb
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.AssemblyInfoInputs.cache
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.AssemblyInfo.cs
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.csproj.CoreCompileInputs.cache
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.sourcelink.json
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.csproj.Up2Date
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.dll
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\refint\Logic.dll
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.pdb
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\ref\Logic.dll

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BackgammonLib
+namespace BackgammonEntities
 {
-    internal class Piece
+    public class Piece
     {
         private int color;
         private int position;

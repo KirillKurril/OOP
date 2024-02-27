@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackgammonLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bed2b6fc9a299a96786eb89271de5bd774f8a38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f620480abb95bf449f46a065cff744d6f8b6dd52")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackgammonLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackgammonLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

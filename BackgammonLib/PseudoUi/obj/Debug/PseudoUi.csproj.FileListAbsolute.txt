@@ -1,0 +1,2 @@
+C:\Uni\OOP\BackgammonLib\PseudoUi\obj\Debug\PseudoUi.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\PseudoUi\obj\Debug\PseudoUi.csproj.CoreCompileInputs.cache

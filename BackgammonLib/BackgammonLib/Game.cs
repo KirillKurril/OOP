@@ -83,5 +83,7 @@ namespace BackgammonLib
                 return false;
             }
         }
+
+        public Stack<Piece>[] GetDetailedReport() => gameBoard.GetBoard();
     }
 }
