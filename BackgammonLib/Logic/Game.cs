@@ -11,34 +11,60 @@ namespace BackgammonLogic
     {
         private int whiteScore;
         private int blackScore;
-        public Player whitePlayer;
-        public Player blackPlayer;
+        public Player curPlayer;
         private GameBoard board;
         private Random randomizer;
+        public List<int> diceValues;
         public List<int> moveValues;
 
 
         public Game()
         {
-            whitePlayer = new Player(0);
-            blackPlayer = new Player(1);
+            curPlayer = new Player(0);
             whiteScore = 360;
             blackScore = 360;
             board = new GameBoard();
             randomizer = new Random();
-            moveValues = new List<int>();   
+            moveValues = new List<int>();
+            diceValues = new List<int>();
         }
-        public void RollTheDice()
+        public void RollDices()
         {
             int firstValue = randomizer.Next(1, 6);
             int secondValue = randomizer.Next(1, 6);
-            moveValues.Add(firstValue);
-            moveValues.Add(secondValue);
+            diceValues.Add(firstValue);
+            diceValues.Add(secondValue);
             if (firstValue == secondValue)
             {
-                moveValues.Add(firstValue);
-                moveValues.Add(firstValue);
+                diceValues.Add(firstValue);
+                diceValues.Add(firstValue);
             }
+        }
+
+        private void RefreshMoveValues()
+        {
+            moveValues.Clear();
+            if(diceValues.Count == 4)
+            {
+                moveValues.Add(diceValues[1]);
+                moveValues.Add(diceValues[1] * 2);
+                moveValues.Add(diceValues[1] * 3);
+                moveValues.Add(diceValues[1] * 4);
+            }
+            if (diceValues.Count == 3)
+            {
+                moveValues.Add(diceValues[1]);
+                moveValues.Add(diceValues[1] * 2);
+                moveValues.Add(diceValues[1] * 3);
+            }
+            if (diceValues.Count == 2)
+            {
+                moveValues.Add(diceValues[0]);
+                moveValues.Add(diceValues[1]);
+                moveValues.Add(diceValues[0] + diceValues[1]);
+            }
+            if (diceValues.Count == 1)
+                moveValues.Add(diceValues[0]);
         }
         public (bool, int) CheckEndTurn()
         {
@@ -69,16 +95,19 @@ namespace BackgammonLogic
                 var movingPiece = board.field[source].Pop();
                 board.field[destination].Push(movingPiece);
             }
+            diceValues.Remove(Math.Abs(source - destination));
+            RefreshMoveValues();
+
         }
         private void ThrowOut(int position)
         {
             var throwedPiece = board.field[position].Pop();
             board.Pieces.Remove(throwedPiece);
         }
-        public bool ReachedHome(Player player)
+        public bool ReachedHome()
         {
             var situation = Status();
-            if(player.Color == 0)
+            if(curPlayer.Color == 0)
             {
                 for(int i = 12; i < 18; i++)
                     if (situation[i] == 0)
@@ -125,11 +154,21 @@ namespace BackgammonLogic
                     report[i].Item1 = -1;
                     report[i].Item2 = 0;
                 }
-                    
-                    
             }
             return report;
         }
 
+        public bool MovsAvalible()
+        {
+            return true;
+        }
+
+        public void NewTurn()
+        {
+            curPlayer.Color = curPlayer.Color == 0 ? 1 : 0;
+            RollDices();
+            RefreshMoveValues();
+
+        }
     }
 }

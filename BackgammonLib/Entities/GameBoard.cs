@@ -27,10 +27,11 @@ namespace BackgammonEntities
         public GameBoard()
         {
             field = new Stack<Piece>[24];
-            Pieces = new List<Piece>();
-            for (int i = 0; i < 16; ++i)
-            {
+            for (int i = 0; i < field.Length; ++i)
                 field[i] = new Stack<Piece>();
+            Pieces = new List<Piece>();
+            for (int i = 0; i < 15; ++i)
+            {
                 Piece whitePiece = new Piece(0);
                 Piece blackPiece = new Piece(1);
                 Pieces.Add(whitePiece);

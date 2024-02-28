@@ -4,7 +4,6 @@ C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.ru
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\BackgammonStyles.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MainWindowStyles.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Backgammon.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.g.cs
@@ -23,3 +22,13 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\refint\UserInter
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.genruntimeconfig.cache
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterface.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MenuStyles.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInte.9C7395B8.Up2Date

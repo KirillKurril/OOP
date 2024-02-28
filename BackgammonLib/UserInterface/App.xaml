@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:UserInterface"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/MenuStyles.xaml"/>
+                <ResourceDictionary Source="Styles/BackgammonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -19,6 +19,8 @@ namespace UserInterface
         public MainWindow()
         {
             InitializeComponent();
+            mainFrame.Navigate(new Uri("Menu.xaml", UriKind.Relative));
         }
+      
     }
 }

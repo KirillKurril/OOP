@@ -8,15 +8,10 @@ namespace BackgammonEntities
 {
     public class Player
     {
-        private int color;
-        public int Color
-        {
-            get => color;
-            private set => color = value;
-        }
+        public int Color;
 
         public Player(int color_)
-            => color = color_;
+            => Color = color_;
 
     }
 }
