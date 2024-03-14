@@ -56,22 +56,22 @@ namespace UserInterface
 
         private void PositionSelected(object sender, RoutedEventArgs e)
         {
-            int position = Convert.ToInt32(((Button)sender).Name.Substring(1));
+            int position = Convert.ToInt32(((StackPanel)sender).Name.Substring(1)); //получает номер ячейки
             int[] fieldForce = game.Status();
-            if (firstChosenPosition == -1)
+            if (firstChosenPosition == -1)  //если загнаны в последний дом появляет кнопку для вывода 
             {
                 if (fieldForce[position] == game.curPlayer.Color)
                     firstChosenPosition = position;
+
                 if (game.ReachedHome())
                 {
-                    Button throwButton = (Button)FindName("Throw");
-                    throwButton.Visibility = Visibility.Visible;
-                    throwButton.IsEnabled = true;
+                    Throw.Visibility = Visibility.Visible;
+                    Throw.IsEnabled = true;
                 }
             }
             else
             {
-                if (!game.MovsAvalible())
+                if (!game.MovsAvalibleExist())
                 {
                     game.NewTurn();
                     return;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,10 @@ namespace BackgammonLogic
         public Player curPlayer;
         private GameBoard board;
         private Random randomizer;
-        public List<int> diceValues;
-        public List<int> moveValues;
+        private int[] status;
+        public List<int> diceValues; //значения на костях 
+        public List<int> moveValues; //доступные ходы
+        
 
 
         public Game()
@@ -27,6 +30,7 @@ namespace BackgammonLogic
             randomizer = new Random();
             moveValues = new List<int>();
             diceValues = new List<int>();
+            int[] status = new int[board.Length];
         }
         public void RollDices()
         {
@@ -123,18 +127,17 @@ namespace BackgammonLogic
             }
         }
 
-        public int[] Status()
+        public int[] GetStatus() => status;
+        private void RefreshStatus()
         {
-            int[] report = new int[board.Length];
             for (int i = 0; i < board.Length; i++)
             {
                 var cell = board.GetCell(i);
                 if (cell.TryPeek(out Piece? piece))
-                    report[i] = piece.Color;
+                    status[i] = piece.Color;
                 else
-                    report[i] = -1;
+                    status[i] = -1;
             }
-            return report;
         }
 
         public (int, int)[] GetDetailedReport()
@@ -158,8 +161,17 @@ namespace BackgammonLogic
             return report;
         }
 
-        public bool MovsAvalible()
+        public bool MovsAvalibleExist()
         {
+            return true;
+        }
+
+        public bool GetLegalPositions(int position, out List<int> avaliblePositions)
+        {
+            avaliblePositions = moveValues.Where().ToList();
+            if (curPlayer.ReachedHome)
+                avaliblePositions.Add(-1);
+            
             return true;
         }
 
