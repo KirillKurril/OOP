@@ -41,7 +41,7 @@ namespace UserInterface
                     piece.Width = 20;
                     piece.Height = 20;
 
-                    if (positionsInfo[i].Item1 == 0)
+                    if (positionsInfo[i].Item1 == 1)
                         piece.Fill = Brushes.White;
                     else
                         piece.Fill = Brushes.Black;

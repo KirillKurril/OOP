@@ -32,6 +32,7 @@ namespace BackgammonLogic
             Players = new Player[2];
             Players[0] = new Player(Colors.White());
             Players[1] = new Player(Colors.Black());
+            curPlayer = Players[1];
 
             randomizer = new Random();
             moveValues = new List<int>();
