@@ -53,16 +53,11 @@ namespace UserInterface
         }
         private void PositionSelected(object sender, RoutedEventArgs e)
         {
-            int position = -1;
-            try
-            {
-                if (((Button)sender).Name == "Throw")
+            int position;
+            if (sender is Button)
                     position = -1;
-            }
-            catch 
-            {
+            else
                 position = Convert.ToInt32(((StackPanel)sender).Name.Substring(1));
-            }
 
             if (game.MovsAvalibleExist() && game.GetStatus()[position] == game.GetPlayerColor())
             {

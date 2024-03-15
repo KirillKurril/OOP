@@ -30,7 +30,7 @@ namespace BackgammonEntities
         }
 
         public Piece(int color_)
-            => (color, position) = (color_, 1);
+            => (color, position) = (color_, 0);
 
         public void MoveTo(int newPosition)
             => position = newPosition;

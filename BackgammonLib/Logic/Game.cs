@@ -38,7 +38,8 @@ namespace BackgammonLogic
             moveValues = new List<int>();
             diceValues = new List<int>();
 
-            int[] status = new int[board.Length];
+            status = new int[24];
+            StatusRefresh();
         }
         public void RollDices()
         {
@@ -150,8 +151,12 @@ namespace BackgammonLogic
         }
         private List<Piece> GetMonitoredPieces() 
             => board.Pieces.Where(piece => piece.Color == curPlayer.Color).ToList();
-        public bool MovsAvalibleExist() => GetMonitoredPieces().All
-            (piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
+        public bool MovsAvalibleExist()// => GetMonitoredPieces().All(piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
+        {
+            List<Piece> pieces = GetMonitoredPieces();
+            return pieces.All(piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
+
+        }
         public bool GetLegalPositions(Piece piece, out List<int> avaliblePositions)
         {
             avaliblePositions = new List<int>();
@@ -159,7 +164,7 @@ namespace BackgammonLogic
             List<int> potentialMoves = moveValues.Select(shiftPosition
                 => shiftPosition * curPlayer.Color + piece.Position).ToList(); //я ебал таво ебало 
 
-            foreach (var i in potentialMoves)
+            for(int j = 0, i = potentialMoves[j]; j < potentialMoves.Count; ++j, i = potentialMoves[j])
             {
                 bool isFree = status[i] == 0;
                 bool capturedByFriendlyUnit = status[i] == curPlayer.Color;
