@@ -16,9 +16,6 @@ using BackgammonLogic;
 
 namespace UserInterface
 {
-    /// <summary>
-    /// Логика взаимодействия для Backgammon.xaml
-    /// </summary>
     public partial class Backgammon : Page
     {
         private Game game;
@@ -28,6 +25,7 @@ namespace UserInterface
             InitializeComponent();
             game = new Game();
             firstChosenPosition = -1;
+            game.NewTurn();
             Refresh();
         }
         private void Refresh()
@@ -53,49 +51,40 @@ namespace UserInterface
             }
 
         }
-
         private void PositionSelected(object sender, RoutedEventArgs e)
         {
-            int position = Convert.ToInt32(((StackPanel)sender).Name.Substring(1)); //получает номер ячейки
-            int[] fieldForce = game.Status();
-            if (firstChosenPosition == -1)  //если загнаны в последний дом появляет кнопку для вывода 
+            int position = -1;
+            try
             {
-                if (fieldForce[position] == game.curPlayer.Color)
+                if (((Button)sender).Name == "Throw")
+                    position = -1;
+            }
+            catch 
+            {
+                position = Convert.ToInt32(((StackPanel)sender).Name.Substring(1));
+            }
+
+            if (game.MovsAvalibleExist() && game.GetStatus()[position] == game.GetPlayerColor())
+            {
+                if (firstChosenPosition == -1)  //если загнаны в последний дом появляет кнопку для вывода 
+                {
                     firstChosenPosition = position;
 
-                if (game.ReachedHome())
-                {
-                    Throw.Visibility = Visibility.Visible;
-                    Throw.IsEnabled = true;
+                    if (game.GetPlayerStatus())
+                    {
+                        Throw.Visibility = Visibility.Visible;
+                        Throw.IsEnabled = true;
+                    }
                 }
-            }
-            else
-            {
-                if (!game.MovsAvalibleExist())
+                else
                 {
-                    game.NewTurn();
-                    return;
-                    //сообщение о следующем ходе
-                }
-                    
-                if (position == 24)
-                    game.Move(firstChosenPosition, position);
-                if (fieldForce[position] == -1)
-                    game.Move(firstChosenPosition, position);
-                if (game.curPlayer.Color == 0 && game.moveValues.Contains(position - firstChosenPosition)
-                    || game.curPlayer.Color == 1 && game.moveValues.Contains(firstChosenPosition - position))
-                    game.Move(firstChosenPosition, position);
-                else if (fieldForce[position] == game.curPlayer.Color)
-                    firstChosenPosition = position;
-                else return;
-                
-                if(firstChosenPosition != position)
-                {
-                    Refresh();
-                    firstChosenPosition = -1;
+                    if(game.MoveConfirm(firstChosenPosition, position))
+                        game.Move(firstChosenPosition, position);
                 }
 
             }
+            game.NewTurn();//отобразить что на кубиках выпало
         }
     }
 }
+

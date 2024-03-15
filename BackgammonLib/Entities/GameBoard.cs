@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,12 +33,13 @@ namespace BackgammonEntities
             Pieces = new List<Piece>();
             for (int i = 0; i < 15; ++i)
             {
-                Piece whitePiece = new Piece(0);
-                Piece blackPiece = new Piece(1);
+                Piece whitePiece = new Piece(Colors.White());
+                Piece blackPiece = new Piece(Colors.Black());
                 Pieces.Add(whitePiece);
                 Pieces.Add(blackPiece);
                 field[0].Push(whitePiece);
                 field[23].Push(blackPiece);
+                
             }
         }
        

@@ -26,7 +26,8 @@
                     Content="Throw"
                     Height="20"
                     Visibility="Hidden"
-                    IsEnabled="False"/>
+                    IsEnabled="False"
+                    Click="PositionSelected"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
