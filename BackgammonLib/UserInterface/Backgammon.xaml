@@ -48,30 +48,30 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel x:Name="S12" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S13" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S14" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S15" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S16" VerticalAlignment="Top" Grid.Row="0" Grid.Column="4" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S17" VerticalAlignment="Top" Grid.Row="0" Grid.Column="5" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S18" VerticalAlignment="Top" Grid.Row="0" Grid.Column="7" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S19" VerticalAlignment="Top" Grid.Row="0" Grid.Column="8" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S20" VerticalAlignment="Top" Grid.Row="0" Grid.Column="9" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S21" VerticalAlignment="Top" Grid.Row="0" Grid.Column="10" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S22" VerticalAlignment="Top" Grid.Row="0" Grid.Column="11" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S23" VerticalAlignment="Top" Grid.Row="0" Grid.Column="12" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S0" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S1" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S2" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S3" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S4" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="4" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S5" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="5" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S6" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="7" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S7" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="8" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S8" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="9" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S9" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="10" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S10" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="11" PreviewMouseLeftButtonDown="PositionSelected"/>
-                <StackPanel x:Name="S11" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="12" PreviewMouseLeftButtonDown="PositionSelected"/>
+                <StackPanel x:Name="S23" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S22" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S21" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S20" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S19" VerticalAlignment="Top" Grid.Row="0" Grid.Column="4" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S18" VerticalAlignment="Top" Grid.Row="0" Grid.Column="5" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S17" VerticalAlignment="Top" Grid.Row="0" Grid.Column="7" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S16" VerticalAlignment="Top" Grid.Row="0" Grid.Column="8" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S15" VerticalAlignment="Top" Grid.Row="0" Grid.Column="9" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S14" VerticalAlignment="Top" Grid.Row="0" Grid.Column="10" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S13" VerticalAlignment="Top" Grid.Row="0" Grid.Column="11" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S12" VerticalAlignment="Top" Grid.Row="0" Grid.Column="12" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S0" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S1" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S2" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S3" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S4" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="4" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S5" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="5" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S6" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="7" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S7" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="8" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S8" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="9" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S9" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="10" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S10" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="11" PreviewMouseDown="PositionSelected"/>
+                <StackPanel x:Name="S11" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="12" PreviewMouseDown="PositionSelected"/>
             </Grid>
         </Grid>
     </Grid>

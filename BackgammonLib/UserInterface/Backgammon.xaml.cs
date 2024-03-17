@@ -25,12 +25,11 @@ namespace UserInterface
             InitializeComponent();
             game = new Game();
             firstChosenPosition = -1;
-            game.NewTurn();
             Refresh();
         }
         private void Refresh()
         {
-            (int, int)[] positionsInfo = game.GetDetailedReport();
+            List<(int, int)> positionsInfo = game.GetDetailedReport();
             for(int i = 0; i < 24; ++i)
             {
                 StackPanel stackPanel = (StackPanel)FindName($"S{i}");
@@ -61,25 +60,34 @@ namespace UserInterface
 
             if (game.MovsAvalibleExist() && game.GetStatus()[position] == game.GetPlayerColor())
             {
-                if (firstChosenPosition == -1)  //если загнаны в последний дом появляет кнопку для вывода 
+                if (game.GetPlayerStatus() && firstChosenPosition != -1)
                 {
                     firstChosenPosition = position;
-
-                    if (game.GetPlayerStatus())
-                    {
-                        Throw.Visibility = Visibility.Visible;
-                        Throw.IsEnabled = true;
-                    }
+                    Throw.Visibility = Visibility.Visible;
+                    Throw.IsEnabled = true;
                 }
                 else
                 {
-                    if(game.MoveConfirm(firstChosenPosition, position))
-                        game.Move(firstChosenPosition, position);
+                    if(firstChosenPosition != -1)
+                    {
+                        if (game.MoveConfirm(firstChosenPosition, position))
+                            game.Move(firstChosenPosition, position);
+                        firstChosenPosition = -1;
+                    }
                 }
-
             }
-            game.NewTurn();//отобразить что на кубиках выпало
+
+            if (game.CheckEndGame())
+            {
+                EndGame();
+                return;
+            }
+
+            if (!game.MovsAvalibleExist())
+                game.NewTurn();
         }
+
+        private void EndGame() { }
     }
 }
 

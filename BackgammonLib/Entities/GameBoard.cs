@@ -10,16 +10,22 @@ namespace BackgammonEntities
     public class GameBoard
     {
 
-        public Stack<Piece> [] field;
+        public List<Cell> whiteField;
+        public List<Cell> blackField;
+
         public List<Piece>? pieсes;
         public int Length = 24;
-
-        public Stack<Piece>[] Field
+        public List<Cell> WhiteField
         {
-            get => field;
-            private set => field = value;
+            get => whiteField;
+            private set => whiteField = value;
         }
-        public List<Piece> Pieces
+        public List<Cell> BlackField
+        {
+            get => blackField;
+            private set => blackField = value;
+        }
+        public List<Piece>? Pieces
         {
             get => pieсes;
             private set => pieсes = value;
@@ -27,26 +33,30 @@ namespace BackgammonEntities
         
         public GameBoard()
         {
-            field = new Stack<Piece>[24];
-            for (int i = 0; i < field.Length; ++i)
-                field[i] = new Stack<Piece>();
             Pieces = new List<Piece>();
+
+            whiteField = new List<Cell>();
+            for (int i = 0; i < 24; ++i)
+            {
+                Cell cell = new Cell();
+                whiteField.Add(cell);
+            }
+
+            blackField = new List<Cell>();
+            for (int i = 12; i < 24; ++i)
+                blackField.Add(WhiteField[i]);
+            for (int i = 0; i < 12; ++i)
+                blackField.Add(WhiteField[i]);
+
             for (int i = 0; i < 15; ++i)
             {
                 Piece whitePiece = new Piece(Colors.White());
                 Piece blackPiece = new Piece(Colors.Black());
                 Pieces.Add(whitePiece);
                 Pieces.Add(blackPiece);
-                field[0].Push(whitePiece);
-                field[23].Push(blackPiece);
-                
+                whiteField[0].Push(whitePiece);
+                whiteField[12].Push(blackPiece);
             }
         }
-       
-        public Stack<Piece>[] GetField() => field;
-
-        public Stack<Piece> GetCell(int i) => field[i];
-
-       
     }
 }

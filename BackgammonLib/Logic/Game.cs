@@ -16,15 +16,15 @@ namespace BackgammonLogic
     {
         private Player curPlayer;
         private Player[] Players;
+        private List<Cell> curField;
         private GameBoard board;
         private Random randomizer;
-        private int[] status;        //массив с цветами позиций
+        private int[] status;        //массив с цветами позиций по белому полю 
         private List<int> diceValues; //значения на костях 
         private List<int> moveValues; //доступные ходы
         
         public int GetPlayerColor() => curPlayer.Color;
         public bool GetPlayerStatus() => curPlayer.ReachedHome;
-
         public Game()
         {
             board = new GameBoard();
@@ -32,7 +32,9 @@ namespace BackgammonLogic
             Players = new Player[2];
             Players[0] = new Player(Colors.White());
             Players[1] = new Player(Colors.Black());
-            curPlayer = Players[1];
+            curPlayer = Players[0];
+
+            curField = board.whiteField;
 
             randomizer = new Random();
             moveValues = new List<int>();
@@ -40,6 +42,9 @@ namespace BackgammonLogic
 
             status = new int[24];
             StatusRefresh();
+
+            RollDices();
+            MoveValuesRefresh();
         }
         public void RollDices()
         {
@@ -85,8 +90,8 @@ namespace BackgammonLogic
                 ThrowOut(source);
             else
             {
-                var movingPiece = board.field[source].Pop();
-                board.field[destination].Push(movingPiece);
+                var movingPiece = curField[source].Pop();
+                curField[destination].Push(movingPiece);
             }
 
             diceValues.Remove(Math.Abs(source - destination));
@@ -96,7 +101,7 @@ namespace BackgammonLogic
         }
         private void ThrowOut(int position)
         {
-            var throwedPiece = board.field[position].Pop();
+            var throwedPiece = curField[position].Pop();
             board.Pieces.Remove(throwedPiece);
         }
         public bool ReachedHomeRefresh()
@@ -119,43 +124,29 @@ namespace BackgammonLogic
         public int[] GetStatus() => status;
         private void StatusRefresh()
         {
-            for (int i = 0; i < board.Length; i++)
-            {
-                var cell = board.GetCell(i);
-                if (cell.TryPeek(out Piece? piece))
-                    status[i] = piece.Color;
-                else
-                    status[i] = 0;
-            }
+            for (int i = 0; i < curField.Count; i++)
+                status[i] = curField[i].GetColor();
         }
 
-        public (int, int)[] GetDetailedReport()
+        public List<(int, int)> GetDetailedReport()
         {
-            (int, int)[] report = new (int, int)[board.Length];
+            List<(int, int)> report = new List<(int, int)>();
 
-            for (int i = 0; i < board.Length; i++)
-            {
-                var cell = board.GetCell(i);
-                if (cell.TryPeek(out Piece? piece))
-                {
-                    report[i].Item1 = piece.Color;
-                    report[i].Item2 = cell.Count;
-                }
-                else
-                {
-                    report[i].Item1 = 0;
-                    report[i].Item2 = 0;
-                }
-            }
+            foreach (var cell in board.whiteField)
+                report.Add((cell.GetColor(), cell.GetHeight()));
+            
             return report;
         }
         private List<Piece> GetMonitoredPieces() 
             => board.Pieces.Where(piece => piece.Color == curPlayer.Color).ToList();
-        public bool MovsAvalibleExist()// => GetMonitoredPieces().All(piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
+        public bool MovsAvalibleExist()
         {
-            List<Piece> pieces = GetMonitoredPieces();
-            return pieces.All(piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
-
+            if(moveValues.Count > 0)
+            {
+                List<Piece> pieces = GetMonitoredPieces();
+                return pieces.All(piece => GetLegalPositions(piece, out List<int> avaliblePositions) == true);
+            }
+            return false;
         }
         public bool GetLegalPositions(Piece piece, out List<int> avaliblePositions)
         {
@@ -184,10 +175,9 @@ namespace BackgammonLogic
         }
         public bool MoveConfirm(int source, int destinatioin)
         {
-            var cell = board.GetCell(source);
-            if (cell.TryPeek(out Piece? piece))
+            if (!curField[source].IsEmpty())
             {
-                if(GetLegalPositions(piece, out List<int> avaliblePositions))
+                if(GetLegalPositions(curField[source].CheckUpper(), out List<int> avaliblePositions))
                     return avaliblePositions.Contains(destinatioin);
             }
             return false;
@@ -195,6 +185,8 @@ namespace BackgammonLogic
         public List<int> NewTurn()
         {
             curPlayer = curPlayer.Color == 1 ? Players[1] : Players[0];
+            curField = curField == board.BlackField ? board.WhiteField : board.BlackField;
+            StatusRefresh();
             RollDices();
             MoveValuesRefresh();
             return diceValues;
