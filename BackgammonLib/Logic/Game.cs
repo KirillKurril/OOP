@@ -162,14 +162,14 @@ namespace BackgammonLogic
             avaliblePositions = new List<int>();
 
             List<int> potentialMoves = moveValues.Select(shiftPosition
-                => shiftPosition * curPlayer.Color + piece.Position).ToList(); //я ебал таво ебало 
+                => shiftPosition * curPlayer.Color + piece.Position).ToList(); 
 
-            for(int j = 0, i = potentialMoves[j]; j < potentialMoves.Count; ++j, i = potentialMoves[j])
+            foreach(var position in potentialMoves)
             {
-                bool isFree = status[i] == 0;
-                bool capturedByFriendlyUnit = status[i] == curPlayer.Color;
+                bool isFree = status[position] == 0;
+                bool capturedByFriendlyUnit = status[position] == curPlayer.Color;
                 if (isFree || capturedByFriendlyUnit)
-                potentialMoves.Add(status[i]);
+                    avaliblePositions.Add(position);
             }
 
             bool throwAway = curPlayer.ReachedHome && 
