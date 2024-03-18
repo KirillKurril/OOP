@@ -104,7 +104,7 @@ namespace BackgammonLogic
             if(!hatsOffToYou)
                 hatsOffToYou = true;
 
-            diceValues.Remove(Math.Abs(source - destination));
+            RemoveUsedDices(Math.Abs(source - destination));
             MoveValuesRefresh();
             StatusRefresh();
         }
@@ -142,12 +142,20 @@ namespace BackgammonLogic
         }
         public bool MovsAvalibleExist()
         {
-            if(moveValues.Count > 0)
+            if(diceValues.Count > 0)
             {
                 return GetMonitoredPositions().All(position
                     => GetLegalPositions(position, out List<int> avaliblePositions) == true);
             }
             return false;
+        }
+
+        private void RemoveUsedDices(int moveModul)
+        {
+            if (moveModul == diceValues.Sum())
+                diceValues.Clear();
+            else
+                diceValues.Remove(moveModul);
         }
         public bool GetLegalPositions(int position, out List<int> avaliblePositions)
         {
