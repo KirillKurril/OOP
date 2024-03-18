@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Backgammon"
-      Style="{StaticResource BackgammonField}">
+      Style="{StaticResource BackgammonField}"
+      MouseRightButtonDown="CancelChoiсe">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -28,6 +29,13 @@
                     Visibility="Hidden"
                     IsEnabled="False"
                     Click="PositionSelected"/>
+            <TextBox x:Name="stat"
+                     Grid.Column="0"
+                     Background="Transparent"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     FontWeight="Bold"
+                     Text="aboba"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -48,30 +56,79 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel x:Name="S23" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S22" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S21" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S20" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S19" VerticalAlignment="Top" Grid.Row="0" Grid.Column="4" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S18" VerticalAlignment="Top" Grid.Row="0" Grid.Column="5" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S17" VerticalAlignment="Top" Grid.Row="0" Grid.Column="7" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S16" VerticalAlignment="Top" Grid.Row="0" Grid.Column="8" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S15" VerticalAlignment="Top" Grid.Row="0" Grid.Column="9" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S14" VerticalAlignment="Top" Grid.Row="0" Grid.Column="10" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S13" VerticalAlignment="Top" Grid.Row="0" Grid.Column="11" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S12" VerticalAlignment="Top" Grid.Row="0" Grid.Column="12" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S0" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S1" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S2" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S3" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S4" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="4" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S5" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="5" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S6" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="7" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S7" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="8" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S8" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="9" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S9" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="10" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S10" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="11" PreviewMouseDown="PositionSelected"/>
-                <StackPanel x:Name="S11" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="12" PreviewMouseDown="PositionSelected"/>
+                <Button x:Name="B23" Grid.Row="0" Grid.Column="0" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S23" VerticalAlignment="Top">
+                    </StackPanel>
+                </Button>
+                <Button x:Name="B22" Grid.Row="0" Grid.Column="1" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S22" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B21"  Grid.Row="0" Grid.Column="2" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S21" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B20" Grid.Row="0" Grid.Column="3" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S20" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B19" Grid.Row="0" Grid.Column="4" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S19" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B18" Grid.Row="0" Grid.Column="5" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S18" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B17" Grid.Row="0" Grid.Column="7" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S17" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B16" Grid.Row="0" Grid.Column="8" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S16" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B15" Grid.Row="0" Grid.Column="9" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S15" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B14" Grid.Row="0" Grid.Column="10" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S14" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B13" Grid.Row="0" Grid.Column="11" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S13" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B12" Grid.Row="0" Grid.Column="12" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S12" VerticalAlignment="Top"/>
+                </Button>
+                <Button x:Name="B0" Grid.Row="1" Grid.Column="0" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S0" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B1" Grid.Row="1" Grid.Column="1" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S1" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B2" Grid.Row="1" Grid.Column="2" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S2" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B3" Grid.Row="1" Grid.Column="3" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S3" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B4" Grid.Row="1" Grid.Column="4" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S4" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B5" Grid.Row="1" Grid.Column="5" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S5" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B6" Grid.Row="1" Grid.Column="7" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S6" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B7" Grid.Row="1" Grid.Column="8" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S7" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B8" Grid.Row="1" Grid.Column="9" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S8" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B9" Grid.Row="1" Grid.Column="10" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S9" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B10" Grid.Row="1" Grid.Column="11" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S10" VerticalAlignment="Bottom"/>
+                </Button>
+                <Button x:Name="B11" Grid.Row="1" Grid.Column="12" Click="PositionSelected" Style="{StaticResource ChoiceButton}">
+                    <StackPanel x:Name="S11" VerticalAlignment="Bottom"/>
+                </Button>
             </Grid>
         </Grid>
     </Grid>

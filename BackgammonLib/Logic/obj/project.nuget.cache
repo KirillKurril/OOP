@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "npqmETI+VXcQdi2ccKj1O6F8+Fv+vU3uYrq/LckRph8ixEf+iYhwHBdOXsZLSmp43xsYUCCEJRIF7wUA0G9n8A==",
+  "dgSpecHash": "XKRX6gDYr4iYWCsPiEQM4JzjfuOSl5wZvmHWPdujkkDVtNgyZdPcdFmYgaIjUQaNOj3pOg9zAXJEkC5toKwjSA==",
   "success": true,
-  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj",
+  "projectFilePath": "D:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

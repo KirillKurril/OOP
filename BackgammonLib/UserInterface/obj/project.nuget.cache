@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3YKYImczVK+aXG8MLPbMjLJLCDGj8glFKM35gH2h4rgFQ6UbeGO8p0kPboJzPOxRG6ZDWcpx0VPBRe1cFbhYOw==",
+  "dgSpecHash": "JSnR5R3/7w4iAk3KQf/pMFP+9TS7ZO0uc5Cs5LSKq3PGcAVbKEcbvD6ItkLaXqUdvL6ABlCX8lzTp31K8xeVNw==",
   "success": true,
-  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+  "projectFilePath": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

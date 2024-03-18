@@ -10,3 +10,15 @@ C:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.dll
 C:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\ref\Entities.dll
+D:\Uni\OOP\BackgammonLib\Entities\bin\Debug\net8.0\Entities.deps.json
+D:\Uni\OOP\BackgammonLib\Entities\bin\Debug\net8.0\Entities.dll
+D:\Uni\OOP\BackgammonLib\Entities\bin\Debug\net8.0\Entities.pdb
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.dll
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\refint\Entities.dll
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.pdb
+D:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\ref\Entities.dll

@@ -46,23 +46,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\Урфин-Джус\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "projectUniqueName": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
       "projectName": "UserInterface",
-      "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
+      "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "packagesPath": "C:\\Users\\Урфин-Джус\\.nuget\\packages\\",
+      "outputPath": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Урфин-Джус\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -78,11 +78,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
+            "D:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
             },
-            "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
+            "D:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
+              "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
             }
           }
         }
@@ -91,6 +91,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -115,7 +120,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

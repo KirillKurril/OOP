@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BackgammonLogic;
+using Entities;
 
 namespace UserInterface
 {
@@ -48,45 +50,69 @@ namespace UserInterface
                     stackPanel.Children.Add(piece);
                 }
             }
+            stat.Text = string.Join(" ", game.GetDiceValues());
 
         }
         private void PositionSelected(object sender, RoutedEventArgs e)
         {
             int position;
-            if (sender is Button)
+            bool startingPositionSelected = firstChosenPosition != -1;
+
+            if (((Button)sender).Name == "Throw")
                     position = -1;
             else
-                position = Convert.ToInt32(((StackPanel)sender).Name.Substring(1));
+                position = Convert.ToInt32(((Button)sender).Name.Substring(1));
 
-            if (game.MovsAvalibleExist() && game.GetStatus()[position] == game.GetPlayerColor())
+            if(game.GetPlayerColor() == Entities.Colors.Black())
+                position = Math.Abs(position - 12);
+
+            if (startingPositionSelected)
             {
-                if (game.GetPlayerStatus() && firstChosenPosition != -1)
+                if (game.MoveConfirm(firstChosenPosition, position))
                 {
-                    firstChosenPosition = position;
-                    Throw.Visibility = Visibility.Visible;
-                    Throw.IsEnabled = true;
-                }
-                else
-                {
-                    if(firstChosenPosition != -1)
+                    game.Move(firstChosenPosition, position);
+                    firstChosenPosition = -1;
+                    Refresh();
+
+                    if (game.CheckEndGame())
+                        EndGame();
+
+                    if (Throw.IsEnabled)
+                        HideThrowButton();
+
+                    if (!game.MovsAvalibleExist())
                     {
-                        if (game.MoveConfirm(firstChosenPosition, position))
-                            game.Move(firstChosenPosition, position);
-                        firstChosenPosition = -1;
+                        game.NewTurn();
+                        Refresh();
                     }
                 }
             }
-
-            if (game.CheckEndGame())
+            else
             {
-                EndGame();
-                return;
+                if (game.VerifyStartPosition(position))
+                {
+                    firstChosenPosition = position;
+                    if (position > 17)
+                        ShowThrowButton();
+                }
             }
-
-            if (!game.MovsAvalibleExist())
-                game.NewTurn();
         }
 
+        private void CancelChoiсe(object sender, MouseButtonEventArgs e)
+        {
+            firstChosenPosition = -1;
+            //MessageBox.Show("Правая кнопка мыши нажата!");
+        }
+        private void ShowThrowButton()
+        {
+            Throw.Visibility = Visibility.Visible;
+            Throw.IsEnabled = true;
+        }
+        private void HideThrowButton()
+        {
+            Throw.Visibility = Visibility.Hidden;
+            Throw.IsEnabled = false;
+        }
         private void EndGame() { }
     }
 }
