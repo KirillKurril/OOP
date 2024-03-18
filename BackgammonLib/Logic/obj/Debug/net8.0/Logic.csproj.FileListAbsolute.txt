@@ -13,7 +13,6 @@ C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.dll
 C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\refint\Logic.dll
 C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.pdb
 C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\ref\Logic.dll
-C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.csproj.CopyComplete
 D:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.deps.json
 D:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.dll
 D:\Uni\OOP\BackgammonLib\Logic\bin\Debug\net8.0\Logic.pdb
@@ -30,3 +29,4 @@ D:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.dll
 D:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\refint\Logic.dll
 D:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.pdb
 D:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\ref\Logic.dll
+C:\Uni\OOP\BackgammonLib\Logic\obj\Debug\net8.0\Logic.csproj.Up2Date

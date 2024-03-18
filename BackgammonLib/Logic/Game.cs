@@ -55,6 +55,7 @@ namespace BackgammonLogic
         }
         public void RollDices()
         {
+            diceValues.Clear();
             int firstValue = randomizer.Next(1, 6);
             int secondValue = randomizer.Next(1, 6);
             diceValues.Add(firstValue);
@@ -101,7 +102,7 @@ namespace BackgammonLogic
                 curField[destination].Push(movingPiece);
             }
 
-            if(!hatsOffToYou)
+            if(!hatsOffToYou && source == 0)
                 hatsOffToYou = true;
 
             RemoveUsedDices(Math.Abs(source - destination));
@@ -144,15 +145,18 @@ namespace BackgammonLogic
         {
             if(diceValues.Count > 0)
             {
-                return GetMonitoredPositions().All(position
+                return GetMonitoredPositions().Any(position
                     => GetLegalPositions(position, out List<int> avaliblePositions) == true);
             }
             return false;
         }
-
         private void RemoveUsedDices(int moveModul)
         {
-            if (moveModul == diceValues.Sum())
+            if (diceValues.Count >= 3)
+                for (int i = moveModul / diceValues[0]; i > 0; --i)
+                    diceValues.Remove(diceValues[0]);
+
+            else if (moveModul == diceValues.Sum())
                 diceValues.Clear();
             else
                 diceValues.Remove(moveModul);
@@ -161,10 +165,10 @@ namespace BackgammonLogic
         {
             avaliblePositions = new List<int>();
 
-            List<int> potentialMoves = moveValues.Select(shiftPosition
+            List<int> potentialMoves = diceValues.Select(shiftPosition          //here must be move values
                 => shiftPosition + position).ToList(); 
 
-            foreach(var potentialDest in potentialMoves)
+            foreach(var potentialDest in potentialMoves.Where(dest => dest < 24))
             {
                 bool isFree = status[potentialDest] == 0;
                 bool capturedByFriendlyUnit = status[potentialDest] == curPlayer.Color;
@@ -187,7 +191,7 @@ namespace BackgammonLogic
             Debug.WriteLine($"Checked move: {source}, {destinatioin}");
             //////////////////////////
             
-            if (!curField[source].IsEmpty())
+            if (!curField[source].IsEmpty() && source < destinatioin)
             {
                 if(GetLegalPositions(source, out List<int> avaliblePositions))
                     return avaliblePositions.Contains(destinatioin);

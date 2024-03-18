@@ -61,10 +61,12 @@ namespace UserInterface
             if (((Button)sender).Name == "Throw")
                     position = -1;
             else
+            {
                 position = Convert.ToInt32(((Button)sender).Name.Substring(1));
-
-            if(game.GetPlayerColor() == Entities.Colors.Black())
-                position = Math.Abs(position - 12);
+                
+                if (game.GetPlayerColor() == Entities.Colors.Black())
+                    position = Math.Abs(position + 12) % 24;
+            }
 
             if (startingPositionSelected)
             {
@@ -92,7 +94,7 @@ namespace UserInterface
                 if (game.VerifyStartPosition(position))
                 {
                     firstChosenPosition = position;
-                    if (position > 17)
+                    if (game.GetPlayerStatus())
                         ShowThrowButton();
                 }
             }
