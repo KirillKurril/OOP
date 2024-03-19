@@ -49,6 +49,12 @@ namespace BackgammonEntities
                 whiteField[12].Push(blackPiece);
             }
 
+            whiteField[6].Push(new Piece(Colors.Black()));
+            whiteField[7].Push(new Piece(Colors.Black()));
+            whiteField[8].Push(new Piece(Colors.Black()));
+            whiteField[9].Push(new Piece(Colors.Black()));
+            whiteField[10].Push(new Piece(Colors.Black()));
+            whiteField[11].Push(new Piece(Colors.Black()));
         }
     }
 }

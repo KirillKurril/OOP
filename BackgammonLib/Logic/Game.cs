@@ -52,9 +52,7 @@ namespace BackgammonLogic
             RollDices();
             MoveValuesRefresh();
 
-            ///////////////////////
             ReachedHomeRefresh();
-            ///////////////////////
         }
 
 
@@ -70,7 +68,12 @@ namespace BackgammonLogic
         {
             if (diceValues.Count > 0)
             {
-                return GetMonitoredPositions().Any(position
+                List<int> monitoredPositions = GetMonitoredPositions();
+
+                if (hatsOffToYou && monitoredPositions.Contains(0))
+                    monitoredPositions.Remove(0);
+
+                return monitoredPositions.Any(position
                     => diceValues.Any(shift => MoveConfirm(position, position + shift)));      //here must be move values
             }
             return false;
@@ -147,10 +150,6 @@ namespace BackgammonLogic
             StatusRefresh();
             RollDices();
             MoveValuesRefresh();
-
-            //////////////////////////
-            Debug.WriteLine(movesCounter++);
-            //////////////////////////
         }
         
         

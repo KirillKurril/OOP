@@ -6,11 +6,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Sprites\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Sprites\field.png" />
     <None Remove="Sprites\MainPage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sprites\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
