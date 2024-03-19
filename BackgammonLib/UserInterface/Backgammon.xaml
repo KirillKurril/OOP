@@ -35,6 +35,8 @@
                      HorizontalAlignment="Center"
                      VerticalAlignment="Center"
                      FontWeight="Bold"
+                     FontSize="14"
+                     Foreground="Azure"
                      Text="aboba"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>

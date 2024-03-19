@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace BackgammonLogic
     public class Game
     {
         private Player curPlayer;
-        private Player[] Players;
+        private Player[] players;
         private List<Cell> curField;
         private GameBoard board;
         private Random randomizer;
@@ -27,16 +28,14 @@ namespace BackgammonLogic
         private bool hatsOffToYou;
         private int movesCounter;
 
-        public int GetPlayerColor() => curPlayer.Color;
-        public bool GetPlayerStatus() => curPlayer.ReachedHome;
         public Game()
         {
             board = new GameBoard();
 
-            Players = new Player[2];
-            Players[0] = new Player(Colors.White());
-            Players[1] = new Player(Colors.Black());
-            curPlayer = Players[0];
+            players = new Player[2];
+            players[0] = new Player(Colors.White());
+            players[1] = new Player(Colors.Black());
+            curPlayer = players[0];
 
             curField = board.whiteField;
 
@@ -52,88 +51,31 @@ namespace BackgammonLogic
 
             RollDices();
             MoveValuesRefresh();
-        }
-        public void RollDices()
-        {
-            diceValues.Clear();
-            int firstValue = randomizer.Next(1, 6);
-            int secondValue = randomizer.Next(1, 6);
-            diceValues.Add(firstValue);
-            diceValues.Add(secondValue);
-            if (firstValue == secondValue)
-            {
-                diceValues.Add(firstValue);
-                diceValues.Add(firstValue);
-            }
-        }
-        private void MoveValuesRefresh()
-        {
-            moveValues.Clear();
-            if(diceValues.Count == 4)
-            {
-                moveValues.Add(diceValues[1]);
-                moveValues.Add(diceValues[1] * 2);
-                moveValues.Add(diceValues[1] * 3);
-                moveValues.Add(diceValues[1] * 4);
-            }
-            if (diceValues.Count == 3)
-            {
-                moveValues.Add(diceValues[1]);
-                moveValues.Add(diceValues[1] * 2);
-                moveValues.Add(diceValues[1] * 3);
-            }
-            if (diceValues.Count == 2)
-            {
-                moveValues.Add(diceValues[0]);
-                moveValues.Add(diceValues[1]);
-                moveValues.Add(diceValues[0] + diceValues[1]);
-            }
-            if (diceValues.Count == 1)
-                moveValues.Add(diceValues[0]);
-        }
-        public bool CheckEndGame() => curPlayer.Score == 0;
-        public void Move(int source, int destination)
-        {
-            if (destination == -1)
-                ThrowOut(source);
-            else
-            {
-                var movingPiece = curField[source].Pop();
-                curField[destination].Push(movingPiece);
-            }
 
-            if(!hatsOffToYou && source == 0)
-                hatsOffToYou = true;
-
-            RemoveUsedDices(Math.Abs(source - destination));
-            MoveValuesRefresh();
-            StatusRefresh();
-        }
-        private void ThrowOut(int position)
-        {
-            var throwedPiece = curField[position].Pop();
-            board.Pieces.Remove(throwedPiece);
-        }
-        public void ReachedHomeRefresh()
-            => curPlayer.ReachedHome = status.All(position => position > 17);
-        public int[] GetStatus() => status;
-        private void StatusRefresh()
-        {
-            for (int i = 0; i < curField.Count; i++)
-                status[i] = curField[i].GetColor();
+            ///////////////////////
+            ReachedHomeRefresh();
+            ///////////////////////
         }
 
-        public List<(int, int)> GetDetailedReport()
+
+        public bool VerifyStartPosition(int startPosition)
         {
-            List<(int, int)> report = new List<(int, int)>();
+            bool potentialMovesExist = MovsAvalibleExist();
+            bool rigthColor = status[startPosition] == curPlayer.Color;
+            bool headless = !(hatsOffToYou && startPosition == 0);
 
-            foreach (var cell in board.whiteField)
-                report.Add((cell.GetColor(), cell.GetHeight()));
-            
-            return report;
+            return potentialMovesExist && rigthColor && headless;
         }
-
-        public List<int> GetMonitoredPositions()
+        public bool MovsAvalibleExist()
+        {
+            if (diceValues.Count > 0)
+            {
+                return GetMonitoredPositions().Any(position
+                    => diceValues.Any(shift => MoveConfirm(position, position + shift)));      //here must be move values
+            }
+            return false;
+        }
+        private List<int> GetMonitoredPositions()
         {
             List<int> positions = new List<int>();
             for (int i = 0; i < curField.Count; ++i)
@@ -141,27 +83,16 @@ namespace BackgammonLogic
                     positions.Add(i);
             return positions;
         }
-        public bool MovsAvalibleExist()
+        public bool MoveConfirm(int source, int destinatioin)
         {
-            if(diceValues.Count > 0)
+            if (!curField[source].IsEmpty() && source < destinatioin)
             {
-                return GetMonitoredPositions().Any(position
-                    => GetLegalPositions(position, out List<int> avaliblePositions) == true);
+                if (GetLegalPositions(source, out List<int> avaliblePositions))
+                    return avaliblePositions.Contains(destinatioin);
             }
             return false;
         }
-        private void RemoveUsedDices(int moveModul)
-        {
-            if (diceValues.Count >= 3)
-                for (int i = moveModul / diceValues[0]; i > 0; --i)
-                    diceValues.Remove(diceValues[0]);
-
-            else if (moveModul == diceValues.Sum())
-                diceValues.Clear();
-            else
-                diceValues.Remove(moveModul);
-        }
-        public bool GetLegalPositions(int position, out List<int> avaliblePositions)
+        private bool GetLegalPositions(int position, out List<int> avaliblePositions)
         {
             avaliblePositions = new List<int>();
 
@@ -179,31 +110,39 @@ namespace BackgammonLogic
             bool throwAway = potentialMoves.Any(potentialDest => potentialDest > 23);
 
             if (throwAway)
-                avaliblePositions.Add(-1);
+                avaliblePositions.Add(25);
 
             return avaliblePositions.Count == 0 ? false : true;
         }
-        public bool MoveConfirm(int source, int destinatioin)
+        public void Move(int source, int destination)
         {
-
-            //////////////////////////
-            Debug.WriteLine($"Bashka na meste: {hatsOffToYou}");
-            Debug.WriteLine($"Checked move: {source}, {destinatioin}");
-            //////////////////////////
-            
-            if (!curField[source].IsEmpty() && source < destinatioin)
+            if (destination == 25)
             {
-                if(GetLegalPositions(source, out List<int> avaliblePositions))
-                    return avaliblePositions.Contains(destinatioin);
+                destination = ThrowOut(source);
+                Refresh(destination, source, true);
             }
-            return false;
+            else
+            {
+                var movingPiece = curField[source].Pop();
+                curField[destination].Push(movingPiece);
 
-            
+                if (!hatsOffToYou && source == 0)
+                    hatsOffToYou = true;
+                Refresh(destination, source);
+            }
+
+        }
+        private int ThrowOut(int position)
+        {
+            var throwedPiece = curField[position].Pop();
+            List<int> throwDices = diceValues.Where(diceValue => diceValue + position >= 24).ToList();
+            int distance = throwDices.Min();
+            return distance + position;
         }
         public void NewTurn()
         {
             hatsOffToYou = false;
-            curPlayer = curPlayer.Color == 1 ? Players[1] : Players[0];
+            curPlayer = curPlayer.Color == 1 ? players[1] : players[0];
             curField = curField == board.BlackField ? board.WhiteField : board.BlackField;
             StatusRefresh();
             RollDices();
@@ -213,15 +152,91 @@ namespace BackgammonLogic
             Debug.WriteLine(movesCounter++);
             //////////////////////////
         }
-        public List<int> GetDiceValues() => diceValues;
-
-        public bool VerifyStartPosition(int startPosition)
+        
+        
+        public List<(int, int)> GetDetailedReport()
         {
-            bool potentialMovesExist = MovsAvalibleExist();
-            bool rigthColor = status[startPosition] == curPlayer.Color;
-            bool headless = !(hatsOffToYou && startPosition == 0);
+            List<(int, int)> report = new List<(int, int)>();
 
-            return potentialMovesExist && rigthColor && headless;
+            foreach (var cell in board.whiteField)
+                report.Add((cell.GetColor(), cell.GetHeight()));
+
+            return report;
         }
+        public (int, int) GetScore()
+           => (players[0].Score, players[1].Score);
+        public bool GetPositionEctability(int position)
+        {
+            List<int> throwDices = diceValues.Where(diceValue => diceValue + position >= 24).ToList();
+            return throwDices.Count != 0;
+        }
+        public int[] GetStatus() => status;
+        public List<int> GetDiceValues() => diceValues;
+        public int GetPlayerColor() => curPlayer.Color;
+        public bool GetPlayerStatus() => curPlayer.ReachedHome;
+        public int GetCurColor() => curPlayer.Color;
+
+
+        void Refresh(int destination, int source, bool throwCase = false)
+        {
+            RemoveUsedDices(destination - source);
+            ScoreRefresh(throwCase ? 24 - source : destination - source);
+            MoveValuesRefresh();
+            StatusRefresh();
+            SafeModeRefresh();
+            ReachedHomeRefresh();
+        }
+        private void SafeModeRefresh()
+            => curPlayer.SafeMode = status.Skip(18).All(position => position != curPlayer.Color);
+        private void StatusRefresh()
+        {
+            for (int i = 0; i < curField.Count; i++)
+                status[i] = curField[i].GetColor();
+        }
+        private void ReachedHomeRefresh()
+            => curPlayer.ReachedHome = status.Take(18).All(position => position != curPlayer.Color);
+        private void ScoreRefresh(int modul)
+            => curPlayer.Score -= modul;
+        public bool CheckEndGame() => curPlayer.Score == 0;
+        public void RollDices()
+        {
+            diceValues.Clear();
+            int firstValue = randomizer.Next(1, 7);
+            int secondValue = randomizer.Next(1, 7);
+            diceValues.Add(firstValue);
+            diceValues.Add(secondValue);
+            if (firstValue == secondValue)
+            {
+                diceValues.Add(firstValue);
+                diceValues.Add(firstValue);
+            }
+        }
+        private void MoveValuesRefresh()
+        {
+            moveValues.Clear();
+
+            if(diceValues.Count > 2)
+                for(int i = diceValues.Count; i > 0; --i)
+                    moveValues.Add(diceValues[0] * i);
+            else if (diceValues.Count == 2)
+            {
+                moveValues = new List<int>(diceValues);
+                moveValues.Add(diceValues.Sum());
+            }
+            else
+                moveValues = new List<int>(diceValues);
+        }
+        private void RemoveUsedDices(int moveModul)
+        {
+            if (diceValues.Count >= 3)
+                for (int i = moveModul / diceValues[0]; i > 0; --i)
+                    diceValues.Remove(diceValues[0]);
+
+            else if (moveModul == diceValues.Sum())
+                diceValues.Clear();
+            else
+                diceValues.Remove(moveModul);
+        }
+
     }
 }

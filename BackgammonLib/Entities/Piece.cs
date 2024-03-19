@@ -11,7 +11,6 @@ namespace BackgammonEntities
     {
         private int color;
         private int position;
-        private int row;
         public int Color
         {
             get => color;
@@ -23,22 +22,8 @@ namespace BackgammonEntities
             get => position;
             private set => position = value;
         }
-        public int Row
-        {
-            get => row;
-            private set => row = value;
-        }
-
-        public bool Ejactable
-        {
-            get => position > 18;
-            private set { }
-        }
 
         public Piece(int color_)
             => (color, position) = (color_, 0);
-
-        public void MoveTo(int newPosition)
-            => position = newPosition;
     }
 }

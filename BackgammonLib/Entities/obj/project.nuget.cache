@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y3YRSHWyONA1CFzm26DFg9+lZ8XjgTE9qRfsm1gAuY23vdF57VQuR7qj6blxYZ00r4It1d+yuHz7xP34A0PiYg==",
+  "dgSpecHash": "gqK3tCiMuiwS/KsdmsxN2mYlwW5owFA0ecfLoB3yH/qbxHO0dRooP2uprNcRshw/Q7k6rvtSDty/5f0E8jJ9CA==",
   "success": true,
-  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

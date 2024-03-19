@@ -51,6 +51,7 @@ namespace UserInterface
                 }
             }
             stat.Text = string.Join(" ", game.GetDiceValues());
+            stat.Text += $"\n\nwhite score:\n{game.GetScore().Item1}\n\nblack score:\n{game.GetScore().Item2}\n\nNow move\n{game.GetPlayerColor()}";
 
         }
         private void PositionSelected(object sender, RoutedEventArgs e)
@@ -59,52 +60,59 @@ namespace UserInterface
             bool startingPositionSelected = firstChosenPosition != -1;
 
             if (((Button)sender).Name == "Throw")
-                    position = -1;
+                    position = 25;
             else
             {
                 position = Convert.ToInt32(((Button)sender).Name.Substring(1));
                 
                 if (game.GetPlayerColor() == Entities.Colors.Black())
-                    position = Math.Abs(position + 12) % 24;
+                    position = (position + 12) % 24;
             }
 
             if (startingPositionSelected)
             {
-                if (game.MoveConfirm(firstChosenPosition, position))
+                if (position == 25)
                 {
                     game.Move(firstChosenPosition, position);
                     firstChosenPosition = -1;
                     Refresh();
-
-                    if (game.CheckEndGame())
-                        EndGame();
-
-                    if (Throw.IsEnabled)
-                        HideThrowButton();
-
-                    if (!game.MovsAvalibleExist())
-                    {
-                        game.NewTurn();
-                        Refresh();
-                    }
+                    HideThrowButton();
                 }
+                else if (game.MoveConfirm(firstChosenPosition, position))
+                {
+                    game.Move(firstChosenPosition, position);
+                    firstChosenPosition = -1;
+                    Refresh();
+                }
+                else 
+                    return;
+
+                if (game.CheckEndGame())
+                {
+                    EndGame();
+                    return;
+                }
+
+                if (!game.MovsAvalibleExist())
+                {
+                    game.NewTurn();
+                    Refresh();
+                }
+                
             }
             else
             {
                 if (game.VerifyStartPosition(position))
                 {
                     firstChosenPosition = position;
-                    if (game.GetPlayerStatus())
+                    if (game.GetPositionEctability(position))
                         ShowThrowButton();
                 }
             }
         }
 
         private void CancelChoiсe(object sender, MouseButtonEventArgs e)
-        {
-            firstChosenPosition = -1;
-            //MessageBox.Show("Правая кнопка мыши нажата!");
-        }
+            => firstChosenPosition = -1;
         private void ShowThrowButton()
         {
             Throw.Visibility = Visibility.Visible;
@@ -115,7 +123,15 @@ namespace UserInterface
             Throw.Visibility = Visibility.Hidden;
             Throw.IsEnabled = false;
         }
-        private void EndGame() { }
+        private void EndGame()
+        {
+            MessageBox.Show($"Congratulations!\n{((game.GetPlayerColor() == Entities.Colors.White()) ?
+                ("White") : ("Black"))}" +
+                $" player win!");
+            game = new Game();
+            firstChosenPosition = -1;
+            Refresh();
+        }
     }
 }
 

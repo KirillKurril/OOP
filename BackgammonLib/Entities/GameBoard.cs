@@ -25,15 +25,8 @@ namespace BackgammonEntities
             get => blackField;
             private set => blackField = value;
         }
-        public List<Piece>? Pieces
-        {
-            get => pieсes;
-            private set => pieсes = value;
-        }
-        
         public GameBoard()
         {
-            Pieces = new List<Piece>();
 
             whiteField = new List<Cell>();
             for (int i = 0; i < 24; ++i)
@@ -52,11 +45,10 @@ namespace BackgammonEntities
             {
                 Piece whitePiece = new Piece(Colors.White());
                 Piece blackPiece = new Piece(Colors.Black());
-                Pieces.Add(whitePiece);
-                Pieces.Add(blackPiece);
                 whiteField[0].Push(whitePiece);
                 whiteField[12].Push(blackPiece);
             }
+
         }
     }
 }
