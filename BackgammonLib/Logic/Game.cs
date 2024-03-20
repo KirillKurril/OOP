@@ -88,34 +88,14 @@ namespace BackgammonLogic
         }
         public bool MoveConfirm(int source, int destinatioin)
         {
-            if (!curField[source].IsEmpty() && source < destinatioin)
-            {
-                if (GetLegalPositions(source, out List<int> avaliblePositions))
-                    return avaliblePositions.Contains(destinatioin);
-            }
-            return false;
-        }
-        private bool GetLegalPositions(int position, out List<int> avaliblePositions)
-        {
-            avaliblePositions = new List<int>();
+            if (destinatioin > 23)
+                return true;
 
-            List<int> potentialMoves = diceValues.Select(shiftPosition          //here must be move values
-                => shiftPosition + position).ToList(); 
-
-            foreach(var potentialDest in potentialMoves.Where(dest => dest < 24))
-            {
-                bool isFree = status[potentialDest] == 0;
-                bool capturedByFriendlyUnit = status[potentialDest] == curPlayer.Color;
-                if (isFree || capturedByFriendlyUnit)
-                    avaliblePositions.Add(potentialDest);
-            }
-
-            bool throwAway = potentialMoves.Any(potentialDest => potentialDest > 23);
-
-            if (throwAway)
-                avaliblePositions.Add(25);
-
-            return avaliblePositions.Count == 0 ? false : true;
+            bool moveForvard = source < destinatioin;
+            bool isFree = status[destinatioin] == 0;
+            bool capturedByFriendlyUnit = status[destinatioin] == curPlayer.Color;
+            
+            return (moveForvard && (isFree || capturedByFriendlyUnit));
         }
         public void Move(int source, int destination)
         {
@@ -137,7 +117,7 @@ namespace BackgammonLogic
         }
         private int ThrowOut(int position)
         {
-            var throwedPiece = curField[position].Pop();
+            curField[position].Pop();
             List<int> throwDices = diceValues.Where(diceValue => diceValue + position >= 24).ToList();
             int distance = throwDices.Min();
             return distance + position;

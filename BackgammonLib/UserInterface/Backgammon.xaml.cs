@@ -83,6 +83,8 @@ namespace UserInterface
                     game.Move(firstChosenPosition, position);
                     firstChosenPosition = -1;
                     Refresh();
+                    if (Throw.Visibility == Visibility.Visible)
+                        HideThrowButton();
                 }
                 else 
                     return;
