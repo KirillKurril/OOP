@@ -37,7 +37,7 @@ namespace BackgammonLogic
             players[1] = new Player(Colors.Black());
             curPlayer = players[0];
 
-            curField = board.whiteField;
+            curField = board.WhiteField;
 
             randomizer = new Random();
             moveValues = new List<int>();
@@ -54,8 +54,6 @@ namespace BackgammonLogic
 
             ReachedHomeRefresh();
         }
-
-
         public bool VerifyStartPosition(int startPosition)
         {
             bool potentialMovesExist = MovsAvalibleExist();
@@ -90,12 +88,12 @@ namespace BackgammonLogic
         {
             if (destinatioin > 23)
                 return true;
-
+            bool destExist = diceValues.Contains(destinatioin - source);          //must be move values
             bool moveForvard = source < destinatioin;
             bool isFree = status[destinatioin] == 0;
             bool capturedByFriendlyUnit = status[destinatioin] == curPlayer.Color;
             
-            return (moveForvard && (isFree || capturedByFriendlyUnit));
+            return (destExist && moveForvard && (isFree || capturedByFriendlyUnit));
         }
         public void Move(int source, int destination)
         {
@@ -124,20 +122,22 @@ namespace BackgammonLogic
         }
         public void NewTurn()
         {
-            hatsOffToYou = false;
-            curPlayer = curPlayer.Color == 1 ? players[1] : players[0];
-            curField = curField == board.BlackField ? board.WhiteField : board.BlackField;
-            StatusRefresh();
-            RollDices();
-            MoveValuesRefresh();
+            do
+            {
+                hatsOffToYou = false;
+                curPlayer = curPlayer.Color == 1 ? players[1] : players[0];
+                curField = curField == board.BlackField ? board.WhiteField : board.BlackField;
+                StatusRefresh();
+                RollDices();
+                MoveValuesRefresh();
+            } while (!MovsAvalibleExist());
+           
         }
-        
-        
         public List<(int, int)> GetDetailedReport()
         {
             List<(int, int)> report = new List<(int, int)>();
 
-            foreach (var cell in board.whiteField)
+            foreach (var cell in board.WhiteField)
                 report.Add((cell.GetColor(), cell.GetHeight()));
 
             return report;
@@ -147,15 +147,13 @@ namespace BackgammonLogic
         public bool GetPositionEctability(int position)
         {
             List<int> throwDices = diceValues.Where(diceValue => diceValue + position >= 24).ToList();
-            return throwDices.Count != 0;
+            return throwDices.Count != 0 && curPlayer.ReachedHome;
         }
         public int[] GetStatus() => status;
         public List<int> GetDiceValues() => diceValues;
         public int GetPlayerColor() => curPlayer.Color;
         public bool GetPlayerStatus() => curPlayer.ReachedHome;
         public int GetCurColor() => curPlayer.Color;
-
-
         void Refresh(int destination, int source, bool throwCase = false)
         {
             RemoveUsedDices(destination - source);

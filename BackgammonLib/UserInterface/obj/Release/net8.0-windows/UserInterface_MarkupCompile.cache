@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Uni\OOP\BackgammonLib\UserInterface\obj\Release\net8.0-windows\
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Release\net8.0-windows\
 UserInterface
 none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-D:\Uni\OOP\BackgammonLib\UserInterface\App.xaml
+C:\Uni\OOP\BackgammonLib\UserInterface\App.xaml
 5-192305613
 1-1935209953
 6-686322637
-200-589223799
+200-613813481
 Backgammon.xaml;MainWindow.xaml;Menu.xaml;Styles\BackgammonStyles.xaml;Styles\MenuStyles.xaml;
 
 False

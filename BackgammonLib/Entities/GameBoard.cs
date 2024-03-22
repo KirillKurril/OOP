@@ -10,8 +10,8 @@ namespace BackgammonEntities
     public class GameBoard
     {
 
-        public List<Cell> whiteField;
-        public List<Cell> blackField;
+        private List<Cell> whiteField;
+        private List<Cell> blackField;
 
         public List<Piece>? pieсes;
         public int Length = 24;
@@ -45,10 +45,9 @@ namespace BackgammonEntities
             {
                 Piece whitePiece = new Piece(Colors.White());
                 Piece blackPiece = new Piece(Colors.Black());
-                whiteField[20].Push(whitePiece);
-                whiteField[8].Push(blackPiece);
+                whiteField[0].Push(whitePiece);
+                whiteField[12].Push(blackPiece);
             }
-
         }
     }
 }

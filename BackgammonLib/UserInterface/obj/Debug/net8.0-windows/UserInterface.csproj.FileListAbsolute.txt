@@ -67,3 +67,4 @@ D:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.ge
 D:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterface.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInte.9C7395B8.Up2Date
 D:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_Content.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_Content.g.cs

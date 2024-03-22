@@ -46,23 +46,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Урфин-Джус\\.nuget\\packages\\": {},
+    "C:\\Users\\natak\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
       "projectName": "UserInterface",
-      "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-      "packagesPath": "C:\\Users\\Урфин-Джус\\.nuget\\packages\\",
-      "outputPath": "D:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
+      "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "packagesPath": "C:\\Users\\natak\\.nuget\\packages\\",
+      "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Урфин-Джус\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\natak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -78,11 +78,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
+            "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
             },
-            "D:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
-              "projectPath": "D:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
+            "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
             }
           }
         }
