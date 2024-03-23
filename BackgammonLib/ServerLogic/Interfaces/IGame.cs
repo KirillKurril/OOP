@@ -1,13 +1,15 @@
-﻿using Logic.Interfaces;
+﻿using BackgammonEntities;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logic.Entities
+namespace ServerLogic.Interfaces
 {
-    public class OnlineGame : IGame
+    public interface IGame
     {
+
     }
 }

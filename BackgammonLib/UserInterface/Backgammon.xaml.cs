@@ -20,12 +20,12 @@ namespace UserInterface
 {
     public partial class Backgammon : Page
     {
-        private Game game;
+        private OfflineGame game;
         int firstChosenPosition;
         public Backgammon()
         {
             InitializeComponent();
-            game = new Game();
+            game = new OfflineGame();
             firstChosenPosition = -1;
             Refresh();
         }
@@ -130,7 +130,7 @@ namespace UserInterface
             MessageBox.Show($"Congratulations!\n{((game.GetPlayerColor() == Entities.Colors.White()) ?
                 ("White") : ("Black"))}" +
                 $" player win!");
-            game = new Game();
+            game = new OfflineGame();
             firstChosenPosition = -1;
             Refresh();
         }

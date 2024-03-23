@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DqN/SoAsST4JAdQqqvX3BriSwOr8lUet6q1h5fjLvZqcQLEEgVkwtlJFwTVyhMqfI8tq/xoGFAma+pA9Pd1gyg==",
+  "dgSpecHash": "o3lT4nfCDh71dT4DKiMRlGxoM9HRX7ywyPjPNjbVI7M7LlONH2G1I+kihWxOtmFCZOHwpdjw5BzZyAfE0UpRAA==",
   "success": true,
   "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\natak\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

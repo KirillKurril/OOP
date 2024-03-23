@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yPcMnXMu9KNgvj/p6BHdSxf4ximZ7P2M65Fsoz22R058ElzvjmVOms6Me70wvbXjtZVZXGKpJeiK+Eq0wGutLw==",
+  "success": true,
+  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\ServerLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\natak\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -3,68 +3,56 @@
   "WorkspaceRootPath": "C:\\Uni\\OOP\\BackgammonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\entities\\offlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\entities\\offlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|c:\\uni\\oop\\backgammonlib\\serverlogic\\services\\onlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|solutionrelative:serverlogic\\services\\onlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\entities\\onlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\entities\\onlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\services\\communicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|solutionrelative:logic\\services\\communicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\logic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\logic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\services\\moveverifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|solutionrelative:logic\\services\\moveverifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\gamestatusdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\gamestatusdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\interfaces\\inetworkconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\interfaces\\inetworkconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|c:\\uni\\oop\\backgammonlib\\serverlogic\\services\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|solutionrelative:serverlogic\\services\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\\u0441lientlogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\\u0421lientLogic.csproj|solutionrelative:logic\\\u0441lientlogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\entities\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\entities\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|c:\\uni\\oop\\backgammonlib\\serverlogic\\serverlogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|solutionrelative:serverlogic\\serverlogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\network.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\network.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\entities\\networkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\entities\\networkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\backgammon.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\backgammon.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|c:\\uni\\oop\\backgammonlib\\network\\entities\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5385C35E-3591-4B7A-A088-1A4AF05F3253}|Network\\Network.csproj|solutionrelative:network\\entities\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|c:\\uni\\oop\\backgammonlib\\serverlogic\\services\\offlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|solutionrelative:serverlogic\\services\\offlinegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\userinterface.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\userinterface.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\userinterface.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\userinterface.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|c:\\uni\\oop\\backgammonlib\\serverlogic\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07D5F448-F768-4132-899C-DE0868B22D71}|ServerLogic\\ServerLogic.csproj|solutionrelative:serverlogic\\interfaces\\igame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,85 +61,33 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 124,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OfflineGame.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\OfflineGame.cs",
-              "RelativeDocumentMoniker": "Logic\\Entities\\OfflineGame.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\OfflineGame.cs",
-              "RelativeToolTip": "Logic\\Entities\\OfflineGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T19:00:46.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OnlineGame.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\OnlineGame.cs",
-              "RelativeDocumentMoniker": "Logic\\Entities\\OnlineGame.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\OnlineGame.cs",
-              "RelativeToolTip": "Logic\\Entities\\OnlineGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T19:00:14.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IGame.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Interfaces\\IGame.cs",
-              "RelativeDocumentMoniker": "Logic\\Interfaces\\IGame.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Interfaces\\IGame.cs",
-              "RelativeToolTip": "Logic\\Interfaces\\IGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:58:49.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Logic",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj",
-              "RelativeDocumentMoniker": "Logic\\Logic.csproj",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj",
-              "RelativeToolTip": "Logic\\Logic.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-23T18:57:55.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "INetworkConnection.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Interfaces\\INetworkConnection.cs",
-              "RelativeDocumentMoniker": "Network\\Interfaces\\INetworkConnection.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Interfaces\\INetworkConnection.cs",
-              "RelativeToolTip": "Network\\Interfaces\\INetworkConnection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAcAAAA",
+              "Title": "MoveVerifier.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Services\\MoveVerifier.cs",
+              "RelativeDocumentMoniker": "Logic\\Services\\MoveVerifier.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Services\\MoveVerifier.cs",
+              "RelativeToolTip": "Logic\\Services\\MoveVerifier.cs",
+              "ViewState": "AQIAABUAAACgmZmZmZkhwCAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:56:06.01Z",
+              "WhenOpened": "2024-03-23T20:27:56.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Network",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Network.csproj",
-              "RelativeDocumentMoniker": "Network\\Network.csproj",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Network.csproj",
-              "RelativeToolTip": "Network\\Network.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-23T18:37:40.38Z",
+              "DocumentIndex": 0,
+              "Title": "OnlineGame.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\OnlineGame.cs",
+              "RelativeDocumentMoniker": "ServerLogic\\Services\\OnlineGame.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\OnlineGame.cs",
+              "RelativeToolTip": "ServerLogic\\Services\\OnlineGame.cs",
+              "ViewState": "AQIAABMAAACAzMzMzMwrwCIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T22:04:39.458Z",
               "EditorCaption": ""
             },
             {
@@ -162,122 +98,139 @@
               "RelativeDocumentMoniker": "Network\\Entities\\Client.cs",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\Client.cs",
               "RelativeToolTip": "Network\\Entities\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
+              "ViewState": "AQIAAAsAAABAAAAAAAAQwBAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:40:12.581Z",
+              "WhenOpened": "2024-03-23T21:19:04.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommunicationManager.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Services\\CommunicationManager.cs",
+              "RelativeDocumentMoniker": "Logic\\Services\\CommunicationManager.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Services\\CommunicationManager.cs",
+              "RelativeToolTip": "Logic\\Services\\CommunicationManager.cs",
+              "ViewState": "AQIAABMAAADAzMzMzMwQwBYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T21:02:48.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameStatusData.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameStatusData.cs",
+              "RelativeDocumentMoniker": "Entities\\GameStatusData.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameStatusData.cs",
+              "RelativeToolTip": "Entities\\GameStatusData.cs",
+              "ViewState": "AQIAAAYAAAAwMzMzMzMjwBAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T22:46:27.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\Game.cs",
+              "RelativeDocumentMoniker": "ServerLogic\\Services\\Game.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\Game.cs",
+              "RelativeToolTip": "ServerLogic\\Services\\Game.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAjwIgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T21:51:48.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "\u0421lientLogic.csproj",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\\u0421lientLogic.csproj",
+              "RelativeDocumentMoniker": "Logic\\\u0421lientLogic.csproj",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\\u0421lientLogic.csproj",
+              "RelativeToolTip": "Logic\\\u0421lientLogic.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-23T21:23:45.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Network",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Network.csproj",
+              "RelativeDocumentMoniker": "Network\\Network.csproj",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Network.csproj",
+              "RelativeToolTip": "Network\\Network.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-23T21:25:46.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\Server.cs",
-              "RelativeDocumentMoniker": "Network\\Entities\\Server.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\Server.cs",
-              "RelativeToolTip": "Network\\Entities\\Server.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:39:54.651Z",
+              "Title": "ServerLogic",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\ServerLogic.csproj",
+              "RelativeDocumentMoniker": "ServerLogic\\ServerLogic.csproj",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\ServerLogic.csproj",
+              "RelativeToolTip": "ServerLogic\\ServerLogic.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-23T21:47:50.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "NetworkService.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\NetworkService.cs",
-              "RelativeDocumentMoniker": "Network\\Entities\\NetworkService.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\NetworkService.cs",
-              "RelativeToolTip": "Network\\Entities\\NetworkService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:39:40.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GameBoard.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameBoard.cs",
-              "RelativeDocumentMoniker": "Entities\\GameBoard.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameBoard.cs",
-              "RelativeToolTip": "Entities\\GameBoard.cs",
-              "ViewState": "AQIAAAoAAAAAmZmZmZn5vw0AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T16:18:22.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\Game.cs",
-              "RelativeDocumentMoniker": "Logic\\Entities\\Game.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\Game.cs",
-              "RelativeToolTip": "Logic\\Entities\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T19:10:05.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserInterface.csproj",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-              "RelativeDocumentMoniker": "UserInterface\\UserInterface.csproj",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-              "RelativeToolTip": "UserInterface\\UserInterface.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-19T15:04:02.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Cell.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Cell.cs",
-              "RelativeDocumentMoniker": "Entities\\Cell.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Cell.cs",
-              "RelativeToolTip": "Entities\\Cell.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAADgvxEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T16:16:37.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Player.cs",
               "RelativeDocumentMoniker": "Entities\\Player.cs",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Player.cs",
               "RelativeToolTip": "Entities\\Player.cs",
-              "ViewState": "AQIAAA4AAABAMzMzMzMgwBkAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T20:19:50.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Backgammon.xaml.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Backgammon.xaml.cs",
-              "RelativeDocumentMoniker": "UserInterface\\Backgammon.xaml.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Backgammon.xaml.cs",
-              "RelativeToolTip": "UserInterface\\Backgammon.xaml.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAawEsAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T08:32:51.833Z",
+              "WhenOpened": "2024-03-23T22:38:53.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserInterface",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-              "RelativeDocumentMoniker": "UserInterface\\UserInterface.csproj",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-              "RelativeToolTip": "UserInterface\\UserInterface.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-19T15:49:22.382Z",
+              "DocumentIndex": 10,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\Server.cs",
+              "RelativeDocumentMoniker": "Network\\Entities\\Server.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Network\\Entities\\Server.cs",
+              "RelativeToolTip": "Network\\Entities\\Server.cs",
+              "ViewState": "AQIAAAkAAABgZmZmZmYkwA8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T21:19:33.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OfflineGame.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\OfflineGame.cs",
+              "RelativeDocumentMoniker": "ServerLogic\\Services\\OfflineGame.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Services\\OfflineGame.cs",
+              "RelativeToolTip": "ServerLogic\\Services\\OfflineGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T22:04:28.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IGame.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Interfaces\\IGame.cs",
+              "RelativeDocumentMoniker": "ServerLogic\\Interfaces\\IGame.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\ServerLogic\\Interfaces\\IGame.cs",
+              "RelativeToolTip": "ServerLogic\\Interfaces\\IGame.cs",
+              "ViewState": "AQIAAAAAAABgZmZmZmYkwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T22:03:37.256Z",
               "EditorCaption": ""
             }
           ]

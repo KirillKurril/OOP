@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
-using BackgammonEntities;
+using ServerLogic.Interfaces;
 using Entities;
+using BackgammonEntities;
 
-
-namespace Logic.Entities
+namespace ServerLogic.Services
 {
-    public class Game
+    public class OnlineGame : IGame
     {
+
         private Player curPlayer;
         private Player[] players;
         private List<Cell> curField;
@@ -26,9 +22,10 @@ namespace Logic.Entities
         private List<int> moveValues;   //доступные ходы
 
         private bool hatsOffToYou;
+
         private int movesCounter;
 
-        public Game()
+        public OnlineGame()
         {
             board = new GameBoard();
 
@@ -53,47 +50,6 @@ namespace Logic.Entities
             MoveValuesRefresh();
 
             ReachedHomeRefresh();
-        }
-        public bool VerifyStartPosition(int startPosition)
-        {
-            bool potentialMovesExist = MovsAvalibleExist();
-            bool rigthColor = status[startPosition] == curPlayer.Color;
-            bool headless = !(hatsOffToYou && startPosition == 0);
-
-            return potentialMovesExist && rigthColor && headless;
-        }
-        public bool MovsAvalibleExist()
-        {
-            if (diceValues.Count > 0)
-            {
-                List<int> monitoredPositions = GetMonitoredPositions();
-
-                if (hatsOffToYou && monitoredPositions.Contains(0))
-                    monitoredPositions.Remove(0);
-
-                return monitoredPositions.Any(position
-                    => diceValues.Any(shift => MoveConfirm(position, position + shift)));      //here must be move values
-            }
-            return false;
-        }
-        private List<int> GetMonitoredPositions()
-        {
-            List<int> positions = new List<int>();
-            for (int i = 0; i < curField.Count; ++i)
-                if (curField[i].GetColor() == curPlayer.Color)
-                    positions.Add(i);
-            return positions;
-        }
-        public bool MoveConfirm(int source, int destinatioin)
-        {
-            if (destinatioin > 23)
-                return true;
-            bool destExist = diceValues.Contains(destinatioin - source);          //must be move values
-            bool moveForvard = source < destinatioin;
-            bool isFree = status[destinatioin] == 0;
-            bool capturedByFriendlyUnit = status[destinatioin] == curPlayer.Color;
-
-            return destExist && moveForvard && (isFree || capturedByFriendlyUnit);
         }
         public void Move(int source, int destination)
         {
@@ -122,15 +78,15 @@ namespace Logic.Entities
         }
         public void NewTurn()
         {
-            do
-            {
+            //do
+            //{
                 hatsOffToYou = false;
                 curPlayer = curPlayer.Color == 1 ? players[1] : players[0];
                 curField = curField == board.BlackField ? board.WhiteField : board.BlackField;
                 StatusRefresh();
                 RollDices();
                 MoveValuesRefresh();
-            } while (!MovsAvalibleExist());
+            //} while (!MovsAvalibleExist());
 
         }
         public List<(int, int)> GetDetailedReport()
@@ -214,6 +170,5 @@ namespace Logic.Entities
             else
                 diceValues.Remove(moveModul);
         }
-
     }
 }
