@@ -1,0 +1,13 @@
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.AssemblyInfoInputs.cache
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.AssemblyInfo.cs
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.csproj.CoreCompileInputs.cache
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.sourcelink.json
+C:\Uni\OOP\BackgammonLib\Network\Сlient\bin\Debug\net8.0\Сlient.deps.json
+C:\Uni\OOP\BackgammonLib\Network\Сlient\bin\Debug\net8.0\Сlient.dll
+C:\Uni\OOP\BackgammonLib\Network\Сlient\bin\Debug\net8.0\Сlient.pdb
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.dll
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\refint\Сlient.dll
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\Сlient.pdb
+C:\Uni\OOP\BackgammonLib\Network\Сlient\obj\Debug\net8.0\ref\Сlient.dll

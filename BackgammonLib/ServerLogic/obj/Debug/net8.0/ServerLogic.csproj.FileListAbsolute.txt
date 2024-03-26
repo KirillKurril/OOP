@@ -1,0 +1,16 @@
+C:\Uni\OOP\BackgammonLib\ServerLogic\bin\Debug\net8.0\ServerLogic.deps.json
+C:\Uni\OOP\BackgammonLib\ServerLogic\bin\Debug\net8.0\ServerLogic.dll
+C:\Uni\OOP\BackgammonLib\ServerLogic\bin\Debug\net8.0\ServerLogic.pdb
+C:\Uni\OOP\BackgammonLib\ServerLogic\bin\Debug\net8.0\Entities.dll
+C:\Uni\OOP\BackgammonLib\ServerLogic\bin\Debug\net8.0\Entities.pdb
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.AssemblyInfoInputs.cache
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.AssemblyInfo.cs
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.csproj.CoreCompileInputs.cache
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.sourcelink.json
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLo.D022E501.Up2Date
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.dll
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\refint\ServerLogic.dll
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ServerLogic.pdb
+C:\Uni\OOP\BackgammonLib\ServerLogic\obj\Debug\net8.0\ref\ServerLogic.dll

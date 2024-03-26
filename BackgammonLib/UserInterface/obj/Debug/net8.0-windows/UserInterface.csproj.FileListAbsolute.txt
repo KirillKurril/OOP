@@ -27,9 +27,7 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MenuStyle
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.dll
-C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.pdb
-C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.csproj.AssemblyReference.cache
 D:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.exe
 D:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.deps.json
@@ -68,3 +66,13 @@ D:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterfac
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInte.9C7395B8.Up2Date
 D:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_Content.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_Content.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Network.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\ServerLogic.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\СlientLogic.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\СlientLogic.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Network.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\ServerLogic.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\ConnectionInitStyles.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ConnectionInit.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ConnectionInit.baml

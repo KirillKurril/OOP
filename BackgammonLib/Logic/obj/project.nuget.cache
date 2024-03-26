@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XRvyscRU3z+PWiDZtykam7HHooc3EZYd4fNV3q6Bf3CK4DTiINm5KJrgmXnZzp5PanOINO0WtX9j/3ol9c3jvg==",
+  "dgSpecHash": "M6XC7ex3wLUgQsAcLPQYgAKrCg4/+EdXWogHiry2/FS4bseahH0K/C4OpphWqDVMmj4HQvh7ydAxlbvhPUo2/A==",
   "success": true,
-  "projectFilePath": "E:\\Uni\\OOP\\BackgammonLib\\Logic\\СlientLogic.csproj",
+  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\СlientLogic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Джузеппе\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

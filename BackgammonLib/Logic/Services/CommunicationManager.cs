@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Entities;
-using Network.Entities;
+using Network.Services;
 using Newtonsoft.Json;
 
 namespace ClientLogic.Services
@@ -24,11 +24,11 @@ namespace ClientLogic.Services
 
         public CommunicationManager(string ip, int port, bool onePlayerOnly)
         {
-            client = new Client(ip, port);
+            /*client = new Client(ip, port);
             OnePlayerOnly = onePlayerOnly;
-            string json = client.Get();
+            string json = client.GetResponse();
             var gameData = JsonConvert.DeserializeObject<GameStatusData>(json);
-            Refresh(gameData);
+            Refresh(gameData);*/
         }
         private void Refresh(GameStatusData gameData)
         {
@@ -43,4 +43,3 @@ namespace ClientLogic.Services
 
         
     }
-}

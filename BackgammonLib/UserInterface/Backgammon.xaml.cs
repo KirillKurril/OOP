@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Entities;
-using Logic.Entities;
+using ServerLogic.Services;
 
 namespace UserInterface
 {
@@ -134,6 +134,12 @@ namespace UserInterface
             firstChosenPosition = -1;
             Refresh();
         }
+
+        void LockField()
+            => Field.IsEnabled = false;
+
+        void UnlockField()
+            => Field.IsEnabled = true;
     }
 }
 

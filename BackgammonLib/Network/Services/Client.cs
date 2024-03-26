@@ -13,31 +13,14 @@ using Newtonsoft.Json;
 
 namespace Network.Services
 {
-    public class Client
+    public class Clientus
     {
         private int Port;
         private string IP;
-        private TcpClient? client;
         private NetworkStream? stream;
-        public Client(string ip = "127.0.0.1", int port = 1234) 
+        public Clientus(string ip = "127.0.0.1", int port = 1234) 
             => (IP, Port) = (ip, port);
 
-        public async Task<bool> Connect()
-        {
-            try
-            {
-                client = new TcpClient();
-                await client.ConnectAsync(IP, Port);
-                stream = client.GetStream();
-                Debug.WriteLine("Connected to the server.");
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error: " + ex.Message);
-                return false;
-            }
-            return true;
-        }
         public async Task<bool> SendMove(string json)
         {
             try
@@ -75,7 +58,6 @@ namespace Network.Services
         public void Disconnect()
         {
             stream.Close();
-            client.Close();
             Debug.WriteLine("Connection closed.");
         }
        
@@ -86,6 +68,6 @@ namespace Network.Services
 //Вставить в клиент 
 /*protected override void OnClosing(CancelEventArgs e)
 {
-    client.CloseConnection();
+    Clientus.CloseConnection();
     base.OnClosing(e);
 }*/

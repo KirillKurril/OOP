@@ -38,7 +38,7 @@
                      FontSize="14"
                      Foreground="Azure"
                      Text="aboba"/>
-            <Grid Grid.Column="1">
+            <Grid x:Name="Field" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
