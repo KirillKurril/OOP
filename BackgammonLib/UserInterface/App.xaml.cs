@@ -4,37 +4,39 @@ using System;
 using UserInterface;
 using System.Windows;
 using System.Windows.Markup;
-public partial class App : Application
+
+namespace UserInterface
 {
-    private readonly IHost _host;
-
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public App()
+    public partial class App : Application
     {
-        _host = Host.CreateDefaultBuilder()
-        .ConfigureServices((services) =>
+        private readonly IHost _host;
+
+        public App()
         {
-            services.AddSingleton<MainWindow>();
-        })
-        .Build();
-    }
-    protected override void OnStartup(StartupEventArgs e)
-    {
-        _host.Start();
+            _host = Host.CreateDefaultBuilder()
+            .ConfigureServices((services) =>
+            {
+                services.AddSingleton<MainWindow>();
+                
+            })
+            .Build();
+        }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            _host.Start();
 
-        MainWindow = _host.Services.GetRequiredService<MainWindow>();
-        MainWindow.Show();
+            MainWindow = _host.Services.GetRequiredService<MainWindow>();
+            MainWindow.Show();
 
-        base.OnStartup(e);
-    }
+            base.OnStartup(e);
+        }
 
-    protected override void OnExit(ExitEventArgs e)
-    {
-        _host.StopAsync().GetAwaiter().GetResult();
-        _host.Dispose();
+        protected override void OnExit(ExitEventArgs e)
+        {
+            _host.StopAsync().GetAwaiter().GetResult();
+            _host.Dispose();
 
-        base.OnExit(e);
+            base.OnExit(e);
+        }
     }
 }
