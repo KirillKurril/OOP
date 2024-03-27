@@ -25,9 +25,9 @@ namespace UserInterface
         public ConnectionInit()
         {
             InitializeComponent();
-            client = new Client("https://localhost:7250");
+            client = new Client("https://localhost:7250/game");
             client.ConnectionStatusEvent += ConnectionStatus;
-            InitializeAsync().Wait();
+            client.Connect().Wait();
         }
 
         private async Task InitializeAsync()

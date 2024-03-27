@@ -6,9 +6,10 @@ namespace Network.Services.Server
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
-            #region ��������� ������� SignalR
+            #region Настройка сервиса SignalR
             builder.Services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -16,20 +17,20 @@ namespace Network.Services.Server
             });
             builder.Services.AddCors();
             builder.Services.AddSignalR();
-            #endregion ��������� ������� SignalR
+            #endregion Настройка сервиса SignalR
 
 
             var app = builder.Build();
 
-            #region ������������� ������� SignalR
+            #region Использование сервиса SignalR
             app.UseResponseCompression();
             app.UseCors(opt => opt
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowAnyOrigin());
 
-            app.MapHub<GameHub>("/chat");
-            #endregion ������������� ������� SignalR
+            app.MapHub<GameHub>("/game");
+            #endregion Использование сервиса SignalR
 
 
             app.MapGet("/", () => "Hello World!");

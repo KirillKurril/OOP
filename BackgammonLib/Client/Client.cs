@@ -7,8 +7,8 @@ namespace Network.Services.Client
 {
     public class Client
     {
-        private string URL;
-        private HubConnection hubConnection;
+        public string URL;
+        public HubConnection hubConnection;
 
         public delegate GameStatusData ReceiveGameStatusDelegate(object sender, GameStatusData e);
         public event ReceiveGameStatusDelegate ReceiveGameStatusEvent;
