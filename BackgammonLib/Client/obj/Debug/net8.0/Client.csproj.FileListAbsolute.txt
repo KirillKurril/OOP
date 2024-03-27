@@ -1,0 +1,16 @@
+C:\Uni\OOP\BackgammonLib\Client\bin\Debug\net8.0\Client.deps.json
+C:\Uni\OOP\BackgammonLib\Client\bin\Debug\net8.0\Client.dll
+C:\Uni\OOP\BackgammonLib\Client\bin\Debug\net8.0\Client.pdb
+C:\Uni\OOP\BackgammonLib\Client\bin\Debug\net8.0\Entities.dll
+C:\Uni\OOP\BackgammonLib\Client\bin\Debug\net8.0\Entities.pdb
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.AssemblyInfoInputs.cache
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.AssemblyInfo.cs
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.csproj.CoreCompileInputs.cache
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.sourcelink.json
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.csproj.Up2Date
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.dll
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\refint\Client.dll
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\Client.pdb
+C:\Uni\OOP\BackgammonLib\Client\obj\Debug\net8.0\ref\Client.dll

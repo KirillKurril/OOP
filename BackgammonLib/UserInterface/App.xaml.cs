@@ -17,7 +17,6 @@ namespace UserInterface
             .ConfigureServices((services) =>
             {
                 services.AddSingleton<MainWindow>();
-                
             })
             .Build();
         }

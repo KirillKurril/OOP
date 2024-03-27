@@ -8,7 +8,7 @@ namespace Network.Services.Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            #region Настройка сервиса SignalR
+            #region пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ SignalR
             builder.Services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -16,12 +16,12 @@ namespace Network.Services.Server
             });
             builder.Services.AddCors();
             builder.Services.AddSignalR();
-            #endregion Настройка сервиса SignalR
+            #endregion пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ SignalR
 
 
             var app = builder.Build();
 
-            #region Использование сервиса SignalR
+            #region пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ SignalR
             app.UseResponseCompression();
             app.UseCors(opt => opt
             .AllowAnyHeader()
@@ -29,7 +29,7 @@ namespace Network.Services.Server
             .AllowAnyOrigin());
 
             app.MapHub<GameHub>("/chat");
-            #endregion Использование сервиса SignalR
+            #endregion пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ SignalR
 
 
             app.MapGet("/", () => "Hello World!");

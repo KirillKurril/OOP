@@ -34,7 +34,9 @@
                     Style="{StaticResource MenuButton}"
                     Click="GoToBackgammon"/>
             <Button Grid.Row="2" Content="Анекдоты" Style="{StaticResource MenuButton}"/>
-            <Button Grid.Row="4" Content="Киндзмараули" Style="{StaticResource MenuButton}"/>
+            <Button Grid.Row="4" Content="Киндзмараули" 
+                    Style="{StaticResource MenuButton}"
+                    Click="GoToNetworkGame"/>
         </Grid>
     </Grid>
 </Page>

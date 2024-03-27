@@ -8,17 +8,20 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserInterface", "UserInterface\UserInterface.csproj", "{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9AC99EF2-BB14-4D95-AAD7-A098A0846409} = {9AC99EF2-BB14-4D95-AAD7-A098A0846409}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{E77F9473-2C8F-40E1-A255-E330E49EF3D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F05124DC-F538-443D-8659-0D513E4A3BCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4} = {454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{9AC99EF2-BB14-4D95-AAD7-A098A0846409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{9AC99EF2-BB14-4D95-AAD7-A098A0846409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

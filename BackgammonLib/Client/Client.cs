@@ -16,6 +16,9 @@ namespace Network.Services.Client
         public delegate bool CreateRoomResponseDelegate(object sender, bool answer, string message);
         public event CreateRoomResponseDelegate CreateRoomResponseEvent;
         public event CreateRoomResponseDelegate JoinRoomResponseEvent;
+
+        public delegate void ConnectionStatusDelegate(object sender, string status);
+        public event ConnectionStatusDelegate ConnectionStatusEvent;    
         public Client(string url)
         {
             URL = url;
@@ -27,7 +30,20 @@ namespace Network.Services.Client
             hubConnection = new HubConnectionBuilder()
                 .WithUrl(URL)
                 .Build();
-            await hubConnection.StartAsync();
+            try
+            {
+                await hubConnection.StartAsync();
+                if (hubConnection.State == HubConnectionState.Connected)
+                    ConnectionStatusEvent?.Invoke(this, "Подключение выполнено успешно");
+                else
+                    ConnectionStatusEvent?.Invoke(this, "Ошибка сраки");
+            }
+            catch (Exception ex)
+            {
+                // Обработка ошибки соединения
+                Console.WriteLine($"Connection error: {ex.Message}");
+            }
+
 
 
             hubConnection.On<GameStatusData>("ReceiveGameStatus", (GameStatusData data) =>

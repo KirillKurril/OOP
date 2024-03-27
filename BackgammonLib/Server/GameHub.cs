@@ -8,7 +8,6 @@ namespace Network.Services.Server
     public class GameHub : Hub
     {
         NetGame game;
-        //List<Room> rooms;
         Dictionary<string, List<string>> rooms;
         GameHub()
             => game = new NetGame();

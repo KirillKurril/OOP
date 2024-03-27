@@ -10,12 +10,18 @@
     <Compile Update="Backgammon.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ConnectionInit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Backgammon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ConnectionInit.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -25,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\BackgammonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ConnectionInitStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\MenuStyles.xaml">

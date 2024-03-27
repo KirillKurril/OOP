@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sprites\DialogWindow.png" />
+    <None Remove="Sprites\empty_field.png" />
     <None Remove="Sprites\field.png" />
     <None Remove="Sprites\MainPage.png" />
   </ItemGroup>
@@ -19,11 +21,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Client\Client.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
     <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Sprites\DialogWindow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\empty_field.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Sprites\field.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -28,5 +28,9 @@ namespace UserInterface
         {
             NavigationService.Navigate(new Uri("Backgammon.xaml", UriKind.Relative));
         }
+        public void GoToNetworkGame(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("ConnectionInit.xaml", UriKind.Relative));
+        }
     }
 }
