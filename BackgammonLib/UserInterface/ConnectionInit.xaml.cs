@@ -25,16 +25,14 @@ namespace UserInterface
         public ConnectionInit()
         {
             InitializeComponent();
-            InitializeAsync().Wait();
             client = new Client("https://localhost:7250");
             client.ConnectionStatusEvent += ConnectionStatus;
+            InitializeAsync().Wait();
         }
 
         private async Task InitializeAsync()
         {
-            // Асинхронные операции
-            await Task.Delay(1000);
-            Console.WriteLine("Initialization complete");
+            await client.Connect();
         }
 
 
