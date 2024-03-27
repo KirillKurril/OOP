@@ -9,23 +9,19 @@ namespace Network.Services.Client
     {
         private string URL;
         private HubConnection hubConnection;
-        HubEventHandler hubEventHandler;
 
-        public class HubEventHandler
-        {
-            public event EventHandler<string> MessageReceived;
+        public delegate GameStatusData ReceiveGameStatusDelegate(object sender, GameStatusData e);
+        public event ReceiveGameStatusDelegate ReceiveGameStatusEvent;
 
-            public void OnMessageReceived(string message)
-            {
-                MessageReceived?.Invoke(this, message);
-            }
-        }
-
+        public delegate bool CreateRoomResponseDelegate(object sender, bool answer, string message);
+        public event CreateRoomResponseDelegate CreateRoomResponseEvent;
+        public event CreateRoomResponseDelegate JoinRoomResponseEvent;
         public Client(string url)
         {
             URL = url;
-            hubEventHandler = new MyHubEventHandler();
         }
+
+
         public async Task Connect()
         {
             hubConnection = new HubConnectionBuilder()
@@ -33,49 +29,40 @@ namespace Network.Services.Client
                 .Build();
             await hubConnection.StartAsync();
 
-            hubConnection.On<string>(string gameData) =>
+
+            hubConnection.On<GameStatusData>("ReceiveGameStatus", (GameStatusData data) =>
             {
-                hubEventHandler.OnMessageReceived(message);
-            }
+                ReceiveGameStatusEvent?.Invoke(this, data); 
+            });
+
+            hubConnection.On<bool, string>("MakeRoomAnswer", (bool createdSuccessfully, string message) =>
+            {
+                CreateRoomResponseEvent?.Invoke(this, createdSuccessfully, message);
+            });
+
+            hubConnection.On<bool, string>("JoinRoomAnswer", (bool joinedSuccessfully, string message) =>
+            {
+                CreateRoomResponseEvent?.Invoke(this, joinedSuccessfully, message);
+            });
         }
+
 
         public async Task MoveRequest(string request)
         {
-            await hubConnection.SendAsync("MoveRequest", request);
+            await hubConnection.InvokeAsync("MoveRequest", request);
         }
 
-        public async Task StartAsync()
+        public async Task MakeRoom(string roomName)
         {
-            hubConnection = new HubConnectionBuilder()
-                .WithUrl(URL)
-                .Build();
-
-            hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
-            {
-                Console.WriteLine($"{user}: {message}");
-            });
-
-            await hubConnection.StartAsync();
-
-            Console.WriteLine("Ваше имя?");
-            var name = Console.ReadLine();
-
-            while (true)
-            {
-                Console.Write("---> ");
-                var message = Console.ReadLine();
-                await hubConnection.InvokeAsync("SendMessage", message, name);
-            }
+            await hubConnection.InvokeAsync("MakeRoomRequest", roomName);
         }
-
-        public async Task SendMessageAsync(string message, string name)
+        public async Task JoinRoom(string roomName)
         {
-            await hubConnection.InvokeAsync("SendMessage", message, name);
+            await hubConnection.InvokeAsync("JoinRoomRequest", roomName);
         }
-
-        public GameStatusData ReceiveGameStatus(string message)
+        public async Task LeaveRoom(string roomName)
         {
-
+            await hubConnection.InvokeAsync("LeaveRoom");
         }
     }
 }
