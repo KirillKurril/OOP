@@ -2,28 +2,26 @@
 using System.Threading.Tasks;
 using Entities;
 using Microsoft.AspNetCore.SignalR.Client;
+using Network.Interfaces;
 
 namespace Network.Services.Client
 {
-    public class Client
+    public class Client : IClient
     {
         public string URL;
         public HubConnection hubConnection;
 
-        public delegate GameStatusData ReceiveGameStatusDelegate(object sender, GameStatusData e);
-        public event ReceiveGameStatusDelegate ReceiveGameStatusEvent;
+        public delegate void ReceiveGameStatusDelegate(object sender, GameStatusData data);
+        public delegate void CreateRoomResponseDelegate(object sender, bool answer, string message);
+        public delegate void ConnectionStatusDelegate(object sender, string status);
 
-        public delegate bool CreateRoomResponseDelegate(object sender, bool answer, string message);
+        public event ReceiveGameStatusDelegate ReceiveGameStatusEvent;
         public event CreateRoomResponseDelegate CreateRoomResponseEvent;
         public event CreateRoomResponseDelegate JoinRoomResponseEvent;
-
-        public delegate void ConnectionStatusDelegate(object sender, string status);
         public event ConnectionStatusDelegate ConnectionStatusEvent;    
-        public Client(string url)
-        {
-            URL = url;
-        }
-
+        public Client() { }
+        public void SetURL(string url)
+            => URL = url;
 
         public async Task Connect()
         {
@@ -40,7 +38,6 @@ namespace Network.Services.Client
             }
             catch (Exception ex)
             {
-                // Обработка ошибки соединения
                 Console.WriteLine($"Connection error: {ex.Message}");
             }
 
@@ -68,15 +65,15 @@ namespace Network.Services.Client
             await hubConnection.InvokeAsync("MoveRequest", request);
         }
 
-        public async Task MakeRoom(string roomName)
+        public async Task CreateRoom(string roomName)
         {
-            await hubConnection.InvokeAsync("MakeRoomRequest", roomName);
+            await hubConnection.InvokeAsync("CreateRoomRequest", roomName);
         }
         public async Task JoinRoom(string roomName)
         {
             await hubConnection.InvokeAsync("JoinRoomRequest", roomName);
         }
-        public async Task LeaveRoom(string roomName)
+        public async Task LeaveRoom()
         {
             await hubConnection.InvokeAsync("LeaveRoom");
         }

@@ -1,6 +1,9 @@
-﻿using Network.Services.Client;
+﻿using Network.Interfaces;
+using Network.Services.Client;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,55 +24,83 @@ namespace UserInterface
     /// </summary>
     public partial class ConnectionInit : Page
     {
-        Client client;
-        public ConnectionInit()
+        IClient client;
+        public ObservableCollection<object> DialogWindowElements { get; set; }
+        public ConnectionInit(IClient client)
         {
+            DialogWindowElements = new ObservableCollection<object>();
             InitializeComponent();
-            client = new Client("https://localhost:7250/game");
-            client.ConnectionStatusEvent += ConnectionStatus;
-            client.Connect().Wait();
+            this.client = client;
+            this.client.SetURL("https://localhost:7250/game");
+            this.client.ConnectionStatusEvent += ConnectionStatus;
+            this.client.CreateRoomResponseEvent += RoomConnectionHandler;
+            Task.Run(() => client.Connect());
         }
-
-        private async Task InitializeAsync()
-        {
-            await client.Connect();
-        }
-
-
-        public void CreateRoom(object sender, RoutedEventArgs e)
-        {
-            DialogWindow.Children.Clear();
-            var textBox = new TextBox();
-            textBox.Style = (Style)FindResource("RoomName");
-            Grid.SetRow(textBox, 0);
-            DialogWindow.Children.Add(textBox);
-
-            var ConfimButton = new Button();
-            ConfimButton.Style = (Style)FindResource("DialogButton");
-            ConfimButton.Content = "Подтвердить";
-            Grid.SetRow(ConfimButton, 1);
-            DialogWindow.Children.Add(ConfimButton);
-
-            //await client.Connect();
-        }
-        public void JoinRoom(object sender, RoutedEventArgs e)
-        {
-            DialogWindow.Children.Clear();
-            var textBox = new TextBox();
-            textBox.Style = (Style)FindResource("RoomName");
-            Grid.SetRow(textBox, 0);
-            DialogWindow.Children.Add(textBox);
-
-            var ConfimButton = new Button();
-            ConfimButton.Style = (Style)FindResource("DialogButton");
-            ConfimButton.Content = "Подтвердить";
-            Grid.SetRow(ConfimButton, 1);
-            DialogWindow.Children.Add(ConfimButton);
-        }
-
         private void ConnectionStatus(object sender, string message)
         {
             MessageBox.Show(message);
+        }
+
+        private void RoomConnectionHandler(object sender, bool answer, string message)
+        {
+            MessageBox.Show(message);
+        }
+
+       
+
+        public void CreateRoom(object sender, RoutedEventArgs e)
+            => Task.Run(() => 
+            {
+                var textBox = (TextBox)FindName("dialogTextBox");
+                var roomName = textBox.Text;
+                client.CreateRoom(roomName);
+            });
+
+        public void JoinRoom(object sender, RoutedEventArgs e)
+            => Task.Run(() => 
+            {
+                var textBox = (TextBox)FindName("dialogTextBox");
+                var roomName = textBox.Text;
+                client.JoinRoom(roomName);
+            });
+        private ObservableCollection<object> BasicDialogCollection()
+        {
+
+            return items;
+        }
+
+        private ObservableCollection<object> CreateDialogCollection()
+        {
+            var textBox = new TextBox();
+            textBox.Name = "dialogTextBox";
+            textBox.Style = (Style)FindResource("RoomName");
+            Grid.SetRow(textBox, 0);
+
+            var ConfimButton = new Button();
+            ConfimButton.Style = (Style)FindResource("DialogButton");
+            ConfimButton.Content = "Подтвердить";
+            Grid.SetRow(ConfimButton, 1);
+            ConfimButton.Click += CreateRoom;
+
+            var items = new ObservableCollection<object>() {textBox, ConfimButton };
+
+            return items;
+        }
+        private ObservableCollection<object> JoinDialogCollection()
+        {
+            var textBox = new TextBox();
+            textBox.Style = (Style)FindResource("RoomName");
+            Grid.SetRow(textBox, 0);
+
+            var ConfimButton = new Button();
+            ConfimButton.Style = (Style)FindResource("DialogButton");
+            ConfimButton.Content = "Подтвердить";
+            Grid.SetRow(ConfimButton, 1);
+            ConfimButton.Click += JoinRoom;
+
+            var items = new ObservableCollection<object>() { textBox, ConfimButton };
+
+            return items;
         }
     }
 }

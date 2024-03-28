@@ -12,7 +12,7 @@ namespace Network.Services.Server
         public GameHub()
             => game = new NetGame();
 
-        public async Task MakeRoomRequest(string roomName)
+        public async Task CreateRoomRequest(string roomName)
         {
             bool dontExist = !rooms.ContainsKey(roomName);
             string message;

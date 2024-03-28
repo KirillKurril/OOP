@@ -4,6 +4,8 @@ using System;
 using UserInterface;
 using System.Windows;
 using System.Windows.Markup;
+using Network.Services.Client;
+using Network.Interfaces;
 
 namespace UserInterface
 {
@@ -17,6 +19,7 @@ namespace UserInterface
             .ConfigureServices((services) =>
             {
                 services.AddSingleton<MainWindow>();
+                services.AddSingleton<IClient, Client>();
             })
             .Build();
         }
