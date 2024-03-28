@@ -15,10 +15,10 @@ namespace Network.Services.Client
         public delegate void CreateRoomResponseDelegate(object sender, bool answer, string message);
         public delegate void ConnectionStatusDelegate(object sender, string status);
 
-        public event ReceiveGameStatusDelegate ReceiveGameStatusEvent;
-        public event CreateRoomResponseDelegate CreateRoomResponseEvent;
-        public event CreateRoomResponseDelegate JoinRoomResponseEvent;
-        public event ConnectionStatusDelegate ConnectionStatusEvent;    
+        public event IClient.ReceiveGameStatusDelegate ReceiveGameStatusEvent;
+        public event IClient.CreateRoomResponseDelegate CreateRoomResponseEvent;
+        public event IClient.CreateRoomResponseDelegate JoinRoomResponseEvent;
+        public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;    
         public Client() { }
         public void SetURL(string url)
             => URL = url;

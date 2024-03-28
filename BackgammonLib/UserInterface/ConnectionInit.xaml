@@ -37,14 +37,7 @@
                     <RowDefinition Height="1.1*"/>
                     <RowDefinition Height="0.8*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" 
-                        Style="{StaticResource DialogButton}" 
-                        Content="Создать комнату"
-                        Click="CreateRoom"/>
-                <Button Grid.Row="1" 
-                        Style="{StaticResource DialogButton}" 
-                        Content="Присоединиться к игре"
-                        Click="JoinRoom"/>
+                <ItemsControl ItemsSource="{Binding DialogWindowElements}"/>
             </Grid>
         </Grid>
     </Grid>

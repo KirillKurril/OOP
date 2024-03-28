@@ -11,34 +11,37 @@ namespace UserInterface
 {
     public partial class App : Application
     {
-        private readonly IHost _host;
+        public static IHost? AppHost{ get; private set; }
 
         public App()
         {
-            _host = Host.CreateDefaultBuilder()
+            AppHost = Host.CreateDefaultBuilder()
             .ConfigureServices((services) =>
             {
                 services.AddSingleton<MainWindow>();
                 services.AddSingleton<IClient, Client>();
+                services.AddTransient<Backgammon>();
+                services.AddTransient<ConnectionInit>();
+                services.AddTransient<Menu>();
             })
             .Build();
         }
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
-            _host.Start();
+            await AppHost!.StartAsync();
 
-            MainWindow = _host.Services.GetRequiredService<MainWindow>();
-            MainWindow.Show();
+            var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
+            startupForm.Show();
 
             base.OnStartup(e);
         }
 
-        protected override void OnExit(ExitEventArgs e)
+        protected override async void OnExit(ExitEventArgs e)
         {
-            _host.StopAsync().GetAwaiter().GetResult();
-            _host.Dispose();
+            await AppHost!.StopAsync();
 
             base.OnExit(e);
         }
     }
+
 }

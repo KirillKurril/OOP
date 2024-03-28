@@ -13,6 +13,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -29,13 +30,16 @@ namespace UserInterface
         public ConnectionInit(IClient client)
         {
             DialogWindowElements = new ObservableCollection<object>();
+            DialogWindowElements = BasicDialogCollection();
             InitializeComponent();
             this.client = client;
             this.client.SetURL("https://localhost:7250/game");
             this.client.ConnectionStatusEvent += ConnectionStatus;
             this.client.CreateRoomResponseEvent += RoomConnectionHandler;
+            this.client.JoinRoomResponseEvent += RoomConnectionHandler;
             Task.Run(() => client.Connect());
         }
+
         private void ConnectionStatus(object sender, string message)
         {
             MessageBox.Show(message);
@@ -49,11 +53,11 @@ namespace UserInterface
        
 
         public void CreateRoom(object sender, RoutedEventArgs e)
-            => Task.Run(() => 
+            => Task.Run(async () => 
             {
                 var textBox = (TextBox)FindName("dialogTextBox");
                 var roomName = textBox.Text;
-                client.CreateRoom(roomName);
+                await client.CreateRoom(roomName);
             });
 
         public void JoinRoom(object sender, RoutedEventArgs e)
@@ -63,8 +67,28 @@ namespace UserInterface
                 var roomName = textBox.Text;
                 client.JoinRoom(roomName);
             });
+       
+
+        private void JoinRoomButton_Click(object sender, RoutedEventArgs e)
+        =>  DialogWindowElements = JoinDialogCollection();
+
+        private void CreateRoomButton_Click(object sender, RoutedEventArgs e)
+        =>  DialogWindowElements = CreateDialogCollection();
         private ObservableCollection<object> BasicDialogCollection()
         {
+            var CreateRoomButton = new Button();
+            CreateRoomButton.Content = "Создать комнату";
+            CreateRoomButton.Style = (Style)FindResource("DialogButton");
+            CreateRoomButton.Click += CreateRoomButton_Click;
+            Grid.SetRow(CreateRoomButton, 0);
+
+            var JoinRoomButton = new Button();
+            JoinRoomButton.Content = "Присоединиться к комнате";
+            JoinRoomButton.Style = (Style)FindResource("DialogButton");
+            JoinRoomButton.Click += JoinRoomButton_Click;
+            Grid.SetRow(JoinRoomButton, 1);
+
+            var items = new ObservableCollection<object>() { CreateRoomButton, JoinRoomButton };
 
             return items;
         }
