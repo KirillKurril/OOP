@@ -14,7 +14,7 @@ namespace Entities
         public List<int> MoveValues { get; set; }
         public bool ReachedHome { get; set; }
         public bool HatsOffToYou { get; set; }
-        public (int, int)[] ExtraStatus { get; set; }
+        public List<(int, int)> ExtraStatus { get; set; }
         public int MoveColor { get; set; }
         public (int, int) Score { get; set; }
         public bool Throwable { get; set; }
@@ -22,7 +22,7 @@ namespace Entities
 
         public GameStatusData(
             int[] status,List<int> diceValues, List<int> moveValues, bool reachedHome, bool hatsOffToYou,
-            (int, int)[] extraStatus,
+            List<(int, int)> extraStatus,
             int moveColor, (int, int) score, bool throwable, bool safemode)
         {
             Status = status;

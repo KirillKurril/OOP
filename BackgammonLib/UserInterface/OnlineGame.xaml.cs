@@ -94,7 +94,7 @@ namespace UserInterface
 
         }
 
-        void RefreshField((int, int)[] extraStatus)
+        void RefreshField(List<(int, int)> extraStatus)
         {
             ///надо колдовать через биндинг
             for (int i = 0; i < 24; ++i)

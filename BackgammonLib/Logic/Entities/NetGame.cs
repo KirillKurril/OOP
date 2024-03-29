@@ -154,13 +154,14 @@ namespace BackgammonLogic
         public GameStatusData GetGameStatus()
         {
             GameStatusData data = new GameStatusData(
+                status,
                 diceValues,
                 moveValues,
-                curField,
-                curPlayer,
+                curPlayer.ReachedHome,
                 hatsOffToYou,
-                board.WhiteField,
-                movesCounter,
+                GetDetailedReport(),
+                GetCurColor(),
+                (players[0].Score, players[1].Score),
                 !MovsAvalibleExist() ? true : false,
                 CheckEndGame()
                 );

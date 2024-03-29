@@ -8,6 +8,7 @@ namespace Network.Services.Server
     public class GameHub : Hub
     {
         Dictionary<string, List<string>> rooms;
+        NetGame game;
         public GameHub()
             => game = new NetGame();
         public async Task CreateRoomRequest(string roomName)

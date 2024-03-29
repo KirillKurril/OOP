@@ -22,30 +22,13 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.085*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="2">
-                <Button x:Name="Throw"
-                    Content="Throw"
-                    Height="20"
-                    Visibility="Hidden"
-                    IsEnabled="False"
-                    Click="PositionSelected"/>
-                <Button x:Name="Connect"
-                    Content="Connect"
-                    Height="20"
-                    Click="ConnectButtonClicked"/>
-                <TextBox x:Name="RoomName"/>
-                <Button x:Name="Create"
-                    Content="Create"
-                    Height="20"
-                    Click="CreateButtonClicked"/>
-                <Button x:Name="Join"
-                    Content="Join"
-                    Height="20"
-                    Click="JoinButtonClicked"/>
-            </StackPanel>
-
-
-
+            <Button x:Name="Throw"
+                Content="Throw"
+                Height="20"
+                Visibility="Hidden"
+                IsEnabled="False"
+                Grid.Column="0"
+                Click="PositionSelected"/>
             <TextBox x:Name="stat"
                      Grid.Column="0"
                      Background="Transparent"
