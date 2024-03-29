@@ -7,36 +7,24 @@
       "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\onlinegame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\connectioninit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\connectioninit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\connectioninit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\connectioninit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}|Server\\Server.csproj|c:\\uni\\oop\\backgammonlib\\server\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}|Server\\Server.csproj|solutionrelative:server\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|c:\\uni\\oop\\backgammonlib\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|solutionrelative:client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|c:\\uni\\oop\\backgammonlib\\client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|solutionrelative:client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\entities\\moveverifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\entities\\moveverifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|c:\\uni\\oop\\backgammonlib\\client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9AC99EF2-BB14-4D95-AAD7-A098A0846409}|Client\\Client.csproj|solutionrelative:client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|c:\\uni\\oop\\backgammonlib\\logic\\entities\\netgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}|Logic\\Logic.csproj|solutionrelative:logic\\entities\\netgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}|Server\\Server.csproj|c:\\uni\\oop\\backgammonlib\\server\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A}|Server\\Server.csproj|solutionrelative:server\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}|UserInterface\\UserInterface.csproj|c:\\uni\\oop\\backgammonlib\\userinterface\\onlinegame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -100,24 +88,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Client",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj",
-              "RelativeDocumentMoniker": "Client\\Client.csproj",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj",
-              "RelativeToolTip": "Client\\Client.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-28T23:13:19.56Z",
+              "DocumentIndex": 1,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.cs",
+              "RelativeDocumentMoniker": "Client\\Client.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.cs",
+              "RelativeToolTip": "Client\\Client.cs",
+              "ViewState": "AQIAAFAAAAAAzczMzMwswEQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T20:54:38.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "OnlineGame.xaml.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\OnlineGame.xaml.cs",
+              "RelativeDocumentMoniker": "UserInterface\\OnlineGame.xaml.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\OnlineGame.xaml.cs",
+              "RelativeToolTip": "UserInterface\\OnlineGame.xaml.cs",
+              "ViewState": "AQIAAEgAAAAAmZmZmZkdwFEAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T21:07:17.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MoveVerifier.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\MoveVerifier.cs",
+              "RelativeDocumentMoniker": "Logic\\Entities\\MoveVerifier.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\MoveVerifier.cs",
+              "RelativeToolTip": "Logic\\Entities\\MoveVerifier.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T21:05:49.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NetGame.cs",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\NetGame.cs",
+              "RelativeDocumentMoniker": "Logic\\Entities\\NetGame.cs",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\NetGame.cs",
+              "RelativeToolTip": "Logic\\Entities\\NetGame.cs",
+              "ViewState": "AQIAADMAAACAmZmZmZktwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T21:07:25.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "GameHub.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Server\\GameHub.cs",
               "RelativeDocumentMoniker": "Server\\GameHub.cs",
@@ -130,97 +157,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.cs",
-              "RelativeDocumentMoniker": "Client\\Client.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.cs",
-              "RelativeToolTip": "Client\\Client.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwBEAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:54:38.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConnectionInit.xaml",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\ConnectionInit.xaml",
-              "RelativeDocumentMoniker": "UserInterface\\ConnectionInit.xaml",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\ConnectionInit.xaml",
-              "RelativeToolTip": "UserInterface\\ConnectionInit.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-28T18:38:08.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConnectionInit.xaml.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\ConnectionInit.xaml.cs",
-              "RelativeDocumentMoniker": "UserInterface\\ConnectionInit.xaml.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\ConnectionInit.xaml.cs",
-              "RelativeToolTip": "UserInterface\\ConnectionInit.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:50:12.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OnlineGame.xaml.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\OnlineGame.xaml.cs",
-              "RelativeDocumentMoniker": "UserInterface\\OnlineGame.xaml.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\OnlineGame.xaml.cs",
-              "RelativeToolTip": "UserInterface\\OnlineGame.xaml.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAArwDsAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T21:07:17.21Z",
+              "DocumentIndex": 3,
+              "Title": "Client.csproj",
+              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj",
+              "RelativeDocumentMoniker": "Client\\Client.csproj",
+              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj",
+              "RelativeToolTip": "Client\\Client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-28T23:13:19.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Game.cs",
-              "RelativeDocumentMoniker": "Logic\\Game.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Game.cs",
-              "RelativeToolTip": "Logic\\Game.cs",
-              "ViewState": "AQIAAKcAAAAAAAAAAAA5wHsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:34:26.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MoveVerifier.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\MoveVerifier.cs",
-              "RelativeDocumentMoniker": "Logic\\Entities\\MoveVerifier.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\MoveVerifier.cs",
-              "RelativeToolTip": "Logic\\Entities\\MoveVerifier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T21:05:49.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NetGame.cs",
-              "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\NetGame.cs",
-              "RelativeDocumentMoniker": "Logic\\Entities\\NetGame.cs",
-              "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Entities\\NetGame.cs",
-              "RelativeToolTip": "Logic\\Entities\\NetGame.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T21:07:25.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "OnlineGame.xaml",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\OnlineGame.xaml",
               "RelativeDocumentMoniker": "UserInterface\\OnlineGame.xaml",
@@ -232,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "IClient.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Client\\IClient.cs",
               "RelativeDocumentMoniker": "Client\\IClient.cs",
@@ -245,20 +195,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\MainWindow.xaml.cs",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T19:20:21.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Backgammon.xaml.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Backgammon.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\Backgammon.xaml.cs",
@@ -271,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
@@ -279,24 +229,24 @@
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T21:10:06.219Z"
+              "WhenOpened": "2024-03-27T21:10:06.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "XamlReader.cs",
+              "DocumentIndex": 11,
+              "Title": "XamlReader.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs",
               "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
               "RelativeToolTip": "..\\..\\..\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "ViewState": "AQIAAA0BAAAAAAAAAAApwPMBAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T19:08:52.478Z",
               "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\App.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\App.xaml.cs",
@@ -309,19 +259,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 12,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Uni\\programming-tools-and-instruments\\MLWD\\MLWD\\MauiProgram.cs",
               "RelativeDocumentMoniker": "..\\..\\programming-tools-and-instruments\\MLWD\\MLWD\\MauiProgram.cs",
               "ToolTip": "C:\\Uni\\programming-tools-and-instruments\\MLWD\\MLWD\\MauiProgram.cs",
               "RelativeToolTip": "..\\..\\programming-tools-and-instruments\\MLWD\\MLWD\\MauiProgram.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T20:00:13.131Z"
+              "WhenOpened": "2024-03-28T20:00:13.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "Menu.xaml.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Menu.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\Menu.xaml.cs",
@@ -329,22 +280,24 @@
               "RelativeToolTip": "UserInterface\\Menu.xaml.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAjwBUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:28:29.738Z"
+              "WhenOpened": "2024-03-27T20:28:29.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\MainWindow.xaml",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\MainWindow.xaml",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-28T19:35:59.073Z"
+              "WhenOpened": "2024-03-28T19:35:59.073Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 17,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\App.xaml",
               "RelativeDocumentMoniker": "UserInterface\\App.xaml",
@@ -356,18 +309,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 15,
               "Title": "Backgammon.xaml",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Backgammon.xaml",
               "RelativeDocumentMoniker": "UserInterface\\Backgammon.xaml",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\Backgammon.xaml",
               "RelativeToolTip": "UserInterface\\Backgammon.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-27T20:20:20.022Z"
+              "WhenOpened": "2024-03-27T20:20:20.022Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 19,
               "Title": "GameStatusData.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameStatusData.cs",
               "RelativeDocumentMoniker": "Entities\\GameStatusData.cs",
@@ -375,11 +329,12 @@
               "RelativeToolTip": "Entities\\GameStatusData.cs",
               "ViewState": "AQIAABsAAACAMzMzMzMLwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:44:39.751Z"
+              "WhenOpened": "2024-03-27T20:44:39.751Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 18,
               "Title": "GameBoard.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\GameBoard.cs",
               "RelativeDocumentMoniker": "Entities\\GameBoard.cs",
@@ -387,7 +342,8 @@
               "RelativeToolTip": "Entities\\GameBoard.cs",
               "ViewState": "AQIAAC4AAAAAMzMzMzMrwDIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T20:34:45.24Z"
+              "WhenOpened": "2024-03-27T20:34:45.24Z",
+              "EditorCaption": ""
             }
           ]
         }

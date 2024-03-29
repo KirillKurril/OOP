@@ -10,18 +10,16 @@ namespace Logic.Entities
 {
     public class MoveVerifier
     {
-        public int MyColor {  get; private set; }
+        public int Color {  get; set; }
         private int[] status ;
         private List<int> diceValues;
         private List<int> moveValues;
         private bool hatsOffToYou;
-        private int firstChosenPosition;
 
         public MoveVerifier(int color)
         {
-            MyColor = color;
+            Color = color;
         }
-
         public void Update(List<int> diceValues, List<int> moveValues,
             int[] status, bool hatsOffToYou)
         {
@@ -34,12 +32,12 @@ namespace Logic.Entities
         public bool VerifyStartPosition(int startPosition)
         {
             bool potentialMovesExist = MovsAvalibleExist();
-            bool rigthColor = status[startPosition] == MyColor;
+            bool rigthColor = status[startPosition] == Color;
             bool headless = !(hatsOffToYou && startPosition == 0);
 
             return potentialMovesExist && rigthColor && headless;
         }
-        public bool MovsAvalibleExist()
+        private bool MovsAvalibleExist()
         {
             if (diceValues.Count > 0)
             {
@@ -57,7 +55,7 @@ namespace Logic.Entities
         {
             List<int> positions = new List<int>();
             for (int i = 0; i < 24; ++i)
-                if (status[i] == MyColor)
+                if (status[i] == Color)
                     positions.Add(i);
             return positions;
         }
@@ -68,7 +66,7 @@ namespace Logic.Entities
             bool destExist = diceValues.Contains(destinatioin - source);          //must be move values
             bool moveForvard = source < destinatioin;
             bool isFree = status[destinatioin] == 0;
-            bool capturedByFriendlyUnit = status[destinatioin] == MyColor;
+            bool capturedByFriendlyUnit = status[destinatioin] == Color;
 
             return destExist && moveForvard && (isFree || capturedByFriendlyUnit);
         }

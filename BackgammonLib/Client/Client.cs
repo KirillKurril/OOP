@@ -20,6 +20,7 @@ namespace Network.Services.Client
         public event IClient.CreateRoomResponseDelegate JoinRoomResponseEvent;
         public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;
         public event EventHandler RoomComplete;
+        public event EventHandler EndGame;
         public Client() { }
         public void SetURL(string url)
             => URL = url;
@@ -63,12 +64,16 @@ namespace Network.Services.Client
             {
                 RoomComplete?.Invoke(this, EventArgs.Empty);
             });
+            hubConnection.On("EndGame", () =>
+            {
+                EndGame?.Invoke(this, EventArgs.Empty);
+            });
         }
 
 
-        public async Task MoveRequest(string request)
+        public async Task MoveRequest(int source, int destination)
         {
-            await hubConnection.InvokeAsync("MoveRequest", request);
+            await hubConnection.InvokeAsync("MoveRequest", source, destination);
         }
 
         public async Task CreateRoom(string roomName)
