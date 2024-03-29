@@ -15,8 +15,8 @@ namespace Network.Interfaces
         Task Connect();
         Task CreateRoom(string roomName);
         Task JoinRoom(string roomName);
+        Task MoveRequest(int source, int destination);
         Task LeaveRoom();
-        Task MoveRequest(string request);
         void SetURL(string url);
 
     }

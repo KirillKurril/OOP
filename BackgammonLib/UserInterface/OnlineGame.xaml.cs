@@ -29,16 +29,20 @@ namespace UserInterface
         int firstPosition = -1;
         bool throwEnabled = false;
         bool fieldEnabled = false;
+        int whiteScore = -1;
+        int blackScore = -1;
+        int moveColor = 0;
 
         public OnlineGame()
         {
             InitializeComponent();
-            client.ReceiveGameStatusEvent += ReceiveGameData;
-            client.EndGame += EndGame;
-        }
+            
+            client.ReceiveColor += ReceiveColorHandler;
+            client.ReceiveGameStatusEvent += ReceiveGameDataHandler;
+            client.EndGame += EndGameHandler;
 
-        void ConnectButtonClicked(object sender, RoutedEventArgs e)
-            =>  Task.Run(async () => await client.Connect());
+            Unloaded += UnloadPageHandler;
+        }
 
         private void PositionSelected(object sender, RoutedEventArgs e)
         {
@@ -55,41 +59,69 @@ namespace UserInterface
             if (firstPosition != -1 
                 && verifier.MoveConfirm(firstPosition, position))
             {
-                Task.Run(async () 
-                    => await client.MoveRequest(firstPosition, position));
+                Task.Run(() 
+                    => client.MoveRequest(firstPosition, position));
                 firstPosition = -1;
+                throwEnabled = false;
+            }
+            else if(verifier.MoveConfirm(firstPosition, position))
+            {
+                firstPosition = position;
+                if (verifier.Throwable(position))
+                    throwEnabled = true;
             }
         }
 
         private void CancelChoiсe(object sender, MouseButtonEventArgs e)
             => firstPosition = -1;
-
-
-        private void EndGame()
-        {
-            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Colors.White()) ?
-                ("White") : ("Black"))}" +
-                $" player win!");
-            //перезагрузить страницу
-        }
-        private void ReceiveColor(object sender, int color)
+        private void ReceiveColorHandler(object sender, int color)
             => verifier.Color = color;
-        public void ReceiveGameData(object sender, GameStatusData data)
+        public void ReceiveGameDataHandler(object sender, GameStatusData data)
         {
-            ///
+            verifier.Update(data.Status, data.DiceValues, data.MoveValues, data.ReachedHome, data.HatsOffToYou, data.Safemode);
+            RefreshField(data.ExtraStatus);
+            fieldEnabled = verifier.Color == data.MoveColor;
+            whiteScore = data.Score.Item1;
+            blackScore = data.Score.Item2;
+            moveColor = data.MoveColor;
         }
         
-        public void EndGameHandler(object sender, EventArgs eventArgs)
+        public void EndGameHandler(object sender, EventArgs e)
         {
-            ///
+            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Colors.White()) ?
+           ("White") : ("Black"))}" +
+           $" player win!");
+
         }
 
-        void RefreshUi((int, int) ExtraStatus)
+        void RefreshField((int, int)[] extraStatus)
         {
-            ///
+            ///надо колдовать через биндинг
+            for (int i = 0; i < 24; ++i)
+            {
+                StackPanel stackPanel = (StackPanel)FindName($"S{i}");
+                stackPanel.Children.Clear();
+                for (int j = 0; j < extraStatus[i].Item2; ++j)
+                {
+                    Ellipse piece = new Ellipse();
+                    piece.Width = 20;
+                    piece.Height = 20;
+
+                    if (extraStatus[i].Item1 == 1)
+                        piece.Fill = Brushes.White;
+                    else
+                        piece.Fill = Brushes.Black;
+
+                    stackPanel.Children.Add(piece);
+                }
+            }
+            ///надо колдовать через биндинг
         }
 
-        ///метод закрытия страницы который отключается от сервера
+        protected void UnloadPageHandler(object sender, RoutedEventArgs e)
+        {
+            Task.Run(() => client.Disconnect());
+        }
     }
 }
 

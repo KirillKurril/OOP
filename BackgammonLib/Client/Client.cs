@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Threading.Tasks;
 using Entities;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -21,6 +22,7 @@ namespace Network.Services.Client
         public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;
         public event EventHandler RoomComplete;
         public event EventHandler EndGame;
+        public event EventHandler<int> ReceiveColor;
         public Client() { }
         public void SetURL(string url)
             => URL = url;
@@ -64,9 +66,15 @@ namespace Network.Services.Client
             {
                 RoomComplete?.Invoke(this, EventArgs.Empty);
             });
+
             hubConnection.On("EndGame", () =>
             {
                 EndGame?.Invoke(this, EventArgs.Empty);
+            });
+
+            hubConnection.On("ReceiveColor", (int color) =>
+            {
+                ReceiveColor?.Invoke(this, color);
             });
         }
 
@@ -87,6 +95,10 @@ namespace Network.Services.Client
         public async Task LeaveRoom()
         {
             await hubConnection.InvokeAsync("LeaveRoom");
+        }
+        public async Task Disconnect()
+        {
+            await hubConnection.StopAsync();
         }
     }
 }

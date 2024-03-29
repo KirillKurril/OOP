@@ -14,19 +14,23 @@ namespace Logic.Entities
         private int[] status ;
         private List<int> diceValues;
         private List<int> moveValues;
+        private bool reachedHome;
         private bool hatsOffToYou;
+        private bool safeMode;
 
         public MoveVerifier(int color)
         {
             Color = color;
         }
-        public void Update(List<int> diceValues, List<int> moveValues,
-            int[] status, bool hatsOffToYou)
+        public void Update(int[] status, List<int> diceValues,
+            List<int> moveValues,bool reachedHome, bool hatsOffToYou, bool safeMode)
         {
+            this.status = status;
             this.diceValues = diceValues;
             this.moveValues = moveValues;
+            this.reachedHome = reachedHome;
             this.hatsOffToYou = hatsOffToYou;
-            this.status = status;
+            this.safeMode = safeMode;
         }
 
         public bool VerifyStartPosition(int startPosition)
@@ -69,6 +73,11 @@ namespace Logic.Entities
             bool capturedByFriendlyUnit = status[destinatioin] == Color;
 
             return destExist && moveForvard && (isFree || capturedByFriendlyUnit);
+        }
+
+        public bool Throwable(int position)
+        {
+            return diceValues.Any(diceValue => diceValue + position >= 24) && reachedHome;
         }
     }
 }

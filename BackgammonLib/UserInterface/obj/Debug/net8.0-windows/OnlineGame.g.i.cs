@@ -493,7 +493,7 @@ namespace UserInterface {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UserInterface;component/onlinegame.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UserInterface;V1.0.0.0;component/onlinegame.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\OnlineGame.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
