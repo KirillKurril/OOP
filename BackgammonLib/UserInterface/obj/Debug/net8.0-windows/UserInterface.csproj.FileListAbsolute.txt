@@ -109,3 +109,4 @@ C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Microsoft.Extens
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Client.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Client.pdb
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGame.g.cs

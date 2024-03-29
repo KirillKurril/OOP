@@ -7,11 +7,9 @@ namespace Network.Services.Server
 {
     public class GameHub : Hub
     {
-        NetGame game;
         Dictionary<string, List<string>> rooms;
         public GameHub()
             => game = new NetGame();
-
         public async Task CreateRoomRequest(string roomName)
         {
             bool dontExist = !rooms.ContainsKey(roomName);
@@ -52,6 +50,9 @@ namespace Network.Services.Server
                         rooms[roomName].Add(Context.ConnectionId);
                         message = "Room joined successfully";
                         response = true;
+                        await Clients.Group(RoomNameByUserId(Context.ConnectionId))
+                            .SendAsync("RoomCompleted");
+                        await SendGameStatus();
                     }
                     catch (Exception ex)
                     {
@@ -65,7 +66,7 @@ namespace Network.Services.Server
             else
                 message = "Room doesn't exists!";
 
-            await Clients.Caller.SendAsync("MakeRoomAnswer", response, message);
+            await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);
         }
         public async Task LeaveRoom()
         {

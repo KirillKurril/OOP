@@ -18,7 +18,8 @@ namespace Network.Services.Client
         public event IClient.ReceiveGameStatusDelegate ReceiveGameStatusEvent;
         public event IClient.CreateRoomResponseDelegate CreateRoomResponseEvent;
         public event IClient.CreateRoomResponseDelegate JoinRoomResponseEvent;
-        public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;    
+        public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;
+        public event EventHandler RoomComplete;
         public Client() { }
         public void SetURL(string url)
             => URL = url;
@@ -48,7 +49,7 @@ namespace Network.Services.Client
                 ReceiveGameStatusEvent?.Invoke(this, data); 
             });
 
-            hubConnection.On<bool, string>("MakeRoomAnswer", (bool createdSuccessfully, string message) =>
+            hubConnection.On<bool, string>("CreateRoomAnswer", (bool createdSuccessfully, string message) =>
             {
                 CreateRoomResponseEvent?.Invoke(this, createdSuccessfully, message);
             });
@@ -56,6 +57,11 @@ namespace Network.Services.Client
             hubConnection.On<bool, string>("JoinRoomAnswer", (bool joinedSuccessfully, string message) =>
             {
                 CreateRoomResponseEvent?.Invoke(this, joinedSuccessfully, message);
+            });
+
+            hubConnection.On("RoomCompleted", () =>
+            {
+                RoomComplete?.Invoke(this, EventArgs.Empty);
             });
         }
 
