@@ -7,10 +7,9 @@ namespace Network.Services.Server
 {
     public class GameHub : Hub
     {
-        Dictionary<string, List<string>> rooms;
-        NetGame game;
+        Dictionary<string, Room> rooms;
         public GameHub()
-            => game = new NetGame();
+            => rooms = new Dictionary<string, Room>();
         public async Task CreateRoomRequest(string roomName)
         {
             bool dontExist = !rooms.ContainsKey(roomName);
@@ -21,7 +20,7 @@ namespace Network.Services.Server
                 try
                 {
                     await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
-                    rooms[roomName] = new List<string>() { Context.ConnectionId };
+                    rooms[roomName] = new Room(Context.ConnectionId);
                     message = "Room created successfully";
                     response = true;
                 }
@@ -43,7 +42,7 @@ namespace Network.Services.Server
 
             if (rooms.ContainsKey(roomName))
             {
-                if (rooms[roomName].Count == 2)
+                if (rooms[roomName].Players.Count == 2)
                 {
                     try
                     {
@@ -51,9 +50,8 @@ namespace Network.Services.Server
                         rooms[roomName].Add(Context.ConnectionId);
                         message = "Room joined successfully";
                         response = true;
-                        await Clients.Group(RoomNameByUserId(Context.ConnectionId))
+                        await Clients.Group(roomName)
                             .SendAsync("RoomCompleted");
-                        await SendGameStatus();
                     }
                     catch (Exception ex)
                     {
@@ -69,25 +67,28 @@ namespace Network.Services.Server
 
             await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);
         }
-        public async Task LeaveRoom()
+        public async Task LeaveRoom(string roomName)
         {
-            string roomName = RoomNameByUserId(Context.UserIdentifier);
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
-            rooms[roomName].Remove(Context.UserIdentifier);
-
-            if (rooms[roomName].Count == 0)
+            rooms[roomName].Remove(roomName);
+            if (rooms[roomName].Players.Count == 0)
                 rooms.Remove(roomName);
         }
-        public async Task MoveRequest(int destination, int source)
+        public void MoveRequest(int destination, int source, string roomName)
         {
-            game.Move(destination, source);
+            Task.Run(() =>
+            {
+                rooms[roomName].Game.Move(destination, source);
+                SendGameStatus(roomName);
+            });
+
         }
-        public async Task SendGameStatus()
+        public async Task SendGameStatus(string roomName)
         {
-            var response = game.GetGameStatus();
+            var response = rooms[roomName].Game.GetGameStatus();
             try
             {
-                await Clients.Group(RoomNameByUserId(Context.ConnectionId))
+                await Clients.Group(roomName)
                     .SendAsync("ReceiveGameStatus", response); //комнатные
             }
             catch (Exception ex)
@@ -95,9 +96,27 @@ namespace Network.Services.Server
                 Console.WriteLine(ex.Message);
             }
         }
-        string? RoomNameByUserId(string userId)
-            => rooms.Keys.FirstOrDefault(key => rooms[key].Contains(userId));
     }
-
+    public class Room
+    {
+        public string Name { get; set; }
+        public List<string> Players { get; set; }
+        public NetGame Game { get; set; }
+        public int ColorCounter { get; set; }
+        public void Add(string userConnectionId)
+        {
+            Players.Add(userConnectionId);
+        }
+        public void Remove(string userConnectionId)
+        {
+            Players.Remove(userConnectionId);
+        }
+        public Room(string userConnectionId)
+        {
+            Name = string.Empty;
+            Players = new List<string>() { userConnectionId };
+            Game = new NetGame();
+        }
+    };
 }
     

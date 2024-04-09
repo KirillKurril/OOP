@@ -9,6 +9,7 @@ namespace Network.Services.Client
 {
     public class Client : IClient
     {
+        public string roomName;
         public string URL;
         public HubConnection hubConnection;
 
@@ -62,9 +63,10 @@ namespace Network.Services.Client
                 CreateRoomResponseEvent?.Invoke(this, joinedSuccessfully, message);
             });
 
-            hubConnection.On("RoomCompleted", () =>
+            hubConnection.On("RoomCompleted", (string roomName) =>
             {
                 RoomComplete?.Invoke(this, EventArgs.Empty);
+                this.roomName = roomName;
             });
 
             hubConnection.On("EndGame", () =>
@@ -81,7 +83,7 @@ namespace Network.Services.Client
 
         public async Task MoveRequest(int source, int destination)
         {
-            await hubConnection.InvokeAsync("MoveRequest", source, destination);
+            await hubConnection.InvokeAsync("MoveRequest", source, destination, roomName);
         }
 
         public async Task CreateRoom(string roomName)
@@ -94,7 +96,7 @@ namespace Network.Services.Client
         }
         public async Task LeaveRoom()
         {
-            await hubConnection.InvokeAsync("LeaveRoom");
+            await hubConnection.InvokeAsync("LeaveRoom", roomName);
         }
         public async Task Disconnect()
         {

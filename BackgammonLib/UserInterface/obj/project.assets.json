@@ -2181,23 +2181,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Джузеппе\\.nuget\\packages\\": {},
+    "C:\\Users\\natak\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
       "projectName": "UserInterface",
-      "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-      "packagesPath": "C:\\Users\\Джузеппе\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
+      "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
+      "packagesPath": "C:\\Users\\natak\\.nuget\\packages\\",
+      "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Джузеппе\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\natak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2213,14 +2213,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "E:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj": {
-              "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj"
+            "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj": {
+              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Client\\Client.csproj"
             },
-            "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
+            "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj"
             },
-            "E:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
-              "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
+            "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\Logic.csproj"
             }
           }
         }
@@ -2264,7 +2264,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
