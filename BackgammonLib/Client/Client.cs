@@ -9,9 +9,9 @@ namespace Network.Services.Client
 {
     public class Client : IClient
     {
-        public string roomName;
-        public string URL;
-        public HubConnection hubConnection;
+        public string roomName { get; private set; }
+        public string URL { get; private set; }
+        public HubConnection hubConnection {  get; private set; }
 
         public delegate void ReceiveGameStatusDelegate(object sender, GameStatusData data);
         public delegate void CreateRoomResponseDelegate(object sender, bool answer, string message);
@@ -23,7 +23,7 @@ namespace Network.Services.Client
         public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;
         public event EventHandler RoomComplete;
         public event EventHandler EndGame;
-        public event EventHandler<int> ReceiveColor;
+        public event EventHandler<int> ColorResponse;
         public Client() { }
         public void SetURL(string url)
             => URL = url;
@@ -74,18 +74,15 @@ namespace Network.Services.Client
                 EndGame?.Invoke(this, EventArgs.Empty);
             });
 
-            hubConnection.On("ReceiveColor", (int color) =>
+            hubConnection.On("ColorResponse", (int color) =>
             {
-                ReceiveColor?.Invoke(this, color);
+                ColorResponse?.Invoke(this, color);
             });
         }
-
-
         public async Task MoveRequest(int source, int destination)
         {
             await hubConnection.InvokeAsync("MoveRequest", source, destination, roomName);
         }
-
         public async Task CreateRoom(string roomName)
         {
             await hubConnection.InvokeAsync("CreateRoomRequest", roomName);
@@ -98,6 +95,8 @@ namespace Network.Services.Client
         {
             await hubConnection.InvokeAsync("LeaveRoom", roomName);
         }
+        public async Task RequestColor()
+            => await hubConnection.InvokeAsync("ColorRequest");
         public async Task Disconnect()
         {
             await hubConnection.StopAsync();

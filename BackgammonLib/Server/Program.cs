@@ -28,6 +28,7 @@ namespace Network.Services.Server
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowAnyOrigin());
+            app.UseRouting(); //////////////////
 
             app.MapHub<GameHub>("/game");
             #endregion Использование сервиса SignalR
