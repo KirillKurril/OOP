@@ -26,6 +26,7 @@ namespace Network.Interfaces
         Task MoveRequest(int source, int destination);
         Task RequestColor();
         Task LeaveRoom();
+        Task Disconnect();
         void SetURL(string url);
 
     }

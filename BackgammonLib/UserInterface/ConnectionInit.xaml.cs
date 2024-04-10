@@ -1,43 +1,27 @@
 ﻿using Network.Interfaces;
-using Network.Services.Client;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UserInterface
 {
-    /// <summary>
-    /// Interaction logic for ConnectionInit.xaml
-    /// </summary>
     public partial class ConnectionInit : Page
     {
-        IClient client;
+        IClient _client;
+        INavigationService _navigationService;
         public ObservableCollection<object> DialogWindowElements { get; set; }
-        public ConnectionInit(IClient client)
+        public ConnectionInit(IClient client, INavigationService navigationService)
         {
             DialogWindowElements = new ObservableCollection<object>();
             DialogWindowElements = BasicDialogCollection();
             InitializeComponent();
-            this.client = client;
-            this.client.SetURL("https://localhost:7250/game");
-            this.client.ConnectionStatusEvent += ConnectionStatus;
-            this.client.CreateRoomResponseEvent += RoomConnectionHandler;
-            this.client.JoinRoomResponseEvent += RoomConnectionHandler;
-            Task.Run(() => client.Connect());
+            _client = client;
+            _navigationService = navigationService;
+            _client.SetURL("https://localhost:7250/game");
+            _client.ConnectionStatusEvent += ConnectionStatus;
+            _client.CreateRoomResponseEvent += RoomConnectionHandler;
+            _client.JoinRoomResponseEvent += RoomConnectionHandler;
+            Task.Run(() => _client.Connect());
         }
 
         private void ConnectionStatus(object sender, string message)
@@ -57,7 +41,7 @@ namespace UserInterface
             {
                 var textBox = (TextBox)FindName("dialogTextBox");
                 var roomName = textBox.Text;
-                await client.CreateRoom(roomName);
+                await _client.CreateRoom(roomName);
             });
 
         public void JoinRoom(object sender, RoutedEventArgs e)
@@ -65,7 +49,7 @@ namespace UserInterface
             {
                 var textBox = (TextBox)FindName("dialogTextBox");
                 var roomName = textBox.Text;
-                client.JoinRoom(roomName);
+                _client.JoinRoom(roomName);
             });
        
 

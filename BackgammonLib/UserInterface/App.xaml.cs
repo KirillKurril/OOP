@@ -20,9 +20,16 @@ namespace UserInterface
             {
                 services.AddSingleton<MainWindow>();
                 services.AddSingleton<IClient, Client>();
-                services.AddTransient<Backgammon>();
+                services.AddTransient<BackgammonPage>();
+                services.AddTransient<OnlineGamePage>();
                 services.AddTransient<ConnectionInit>();
-                services.AddTransient<Menu>();
+                services.AddTransient<MenuPage>();
+
+                services.AddSingleton<INavigationService>((sp) =>
+                {
+                    var serviceProvider = sp.GetService<IServiceProvider>();
+                    return new NavigationService(serviceProvider);
+                });
             })
             .Build();
         }

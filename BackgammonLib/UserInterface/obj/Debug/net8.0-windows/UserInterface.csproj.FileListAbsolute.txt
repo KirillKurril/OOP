@@ -4,12 +4,10 @@ C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.ru
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\BackgammonStyles.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Backgammon.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_MarkupCompile.cache
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_MarkupCompile.lref
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Backgammon.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.g.resources
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.GeneratedMSBuildEditorConfig.editorconfig
@@ -24,8 +22,6 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.ge
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterface.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MenuStyles.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.g.cs
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Menu.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.pdb
@@ -109,7 +105,6 @@ C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Microsoft.Extens
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Client.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Client.pdb
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGame.g.cs
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.csproj.AssemblyReference.cache
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\BackgammonStyles.baml
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\ConnectionInitStyles.baml
@@ -188,3 +183,11 @@ E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.so
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInte.9C7395B8.Up2Date
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.genruntimeconfig.cache
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterface.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MenuPage.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MenuPage.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\BackgammonPage.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\BackgammonPage.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.baml
