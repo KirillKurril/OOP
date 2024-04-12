@@ -61,7 +61,7 @@ namespace Network.Services.Server
                 message = "Room joined successfully";
                 response = true;
                 WriteLog(roomName, $"{Context.ConnectionId} joined successfully");
-                await Clients.Group(roomName).SendAsync("RoomCompleted");
+                await Clients.Group(roomName).SendAsync("RoomCompleted", roomName);
                 WriteLog(roomName, "RoomCompleted");
             }
             catch (Exception ex)
@@ -105,10 +105,19 @@ namespace Network.Services.Server
         }
         public async Task ColorRequest(string roomName)
         {
-            if (_rooms.GetCurColor(roomName) == 0)
-                await Clients.Caller.SendAsync("ColorResponse", 1);
-            else
-                await Clients.Caller.SendAsync("ColorResponse", 1);
+            try
+            {
+                var players = _rooms.GetPlayers(roomName);
+                if (Context.ConnectionId == players[0])
+                    await Clients.Caller.SendAsync("ColorResponse", 1);
+                else
+                    await Clients.Caller.SendAsync("ColorResponse", -1);
+            }
+            catch 
+            {
+                await Clients.Caller.SendAsync("ColorResponse", 0);
+            }
+            
         }
         public void WriteLog(string roomName, string message)
         {

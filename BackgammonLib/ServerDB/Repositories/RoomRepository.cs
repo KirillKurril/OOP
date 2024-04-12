@@ -96,5 +96,10 @@ namespace ServerDB.Repositories
             var room = GetRoom(roomName);
             return room != null ? room.Game.GetCurColor() : null;
         }
+        public List<string>? GetPlayers(string roomName)
+        {
+            var room = GetRoom(roomName);
+            return room != null ? room.Players : null;
+        }
     }
 }

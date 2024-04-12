@@ -10,6 +10,7 @@ namespace TestClient
     internal class Program
     {
         static IClient client;
+        static string room;
         static int _color;
         static char _piece;
         static bool myTurn;
@@ -35,7 +36,6 @@ namespace TestClient
                     Console.WriteLine("Введите название комнаты:\n");
                     var roomName = Console.ReadLine();
                     Task.Run(async () => await client.CreateRoom(roomName));
-
                 }
                 else
                 {
@@ -80,7 +80,7 @@ namespace TestClient
 
         private static void RoomCompleteHandler(object? sender, EventArgs e)
         {
-            Console.WriteLine($"Комната {client.roomName} успешно создана\n");
+            Console.WriteLine($"Комната {client._roomName} успешно создана\n");
             client.RequestColor();
         }
 

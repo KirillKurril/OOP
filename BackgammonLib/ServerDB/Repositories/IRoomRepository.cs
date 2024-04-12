@@ -18,5 +18,6 @@ namespace ServerDB.Repositories
         void Remove(string roomName);
         void RemovePlayer(string roomName, string playerName);
         void MakeMove(string roomName, int source, int dstination);
+        List<string>? GetPlayers(string roomName);
     }
 }

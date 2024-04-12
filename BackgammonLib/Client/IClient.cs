@@ -5,7 +5,7 @@ namespace Network.Interfaces
 {
     public interface IClient
     {
-        public string roomName { get;}
+        public string _roomName { get;}
         public string URL { get; }
         public HubConnection hubConnection { get; }
 
