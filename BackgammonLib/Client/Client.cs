@@ -21,7 +21,7 @@ namespace Network.Services.Client
         public event IClient.CreateRoomResponseDelegate CreateRoomResponseEvent;
         public event IClient.CreateRoomResponseDelegate JoinRoomResponseEvent;
         public event IClient.ConnectionStatusDelegate ConnectionStatusEvent;
-        public event EventHandler RoomComplete;
+        public event EventHandler RoomCompleted;
         public event EventHandler EndGame;
         public event EventHandler<int> ColorResponse;
         public Client() { }
@@ -39,7 +39,7 @@ namespace Network.Services.Client
                 if (hubConnection.State == HubConnectionState.Connected)
                     ConnectionStatusEvent?.Invoke(this, "Подключение выполнено успешно");
                 else
-                    ConnectionStatusEvent?.Invoke(this, "Ошибка сраки");
+                    ConnectionStatusEvent?.Invoke(this, "Ошибка подключения");
             }
             catch (Exception ex)
             {
@@ -60,12 +60,12 @@ namespace Network.Services.Client
 
             hubConnection.On<bool, string>("JoinRoomAnswer", (bool joinedSuccessfully, string message) =>
             {
-                CreateRoomResponseEvent?.Invoke(this, joinedSuccessfully, message);
+                JoinRoomResponseEvent?.Invoke(this, joinedSuccessfully, message);
             });
 
-            hubConnection.On("RoomCompleted", (string roomName) =>
+            hubConnection.On("RoomCompleted", () =>
             {
-                RoomComplete?.Invoke(this, EventArgs.Empty);
+                RoomCompleted?.Invoke(this, EventArgs.Empty);
                 this.roomName = roomName;
             });
 

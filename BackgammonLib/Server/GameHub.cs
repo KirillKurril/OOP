@@ -28,7 +28,8 @@ namespace Network.Services.Server
                     throw new Exception("Room already exists!");
 
                 await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
-                _rooms.Add(Context.ConnectionId);
+                _rooms.Add(roomName);
+                _rooms.AddPlayer(roomName, Context.ConnectionId);
                 message = "Room created successfully";
                 response = true;
             }
@@ -38,7 +39,7 @@ namespace Network.Services.Server
             }
 
             await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);
-            Task.Run(() => WriteLog(roomName, message));
+            await Task.Run(() => WriteLog(roomName, message));
         }
         public async Task JoinRoomRequest(string roomName)
         {
@@ -56,22 +57,19 @@ namespace Network.Services.Server
                     throw new Exception("You have already entered the room!");
 
                 await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
-                _rooms.Add(Context.ConnectionId);
+                _rooms.AddPlayer(roomName, Context.ConnectionId);
                 message = "Room joined successfully";
                 response = true;
-                Task.Run(() => WriteLog(roomName, $"{Context.ConnectionId} joined successfully"));
-               
-                Task.Run(async () => {
-                    await Clients.Group(roomName).SendAsync("RoomCompleted");
-                    WriteLog(roomName, "RoomCompleted");
-                }); 
+                WriteLog(roomName, $"{Context.ConnectionId} joined successfully");
+                await Clients.Group(roomName).SendAsync("RoomCompleted");
+                WriteLog(roomName, "RoomCompleted");
             }
             catch (Exception ex)
             {
                 message = ex.Message;
             }
 
-            Task.Run(() => WriteLog(roomName, message));
+            await Task.Run(() => WriteLog(roomName, message));
             await Clients.Caller.SendAsync("JoinRoomAnswer", response, message);
         }
         public async Task LeaveRoom(string roomName)
@@ -81,19 +79,15 @@ namespace Network.Services.Server
             if (_rooms.IsEmpty(roomName))
             {
                 _rooms.Remove(roomName);
-                Task.Run(() => WriteLog(roomName, "Room deleted"));
+                await Task.Run(() => WriteLog(roomName, "Room deleted"));
             }
         }
-        public void MoveRequest(int destination, int source, string roomName)
+        public async Task MoveRequest(int destination, int source, string roomName)
         {
-            Task.Run(() =>
-            {
-                _rooms.MakeMove(roomName, destination, source);
-                Task.Run(() => WriteLog(roomName,
+                 _rooms.MakeMove(roomName, destination, source);
+                await Task.Run(() => WriteLog(roomName,
                     $"User {Context.ConnectionId} requests for move {source} : {destination}"));
-                SendGameStatus(roomName);
-            });
-
+                await SendGameStatus(roomName);
         }
         public async Task SendGameStatus(string roomName)
         {
@@ -102,7 +96,7 @@ namespace Network.Services.Server
             {
                 await Clients.Group(roomName)
                     .SendAsync("ReceiveGameStatus", response);
-                Task.Run(() => WriteLog(roomName, "Status's sended"));
+                await Task.Run(() => WriteLog(roomName, "Status's sended"));
             }
             catch (Exception ex)
             {
@@ -130,10 +124,6 @@ namespace Network.Services.Server
                     foreach(var player in room.Players)
                         Console.WriteLine($"\t + {player}");
                 }
-        }
-
-        private class Room
-        {
         }
     }
    

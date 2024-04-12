@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using ServerDB.Repositories;
 using ServerDB.DBContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace Network.Services.Server
 {
@@ -11,7 +12,6 @@ namespace Network.Services.Server
 
             var builder = WebApplication.CreateBuilder(args);
 
-            #region Настройка сервиса SignalR
             builder.Services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -19,9 +19,14 @@ namespace Network.Services.Server
             });
             builder.Services.AddCors();
             builder.Services.AddSignalR();
-            builder.Services.AddDbContext<RoomsDBContext>();
+
+            builder.Services.AddDbContext<RoomsDBContext>(opts =>
+            {
+                var connectionString = "Data Source=Rooms.db";
+                opts.UseSqlite(connectionString);    
+            });
             builder.Services.AddScoped<IRoomRepository, RoomRepository>();
-            #endregion Настройка сервиса SignalR
+
 
 
             var app = builder.Build();

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\
+E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\
 UserInterface
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Uni\OOP\BackgammonLib\UserInterface\App.xaml
+E:\Uni\OOP\BackgammonLib\UserInterface\App.xaml
 82119153561
 1-1935209953
 12-44231567
-237-121559605
+237-796357744
 BackgammonPage.xaml;ConnectionInit.xaml;MainWindow.xaml;MenuPage.xaml;OnlineGamePage.xaml;Styles\BackgammonStyles.xaml;Styles\ConnectionInitStyles.xaml;Styles\MenuStyles.xaml;
 
-False
+True
 

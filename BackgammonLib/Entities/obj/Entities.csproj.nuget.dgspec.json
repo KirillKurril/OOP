@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {}
+    "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
+    "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\obj\\",
+        "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Джузеппе\\.nuget\\packages\\",
+        "outputPath": "E:\\Uni\\OOP\\BackgammonLib\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Джузеппе\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -22,18 +22,27 @@ namespace TestClient
             client.ConnectionStatusEvent += ConnectionStatusHandler;
             client.CreateRoomResponseEvent += RoomConnectionHandler;
             client.JoinRoomResponseEvent += RoomConnectionHandler;
-            client.RoomComplete += RoomCompleteHandler;
+            client.RoomCompleted += RoomCompleteHandler;
             client.ColorResponse += ColorResponseHandler;
             client.ReceiveGameStatusEvent += GameStatusHandler;
-            Task.Run(() => client.Connect());
+            Task.Run(async () => await client.Connect());
             while(true)
             {
                 Console.WriteLine("1 - Создать\n2 - Подключиться\n");
                 int choise = int.Parse(Console.ReadLine());
                 if (choise == 1)
-                    Task.Run(() => client.CreateRoom("room"));
+                {
+                    Console.WriteLine("Введите название комнаты:\n");
+                    var roomName = Console.ReadLine();
+                    Task.Run(async () => await client.CreateRoom(roomName));
+
+                }
                 else
-                    Task.Run(() => client.JoinRoom("room"));
+                {
+                    Console.WriteLine("Введите название комнаты:\n");
+                    var roomName = Console.ReadLine();
+                    Task.Run(async () => await client.JoinRoom(roomName));
+                }
                 if (_color != 0)
                     break;
             }
@@ -45,7 +54,7 @@ namespace TestClient
                 {
                     int source= int.Parse(Console.ReadLine());
                     int dstination = int.Parse(Console.ReadLine());
-                    client.MoveRequest(source, dstination);
+                    Task.Run(async() => await client.MoveRequest(source, dstination)); 
                 }
             }
         }

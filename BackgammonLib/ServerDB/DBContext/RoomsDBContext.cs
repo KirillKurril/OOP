@@ -6,9 +6,10 @@ namespace ServerDB.DBContext
     public class RoomsDBContext : DbContext
     {
         public DbSet<Room> Rooms { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        public RoomsDBContext(DbContextOptions options) : base(options) 
         {
-            optionsBuilder.UseSqlite("Filename=Rooms.db");
+            Database.EnsureCreated();
         }
         public void SaveData()
         {

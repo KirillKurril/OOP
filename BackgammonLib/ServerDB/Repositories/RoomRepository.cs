@@ -19,17 +19,10 @@ namespace ServerDB.Repositories
         }
         public bool Contains(string roomName)
             =>  db.Rooms.Find(roomName) != null;
-
         public bool ContainsPlayer(string roomName, string playerConnectionId)
         {
             var room = GetRoom(roomName);
             return room != null ? room.Players.Contains(playerConnectionId) : false;
-        }
-
-        public void Add(Room item)
-        {
-            db.Rooms.Add(item);
-            db.SaveChanges();
         }
         public void Add(string roomName)
         {
@@ -37,25 +30,42 @@ namespace ServerDB.Repositories
             db.Rooms.Add(room);
             db.SaveChanges();
         }
+        public void AddPlayer(string roomName, string playerName)
+        {
+            var room = db.Rooms.Find(roomName);
+
+            if (room != null)
+            {
+                room.Players.Add(playerName);
+                db.SaveChanges();
+            }
+        }
         public void Remove(string roomName)
         {
             var removableItem = db.Rooms.Find(roomName);
             
             if (removableItem != null)
             {
-                db.SaveChanges();
                 db.Rooms.Remove(removableItem);
+                db.SaveChanges();
             }
         }
+        public void RemovePlayer(string roomName, string playerName)
+        {
+            var room = db.Rooms.Find(roomName);
 
+            if (room != null)
+            {
+                room.Players.Remove(playerName);
+                db.SaveChanges();
+            }
+        }
         public void Dispose()
             => db.Dispose();
-
         public Room? GetRoom(string roomName)
             => db.Rooms.Find(roomName);
         public IEnumerable<Room> GetRooms()
             => db.Rooms.ToList();
-
         public bool IsEmpty(string roomName)
         {
             var room = GetRoom(roomName);
@@ -66,7 +76,6 @@ namespace ServerDB.Repositories
             var room = GetRoom(roomName);
             return room != null ? room.Players.Count() == 2 : false;
         }
-
         public void MakeMove(string roomName, int source, int destination)
         {
             var room = GetRoom(roomName);

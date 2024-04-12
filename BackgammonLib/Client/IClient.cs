@@ -17,7 +17,7 @@ namespace Network.Interfaces
         event CreateRoomResponseDelegate CreateRoomResponseEvent;
         event CreateRoomResponseDelegate JoinRoomResponseEvent;
         event ConnectionStatusDelegate ConnectionStatusEvent;
-        public event EventHandler RoomComplete;
+        public event EventHandler RoomCompleted;
         public event EventHandler EndGame;
         public event EventHandler<int> ColorResponse;
         Task Connect();

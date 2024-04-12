@@ -10,7 +10,7 @@
         "dependencies": {
           "Client": "1.0.0",
           "Entities": "1.0.0",
-          "Logic": "1.0.0",
+          "GameLogic": "1.0.0",
           "Microsoft.Extensions.Hosting": "8.0.0"
         },
         "runtime": {
@@ -475,22 +475,7 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.0": {},
-      "System.Diagnostics.EventLog/8.0.0": {
-        "runtime": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        }
-      },
+      "System.Diagnostics.EventLog/8.0.0": {},
       "System.IO.Pipelines/8.0.0": {
         "runtime": {
           "lib/net8.0/System.IO.Pipelines.dll": {
@@ -520,12 +505,12 @@
           "Entities.dll": {}
         }
       },
-      "Logic/1.0.0": {
+      "GameLogic/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0"
         },
         "runtime": {
-          "Logic.dll": {}
+          "GameLogic.dll": {}
         }
       }
     }
@@ -833,7 +818,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Logic/1.0.0": {
+    "GameLogic/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
