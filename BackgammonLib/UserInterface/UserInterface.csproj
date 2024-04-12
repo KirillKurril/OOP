@@ -23,7 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Client\Client.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-    <ProjectReference Include="..\Logic\Logic.csproj" />
+    <ProjectReference Include="..\Logic\GameLogic.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using ServerDB.Repositories;
+using ServerDB.DBContext;
 
 namespace Network.Services.Server
 {
@@ -17,6 +19,8 @@ namespace Network.Services.Server
             });
             builder.Services.AddCors();
             builder.Services.AddSignalR();
+            builder.Services.AddDbContext<RoomsDBContext>();
+            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
             #endregion Настройка сервиса SignalR
 
 

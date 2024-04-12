@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{61E7786C-C82E-4494-B3BB-42CFA6AE997B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "Logic\GameLogic.csproj", "{454CB42B-ACF8-4332-BEF0-BB8A7F0A9FE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserInterface", "UserInterface\UserInterface.csproj", "{A87B3A33-1B09-4AB5-9F3C-758430B1DAF5}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{9AC99EF2-BB14-4D95-AAD7-A098A0846409}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{7468E800-73FE-4A1E-B0C1-7315AB1C9C67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClient", "TestClient\TestClient.csproj", "{7468E800-73FE-4A1E-B0C1-7315AB1C9C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerDB", "ServerDB\ServerDB.csproj", "{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{7468E800-73FE-4A1E-B0C1-7315AB1C9C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7468E800-73FE-4A1E-B0C1-7315AB1C9C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7468E800-73FE-4A1E-B0C1-7315AB1C9C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{F05124DC-F538-443D-8659-0D513E4A3BCC} = {E77F9473-2C8F-40E1-A255-E330E49EF3D2}
 		{C1B5F50F-965F-4B55-B1AB-63EA9EE4B91A} = {F05124DC-F538-443D-8659-0D513E4A3BCC}
 		{9AC99EF2-BB14-4D95-AAD7-A098A0846409} = {F05124DC-F538-443D-8659-0D513E4A3BCC}
+		{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA} = {F05124DC-F538-443D-8659-0D513E4A3BCC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9313B86-CA3D-48F7-83A4-5337C7393F05}
