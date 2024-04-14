@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v8.0": {
       "Server/1.0.0": {
         "dependencies": {
-          "GameLogic": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.4",
           "Newtonsoft.Json": "13.0.3",
           "ServerDB": "1.0.0"
@@ -296,18 +295,9 @@
           "Entities.dll": {}
         }
       },
-      "GameLogic/1.0.0": {
-        "dependencies": {
-          "Entities": "1.0.0"
-        },
-        "runtime": {
-          "GameLogic.dll": {}
-        }
-      },
       "ServerDB/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0",
-          "GameLogic": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.4"
         },
         "runtime": {
@@ -498,11 +488,6 @@
       "hashPath": "system.text.json.8.0.0.nupkg.sha512"
     },
     "Entities/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameLogic/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

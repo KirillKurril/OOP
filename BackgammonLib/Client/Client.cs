@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Threading.Tasks;
-using Entities;
+using Entities.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using Network.Interfaces;
 using Newtonsoft.Json;
@@ -47,21 +47,26 @@ namespace Network.Services.Client
                 Console.WriteLine($"Connection error: {ex.Message}");
             }
 
-
-
-            hubConnection.On<GameStatusData>("ReceiveGameStatus", (GameStatusData data) =>
+            hubConnection.On<string>("Test", (amongus) =>
             {
-                File.WriteAllText("gameStat.txt", data.ToString());
-                ReceiveGameStatusEvent?.Invoke(this, data); 
+                File.WriteAllText("test.txt", amongus);
             });
 
- /*         
-                hubConnection.On<string>("ReceiveGameStatus", (string json) =>
+            hubConnection.On<string>("GameStatusHandler", (amongus) =>
+            {
+                var data = JsonConvert.DeserializeObject<GameStatusData>(amongus);
+                File.WriteAllText("test.txt", data.ToString());
+                ReceiveGameStatusEvent?.Invoke(this, data);
+
+            });
+
+            hubConnection.On<string>("ReceiveGameStatus", (json) =>
             {
                 var data = JsonConvert.DeserializeObject<GameStatusData>(json);
+                File.WriteAllText("test0.txt", data.ToString());
                 ReceiveGameStatusEvent?.Invoke(this, data);
             });
- */
+ 
 
             hubConnection.On<bool, string>("CreateRoomAnswer", (bool createdSuccessfully, string message) =>
             {

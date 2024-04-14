@@ -1,4 +1,4 @@
-﻿using Entities;
+﻿using Entities.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 
 namespace Network.Interfaces

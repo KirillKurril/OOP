@@ -1,4 +1,4 @@
-﻿using Entities;
+﻿using Entities.Models;
 using ServerDB.Models;
 
 namespace ServerDB.Repositories

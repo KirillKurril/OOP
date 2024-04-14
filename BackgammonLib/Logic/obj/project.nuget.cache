@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oCrJzrTnYXOnbbFEdCA/TR1lvyxkoK8qyWkk2XXdVafUkSeekAb3m37/hqGY2Ezm6CQTgytQC+v4xFXbTOzFeQ==",
+  "dgSpecHash": "qozrRsPXy4Xogv7YJtaRC8YDVimdKiARV7xPPNqOuBaYHDhCFcJeLXbaANmYka+4kFlPZARlwZPsP6CaWwZg5A==",
   "success": true,
-  "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\GameLogic.csproj",
+  "projectFilePath": "E:\\Uni\\OOP\\BackgammonLib\\Logic\\GameLogic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

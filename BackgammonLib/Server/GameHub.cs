@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using BackgammonLogic;
 using Newtonsoft.Json;
-using Entities;
-using Microsoft.Extensions.Logging;
-using System;
 using ServerDB.Repositories;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Network.Services.Server
@@ -107,6 +102,7 @@ namespace Network.Services.Server
         }
         public async Task ColorRequest(string roomName)
         {
+            string response = string.Empty;
             try
             {
                 var players = _rooms.GetPlayers(roomName);
@@ -116,15 +112,16 @@ namespace Network.Services.Server
                     await Clients.Caller.SendAsync("ColorResponse", -1);
                 var gameStat = _rooms.GetStatus(roomName);
                 Console.WriteLine(gameStat);
-                await Clients.Caller.SendAsync("ReceiveGameStatus", gameStat);
 
-                /*string response = JsonConvert.SerializeObject(gameStat);
-                await Clients.Caller.SendAsync("ReceiveGameStatus", response);*/
+                response = JsonConvert.SerializeObject(gameStat);
+                await Clients.Caller.SendAsync("GameStatusHandler", response);
             }
-            catch 
+            catch
             {
                 await Clients.Caller.SendAsync("ColorResponse", 0);
             }
+
+                await Clients.Caller.SendAsync("Test", response);
             
         }
         public void WriteLog(string roomName, string message)
@@ -136,7 +133,7 @@ namespace Network.Services.Server
                 Console.WriteLine("\nRooms:");
                 foreach (var room in _rooms.GetRooms())
                 {
-                    Console.WriteLine($"Name: {room.ID}");
+                    Console.WriteLine($"Name: {room.Id}");
                     Console.WriteLine("Players:");
                     foreach(var player in room.Players)
                         Console.WriteLine($"\t + {player}");

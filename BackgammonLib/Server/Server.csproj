@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Logic\GameLogic.csproj" />
     <ProjectReference Include="..\ServerDB\ServerDB.csproj" />
   </ItemGroup>
 

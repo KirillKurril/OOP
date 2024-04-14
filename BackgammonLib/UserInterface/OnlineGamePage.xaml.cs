@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using Entities;
+using Entities.Models;
 using Logic.Entities;
 using Network.Interfaces;
 using Network.Services.Client;
@@ -43,7 +43,7 @@ namespace UserInterface
             else
             {
                 position = Convert.ToInt32(((Button)sender).Name.Substring(1));
-                if (verifier.Color == Entities.Colors.Black())
+                if (verifier.Color == Entities.Models.Colors.Black())
                     position = (position + 12) % 24;
             }
 
@@ -79,7 +79,7 @@ namespace UserInterface
         
         public void EndGameHandler(object sender, EventArgs e)
         {
-            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Colors.White()) ?
+            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Models.Colors.White()) ?
            ("White") : ("Black"))}" +
            $" player win!");
 

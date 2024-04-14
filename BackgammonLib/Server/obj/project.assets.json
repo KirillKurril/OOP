@@ -506,25 +506,11 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
-      "GameLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Entities": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GameLogic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameLogic.dll": {}
-        }
-      },
       "ServerDB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Entities": "1.0.0",
-          "GameLogic": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.4"
         },
         "compile": {
@@ -1265,11 +1251,6 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
-    "GameLogic/1.0.0": {
-      "type": "project",
-      "path": "../Logic/GameLogic.csproj",
-      "msbuildProject": "../Logic/GameLogic.csproj"
-    },
     "ServerDB/1.0.0": {
       "type": "project",
       "path": "../ServerDB/ServerDB.csproj",
@@ -1278,30 +1259,29 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "GameLogic >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.4",
       "Newtonsoft.Json >= 13.0.3",
       "ServerDB >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\natak\\.nuget\\packages\\": {},
+    "C:\\Users\\Джузеппе\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\Server\\Server.csproj",
+      "projectUniqueName": "E:\\Uni\\OOP\\BackgammonLib\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\natak\\.nuget\\packages\\",
-      "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\Server\\obj\\",
+      "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\Джузеппе\\.nuget\\packages\\",
+      "outputPath": "E:\\Uni\\OOP\\BackgammonLib\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\natak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Джузеппе\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1317,11 +1297,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Uni\\OOP\\BackgammonLib\\Logic\\GameLogic.csproj": {
-              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\Logic\\GameLogic.csproj"
-            },
-            "C:\\Uni\\OOP\\BackgammonLib\\ServerDB\\ServerDB.csproj": {
-              "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\ServerDB\\ServerDB.csproj"
+            "E:\\Uni\\OOP\\BackgammonLib\\ServerDB\\ServerDB.csproj": {
+              "projectPath": "E:\\Uni\\OOP\\BackgammonLib\\ServerDB\\ServerDB.csproj"
             }
           }
         }
@@ -1369,7 +1346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

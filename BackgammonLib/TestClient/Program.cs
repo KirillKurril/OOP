@@ -3,17 +3,16 @@ using Network.Interfaces;
 using Network.Services.Client;
 using System.Data;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using Entities;
+using Entities.Models;
 
 namespace TestClient
 {
     internal class Program
     {
         static IClient client;
-        static string room;
         static int _color;
-        static char _piece;
         static bool myTurn;
+        static GameStatusData gd;
 
         static void Main(string[] args)
         {
@@ -52,7 +51,7 @@ namespace TestClient
         {
             while (true)
             {
-                if (myTurn)
+                if (_color == gd.MoveColor && gd.DiceValues.Count != 0 )
                 {
                     Console.WriteLine("Теперь ваш ход ^^");
                     Console.WriteLine("Введите позицию первой шашки");
@@ -67,6 +66,7 @@ namespace TestClient
         private static void GameStatusHandler(object sender, GameStatusData data)
         {
             Console.WriteLine(data);
+            gd = data;
             MakeTurn();
         }
 
