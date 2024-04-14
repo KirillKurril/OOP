@@ -23,14 +23,14 @@ namespace Logic.Entities
             Color = color;
         }
         public void Update(int[] status, List<int> diceValues,
-            List<int> moveValues,bool reachedHome, bool hatsOffToYou, bool safeMode)
+            List<int> moveValues,bool reachedHome, bool hatsOffToYou, (bool, bool) safeMode)
         {
             this.status = status;
             this.diceValues = diceValues;
             this.moveValues = moveValues;
             this.reachedHome = reachedHome;
             this.hatsOffToYou = hatsOffToYou;
-            this.safeMode = safeMode;
+            this.safeMode = (Color == Colors.White() ? safeMode.Item1 : safeMode.Item2);
         }
 
         public bool VerifyStartPosition(int startPosition)

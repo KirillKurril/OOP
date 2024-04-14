@@ -14,7 +14,7 @@ namespace TestClient
         static int _color;
         static char _piece;
         static bool myTurn;
-        
+
         static void Main(string[] args)
         {
             _color = 0;
@@ -27,8 +27,11 @@ namespace TestClient
             client.ColorResponse += ColorResponseHandler;
             client.ReceiveGameStatusEvent += GameStatusHandler;
             Task.Run(async () => await client.Connect());
-            while(true)
+            while (true)
             {
+                if (_color != 0)
+                    break;
+
                 Console.WriteLine("1 - Создать\n2 - Подключиться\n");
                 int choise = int.Parse(Console.ReadLine());
                 if (choise == 1)
@@ -37,46 +40,35 @@ namespace TestClient
                     var roomName = Console.ReadLine();
                     Task.Run(async () => await client.CreateRoom(roomName));
                 }
-                else
+                else if (choise == 2)
                 {
                     Console.WriteLine("Введите название комнаты:\n");
                     var roomName = Console.ReadLine();
                     Task.Run(async () => await client.JoinRoom(roomName));
                 }
-                if (_color != 0)
-                    break;
             }
-            
-            
-            while(true)
+        }
+        public static void MakeTurn()
+        {
+            while (true)
             {
-                if(myTurn)
+                if (myTurn)
                 {
-                    int source= int.Parse(Console.ReadLine());
+                    Console.WriteLine("Теперь ваш ход ^^");
+                    Console.WriteLine("Введите позицию первой шашки");
+                    int source = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите позицию второй шашки");
                     int dstination = int.Parse(Console.ReadLine());
-                    Task.Run(async() => await client.MoveRequest(source, dstination)); 
+                    Task.Run(async () => await client.MoveRequest(source, dstination));
                 }
             }
         }
 
         private static void GameStatusHandler(object sender, GameStatusData data)
         {
-            Console.WriteLine($"Dice calues: \n");
-            foreach (var diceValue in data.DiceValues)
-                Console.WriteLine(diceValue);
-            
-            Console.WriteLine($"Score: {data.Score}");
-
-            myTurn = _color == data.MoveColor;
-
-            int counter = 0;
-            foreach( var pair in data.ExtraStatus)
-            {
-                Console.WriteLine($"[{counter}] ");
-                for (int i = pair.Item1; i > 0; i--)
-                    Console.Write(_piece);
-            }
-    }
+            Console.WriteLine(data);
+            MakeTurn();
+        }
 
         private static void RoomCompleteHandler(object? sender, EventArgs e)
         {
@@ -94,10 +86,7 @@ namespace TestClient
         {
             _color = color;
             Console.WriteLine($"Полученный цвет: {color}");
-            if (color == 1)
-                _piece = '○';
-            else
-                _piece = '●';
+         
         }
     }
 }

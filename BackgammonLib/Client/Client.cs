@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Entities;
 using Microsoft.AspNetCore.SignalR.Client;
 using Network.Interfaces;
+using Newtonsoft.Json;
 
 namespace Network.Services.Client
 {
@@ -50,8 +51,17 @@ namespace Network.Services.Client
 
             hubConnection.On<GameStatusData>("ReceiveGameStatus", (GameStatusData data) =>
             {
+                File.WriteAllText("gameStat.txt", data.ToString());
                 ReceiveGameStatusEvent?.Invoke(this, data); 
             });
+
+ /*         
+                hubConnection.On<string>("ReceiveGameStatus", (string json) =>
+            {
+                var data = JsonConvert.DeserializeObject<GameStatusData>(json);
+                ReceiveGameStatusEvent?.Invoke(this, data);
+            });
+ */
 
             hubConnection.On<bool, string>("CreateRoomAnswer", (bool createdSuccessfully, string message) =>
             {

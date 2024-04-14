@@ -153,8 +153,8 @@ namespace BackgammonLogic
                 GetDetailedReport(),
                 GetCurColor(),
                 (players[0].Score, players[1].Score),
-                !MovsAvalibleExist() ? true : false,
-                CheckEndGame()
+                (players[0].SafeMode, players[1].SafeMode),
+                (CheckEndGame(), GetCurColor())
                 );
             return data;
         }

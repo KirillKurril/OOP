@@ -23,9 +23,7 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterfac
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MenuStyles.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.dll
-C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.pdb
-C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Logic.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.csproj.AssemblyReference.cache
 D:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.exe
 D:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\UserInterface.deps.json
@@ -191,3 +189,5 @@ E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.g
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\BackgammonPage.baml
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MenuPage.baml
 E:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\GameLogic.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\GameLogic.pdb

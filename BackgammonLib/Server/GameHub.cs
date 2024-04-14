@@ -5,6 +5,7 @@ using Entities;
 using Microsoft.Extensions.Logging;
 using System;
 using ServerDB.Repositories;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Network.Services.Server
@@ -92,6 +93,7 @@ namespace Network.Services.Server
         public async Task SendGameStatus(string roomName)
         {
             var response = _rooms.GetStatus(roomName);
+            //string response = JsonConvert.SerializeObject(data);
             try
             {
                 await Clients.Group(roomName)
@@ -112,6 +114,12 @@ namespace Network.Services.Server
                     await Clients.Caller.SendAsync("ColorResponse", 1);
                 else
                     await Clients.Caller.SendAsync("ColorResponse", -1);
+                var gameStat = _rooms.GetStatus(roomName);
+                Console.WriteLine(gameStat);
+                await Clients.Caller.SendAsync("ReceiveGameStatus", gameStat);
+
+                /*string response = JsonConvert.SerializeObject(gameStat);
+                await Clients.Caller.SendAsync("ReceiveGameStatus", response);*/
             }
             catch 
             {
