@@ -1,5 +1,4 @@
-﻿using System.Reflection.Metadata;
-using Entities.GameServices;
+﻿using Entities.GameServices;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using ServerDB.Models;
@@ -40,12 +39,6 @@ namespace ServerDB.DBContext
                 .HasMany(game => game.Players)
                 .WithOne(player => player.NetGame)
                 .HasForeignKey(player => player.NetGameId)
-                .IsRequired();
-
-            modelBuilder.Entity<NetGame>()
-                .HasOne(game => game.CurPlayer)
-                .WithOne(player => player.NetGame)
-                .HasForeignKey<Player>(player => player.NetGameId)
                 .IsRequired();
 
             modelBuilder.Entity<GameBoard>()

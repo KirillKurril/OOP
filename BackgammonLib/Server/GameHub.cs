@@ -18,7 +18,7 @@ namespace Network.Services.Server
             string message ="";
             bool response = false;
 
-            try
+            //try
             {
                 if (_rooms.Contains(roomName))
                     throw new Exception("Room already exists!");
@@ -29,9 +29,9 @@ namespace Network.Services.Server
                 message = "Room created successfully";
                 response = true;
             }
-            catch(Exception ex)
+            //catch(Exception ex)
             {
-                message = ex.Message;
+                //message = ex.Message;
             }
 
             await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);

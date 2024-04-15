@@ -7,7 +7,8 @@ namespace Entities.GameServices
     public class NetGame
     {
         public int Id { get; set; }
-        public Player CurPlayer { get; set; }
+        public int CurPlayerInd { get; set; }
+       // public Player CurPlayer { get; set; }
         public List<Player> Players { get; set; }
         public List<Cell> СurField { get; set; }
         public GameBoard Board { get; set; }
@@ -15,7 +16,7 @@ namespace Entities.GameServices
         public List<int> DiceValues { get; set; }   
         public List<int> MoveValues { get; set; }   
         public bool HatsOffToYou { get; set; }
-        public int RoomId {  get; set; }
+        public string RoomId {  get; set; }
         public Room? Room { get; set; }
         
         public NetGame()
@@ -23,9 +24,9 @@ namespace Entities.GameServices
             Board = new GameBoard();
 
             Players = new List<Player>(2);
-            Players[0] = new Player(Colors.White);
-            Players[1] = new Player(Colors.Black);
-            CurPlayer = Players[0];
+            Players.Add(new Player(Colors.White));
+            Players.Add(new Player(Colors.Black));
+            CurPlayerInd = 0;
 
             СurField = Board.WhiteField;
 
@@ -45,7 +46,7 @@ namespace Entities.GameServices
         public bool VerifyStartPosition(int startPosition)
         {
             bool potentialMovesExist = MovsAvalibleExist();
-            bool rigthColor = Status[startPosition] == CurPlayer.Color;
+            bool rigthColor = Status[startPosition] == Players[CurPlayerInd].Color;
             bool headless = !(HatsOffToYou && startPosition == 0);
 
             return potentialMovesExist && rigthColor && headless;
@@ -68,7 +69,7 @@ namespace Entities.GameServices
         {
             List<int> positions = new List<int>();
             for (int i = 0; i < СurField.Count; ++i)
-                if (СurField[i].GetColor() == CurPlayer.Color)
+                if (СurField[i].GetColor() == Players[CurPlayerInd].Color)
                     positions.Add(i);
             return positions;
         }
@@ -79,7 +80,7 @@ namespace Entities.GameServices
             bool destExist = DiceValues.Contains(destinatioin - source);          //must be move values
             bool moveForvard = source < destinatioin;
             bool isFree = Status[destinatioin] == 0;
-            bool capturedByFriendlyUnit = Status[destinatioin] == CurPlayer.Color;
+            bool capturedByFriendlyUnit = Status[destinatioin] == Players[CurPlayerInd].Color;
             
             return (destExist && moveForvard && (isFree || capturedByFriendlyUnit));
         }
@@ -113,7 +114,7 @@ namespace Entities.GameServices
             do
             {
                 HatsOffToYou = false;
-                CurPlayer = CurPlayer.Color == 1 ? Players[1] : Players[0];
+                CurPlayerInd = Players[CurPlayerInd].Color == Colors.White ? Colors.Black : Colors.White;
                 СurField = СurField == Board.BlackField ? Board.WhiteField : Board.BlackField;
                 StatusRefresh();
                 RollDices();
@@ -135,7 +136,7 @@ namespace Entities.GameServices
         public bool GetPositionEctability(int position)
         {
             List<int> throwDices = DiceValues.Where(diceValue => diceValue + position >= 24).ToList();
-            return throwDices.Count != 0 && CurPlayer.ReachedHome;
+            return throwDices.Count != 0 && Players[CurPlayerInd].ReachedHome;
         }
         public List<int> GetStatus()
             => Status;
@@ -145,7 +146,7 @@ namespace Entities.GameServices
                 Status,
                 DiceValues,
                 MoveValues,
-                CurPlayer.ReachedHome,
+                Players[CurPlayerInd].ReachedHome,
                 HatsOffToYou,
                 GetDetailedReport(),
                 GetCurColor(),
@@ -158,11 +159,11 @@ namespace Entities.GameServices
         public List<int> GetDiceValues()
             => DiceValues;
         public int GetPlayerColor()
-            => CurPlayer.Color;
+            => Players[CurPlayerInd].Color;
         public bool GetPlayerStatus()
-            => CurPlayer.ReachedHome;
+            => Players[CurPlayerInd].ReachedHome;
         public int GetCurColor()
-            => CurPlayer.Color;
+            => Players[CurPlayerInd].Color;
         void Refresh(int destination, int source, bool throwCase = false)
         {
             RemoveUsedDices(destination - source);
@@ -173,18 +174,18 @@ namespace Entities.GameServices
             ReachedHomeRefresh();
         }
         private void SafeModeRefresh()
-            => CurPlayer.SafeMode = Status.Skip(18).All(position => position != CurPlayer.Color);
+            => Players[CurPlayerInd].SafeMode = Status.Skip(18).All(position => position != Players[CurPlayerInd].Color);
         private void StatusRefresh()
         {
             for (int i = 0; i < СurField.Count; i++)
                 Status[i] = СurField[i].GetColor();
         }
         private void ReachedHomeRefresh()
-            => CurPlayer.ReachedHome = Status.Take(18).All(position => position != CurPlayer.Color);
+            => Players[CurPlayerInd].ReachedHome = Status.Take(18).All(position => position != Players[CurPlayerInd].Color);
         private void ScoreRefresh(int modul)
-            => CurPlayer.Score -= modul;
+            => Players[CurPlayerInd].Score -= modul;
         public bool CheckEndGame()
-            => CurPlayer.Score == 0;
+            => Players[CurPlayerInd].Score == 0;
         public void RollDices()
         {
             DiceValues.Clear();
