@@ -10,7 +10,7 @@ namespace Entities.Models
         public bool ReachedHome { get; set; }
         public bool SafeMode { get; set; }
         public int NetGameId { get; set; }
-        public NetGame? NetGame { get; set; }
+        public NetGame NetGame { get; set; } = null!;
 
         public Player(int color, int score = 360)
             => (Color, Score, SafeMode) = (color, score, true);

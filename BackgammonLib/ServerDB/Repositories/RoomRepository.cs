@@ -76,19 +76,19 @@ namespace ServerDB.Repositories
             
             if(room != null)
             { 
-                room.Game.Move(source, destination);
+                room.NetGame.Move(source, destination);
                 db.SaveChanges();
             }
         }
         public GameStatusData? GetStatus(string roomName)
         {
             var room = GetRoom(roomName);
-            return room != null ? room.Game.GetGameStatus() : null;
+            return room != null ? room.NetGame.GetGameStatus() : null;
         }
         public int? GetCurColor(string roomName)
         {
             var room = GetRoom(roomName);
-            return room != null ? room.Game.GetCurColor() : null;
+            return room != null ? room.NetGame.GetCurColor() : null;
         }
         public List<string>? GetPlayers(string roomName)
         {

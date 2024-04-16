@@ -1,5 +1,6 @@
 ﻿using Entities.Models;
 using ServerDB.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace Entities.GameServices
@@ -8,17 +9,18 @@ namespace Entities.GameServices
     {
         public int Id { get; set; }
         public int CurPlayerInd { get; set; }
-       // public Player CurPlayer { get; set; }
         public List<Player> Players { get; set; }
-        public List<Cell> СurField { get; set; }
+        [NotMapped]
+        public List<Cell> СurField
+            => CurPlayerInd == 0 ? Board.WhiteField : Board.BlackField;
         public GameBoard Board { get; set; }
         public List<int> Status { get; set; }           
         public List<int> DiceValues { get; set; }   
         public List<int> MoveValues { get; set; }   
         public bool HatsOffToYou { get; set; }
-        public string RoomId {  get; set; }
-        public Room? Room { get; set; }
-        
+        public string RoomId { get; set; }
+        public Room Room { get; set; } = null!;
+
         public NetGame()
         {
             Board = new GameBoard();
@@ -27,8 +29,6 @@ namespace Entities.GameServices
             Players.Add(new Player(Colors.White));
             Players.Add(new Player(Colors.Black));
             CurPlayerInd = 0;
-
-            СurField = Board.WhiteField;
 
             MoveValues = new List<int>();
             DiceValues = new List<int>();
@@ -115,7 +115,6 @@ namespace Entities.GameServices
             {
                 HatsOffToYou = false;
                 CurPlayerInd = Players[CurPlayerInd].Color == Colors.White ? Colors.Black : Colors.White;
-                СurField = СurField == Board.BlackField ? Board.WhiteField : Board.BlackField;
                 StatusRefresh();
                 RollDices();
                 MoveValuesRefresh();
@@ -177,8 +176,9 @@ namespace Entities.GameServices
             => Players[CurPlayerInd].SafeMode = Status.Skip(18).All(position => position != Players[CurPlayerInd].Color);
         private void StatusRefresh()
         {
+            Status.Clear();
             for (int i = 0; i < СurField.Count; i++)
-                Status[i] = СurField[i].GetColor();
+                Status.Add(СurField[i].GetColor());
         }
         private void ReachedHomeRefresh()
             => Players[CurPlayerInd].ReachedHome = Status.Take(18).All(position => position != Players[CurPlayerInd].Color);
