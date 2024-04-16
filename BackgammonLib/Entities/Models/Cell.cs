@@ -1,10 +1,16 @@
-﻿namespace Entities.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Entities.Models
 {
     public class Cell
     {
         public int Id { get; set; }
         public List<int> Storage { get; set; }
-        public int GameBoardId {  get; set; }
+
+        [Column("GameBoardId")]
+        public int GameBoardId { get; set; }
+
+        [ForeignKey("GameBoardId")]
         public GameBoard GameBoard { get; set; } = null!;
         public Cell()
             => Storage = new List<int>();

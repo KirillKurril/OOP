@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Uni\\OOP\\BackgammonLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\models\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\models\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|c:\\uni\\oop\\backgammonlib\\entities\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61E7786C-C82E-4494-B3BB-42CFA6AE997B}|Entities\\Entities.csproj|solutionrelative:entities\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7127E02E-9F1E-4DC9-9D4A-7D0D06C00CEA}|ServerDB\\ServerDB.csproj|c:\\uni\\oop\\backgammonlib\\serverdb\\dbcontext\\roomsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,17 +58,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameBoard.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Models\\GameBoard.cs",
               "RelativeDocumentMoniker": "Entities\\Models\\GameBoard.cs",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Models\\GameBoard.cs",
               "RelativeToolTip": "Entities\\Models\\GameBoard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T23:43:36.305Z",
               "EditorCaption": ""
@@ -88,13 +88,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cell.cs",
               "DocumentMoniker": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Models\\Cell.cs",
               "RelativeDocumentMoniker": "Entities\\Models\\Cell.cs",
               "ToolTip": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Models\\Cell.cs",
               "RelativeToolTip": "Entities\\Models\\Cell.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T06:57:10.783Z",
               "EditorCaption": ""
