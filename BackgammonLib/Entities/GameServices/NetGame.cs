@@ -14,14 +14,15 @@ namespace Entities.GameServices
         public List<Cell> СurField
             => CurPlayerInd == 0 ? Board.WhiteField : Board.BlackField;
         public GameBoard Board { get; set; }
-        public List<int> Status { get; set; }           
-        public List<int> DiceValues { get; set; }   
-        public List<int> MoveValues { get; set; }   
+        public List<int> Status { get; set; } = [];
+        public List<int> DiceValues { get; set; } = [];
+        public List<int> MoveValues { get; set; } = [];   
         public bool HatsOffToYou { get; set; }
         public string RoomId { get; set; }
         public Room Room { get; set; } = null!;
 
-        public NetGame()
+        public NetGame() { }
+        public NetGame(int init)
         {
             Board = new GameBoard();
 

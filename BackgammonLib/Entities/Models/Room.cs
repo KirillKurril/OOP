@@ -13,7 +13,7 @@ namespace ServerDB.Models
         {
             this.Id = Id;
             Players = new List<string>();
-            NetGame = new NetGame();
+            NetGame = new NetGame(1);
         }
     }
 }

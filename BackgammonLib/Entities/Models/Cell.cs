@@ -15,7 +15,7 @@ namespace Entities.Models
         public Cell()
             => Storage = new List<int>();
         public void Push(int piece)
-            => Storage.Append(piece);
+            => this.Storage.Add(piece);
         public int Pop()
         {
             int lastPiece = Storage[Storage.Count - 1];
