@@ -17,17 +17,23 @@ namespace Network.Services.Server
         {
             string message ="";
             bool response = false;
-
+            
+            try
             {
                 if (_rooms.Contains(roomName))
-                    throw new Exception("Room already exists!");
+                throw new Exception("Room already exists!");
 
-                await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
-                _rooms.Add(roomName);
-                _rooms.AddPlayer(roomName, Context.ConnectionId);
-                message = "Room created successfully";
+            await Groups.AddToGroupAsync(Context.ConnectionId, roomName);
+            _rooms.Add(roomName);
+            _rooms.AddPlayer(roomName, Context.ConnectionId);
+            message = "Room created successfully";
                 response = true;
             }
+            catch(Exception ex)
+            {
+                message = ex.Message;
+            }
+            
 
             await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);
             await Task.Run(() => WriteLog(roomName, message));
@@ -104,20 +110,16 @@ namespace Network.Services.Server
                 var players = _rooms.GetPlayers(roomName);
                 if (Context.ConnectionId == players[0])
                 {
-                    await Clients.Caller.SendAsync("ColorResponse", 1);
+                     await Task.Run(() => Clients.Caller.SendAsync("ColorResponse", 1));
                 }
                 else
                 {
-                    await Clients.Caller.SendAsync("ColorResponse", -1);
-                    await SendGameStatus(roomName);
+                     await Task.Run(async () =>
+                    {
+                        await Clients.Caller.SendAsync("ColorResponse", -1);
+                        await SendGameStatus(roomName);
+                    });
                 }
-/*                {
-                        var gameStat = _rooms.GetStatus(roomName);
-                        Console.WriteLine(gameStat);
-
-                        response = JsonConvert.SerializeObject(gameStat);
-                        await Clients.Caller.SendAsync("GameStatusHandler", response);
-                }*/
             }
             catch (Exception ex)
             {

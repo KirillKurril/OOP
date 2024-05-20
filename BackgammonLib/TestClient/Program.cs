@@ -47,10 +47,9 @@ namespace TestClient
                 }
             }
         }
-        public static void MakeTurn()
+        static void MakeTurn()
         {
-            while (true)
-            {
+            while(true)
                 if (_color == gd.MoveColor && gd.DiceValues.Count != 0)
                 {
                     Console.WriteLine("Теперь ваш ход ^^");
@@ -60,7 +59,9 @@ namespace TestClient
                     int dstination = int.Parse(Console.ReadLine());
                     Task.Run(async () => await client.MoveRequest(source, dstination));
                 }
-            }
+
+            Console.WriteLine("Нажмите любую клавишу для выхода...");
+            Console.ReadKey();
         }
 
         private static void ReceiveGameStatusHandler(object sender, GameStatusData data)
@@ -86,7 +87,10 @@ namespace TestClient
 
         private static void ColorResponseHandler(object sender, int color)
         {
-            _color = color;
+            if (color == 0)
+                Console.WriteLine("!!!Ошибка раздачи цвета!!!");
+            else
+                _color = color;
             Console.WriteLine($"Полученный цвет: {color}");
         }
     }

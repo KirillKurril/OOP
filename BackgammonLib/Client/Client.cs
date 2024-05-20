@@ -92,8 +92,6 @@ namespace Network.Services.Client
             hubConnection.On("ColorResponse", (int color) =>
             {
                 Console.WriteLine($"Пришел ответ на запрос цвета: {color}");
-                if(color == -1)
-
                 ColorResponse?.Invoke(this, color);
             });
         }
