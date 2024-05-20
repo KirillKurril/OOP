@@ -60,8 +60,9 @@ namespace Network.Services.Client
 
             });
 
-            hubConnection.On<GameStatusData>("ReceiveGameStatus", (data) =>
+            hubConnection.On<string>("ReceiveGameStatus", (json) =>
             {
+                var data = JsonConvert.DeserializeObject<GameStatusData>(json);
                 File.WriteAllText("test0.txt", data.ToString());
                 ReceiveGameStatusEvent?.Invoke(this, data);
             });

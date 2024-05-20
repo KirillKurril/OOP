@@ -60,8 +60,6 @@ namespace TestClient
                     int dstination = int.Parse(Console.ReadLine());
                     Task.Run(async () => await client.MoveRequest(source, dstination));
                 }
-                else
-                    Console.WriteLine("Не твой ход");
             }
         }
 

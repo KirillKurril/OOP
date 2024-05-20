@@ -82,8 +82,8 @@ namespace Network.Services.Server
         }
         public async Task SendGameStatus(string roomName)
         {
-            var response = _rooms.GetStatus(roomName);
-            //string response = JsonConvert.SerializeObject(data);
+            var data = _rooms.GetStatus(roomName);
+            string response = JsonConvert.SerializeObject(data);
             try
             {
                 await Clients.Group(roomName)
