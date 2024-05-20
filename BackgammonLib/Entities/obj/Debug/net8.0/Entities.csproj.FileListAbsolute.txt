@@ -34,3 +34,4 @@ E:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.dll
 E:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\refint\Entities.dll
 E:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.pdb
 E:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Uni\OOP\BackgammonLib\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache

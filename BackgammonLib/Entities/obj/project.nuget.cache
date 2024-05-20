@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AzkzJotZH30s/NaLr51P8ZOvm8hJ2GHreXqsnHagO4+MVSD3UA2pBmdRVtzXpmISxf93kT+gWP6THRlxh0ST+g==",
+  "dgSpecHash": "rZX87TWccHIfjYN/dZ+lYZTncYCJlGrQc4+/7N1uSvF4xfGQvgK4/jrgQiEj+m4tjNpm6Ehrr6gg0WSVC5pByg==",
   "success": true,
   "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\Entities\\Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\natak\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

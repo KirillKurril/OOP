@@ -4,7 +4,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Entities.Models;
-using Logic.Entities;
+using Entities.GameServices;
 using Network.Interfaces;
 using Network.Services.Client;
 

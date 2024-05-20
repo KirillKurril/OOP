@@ -20,10 +20,7 @@ namespace ServerDB.DBContext
         }
 /*        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<GameBoard>()
-                .HasMany(board => board.WhiteField)
-                .WithOne(cell => cell.GameBoard)
-                .HasForeignKey(cell => cell.GameBoardId);
+                
         }*/
         public void SaveData()
         {

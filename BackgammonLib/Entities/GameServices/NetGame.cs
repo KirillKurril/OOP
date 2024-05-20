@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Microsoft.Extensions.DependencyInjection;
 using ServerDB.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,12 +21,10 @@ namespace Entities.GameServices
         public bool HatsOffToYou { get; set; }
         public string RoomId { get; set; }
         public Room Room { get; set; } = null!;
-
         public NetGame() { }
         public NetGame(int init)
         {
             Board = new GameBoard();
-
             Players = new List<Player>(2);
             Players.Add(new Player(Colors.White));
             Players.Add(new Player(Colors.Black));
@@ -44,6 +43,7 @@ namespace Entities.GameServices
 
             ReachedHomeRefresh();
         }
+
         public bool VerifyStartPosition(int startPosition)
         {
             bool potentialMovesExist = MovsAvalibleExist();
