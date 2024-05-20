@@ -60,9 +60,8 @@ namespace Network.Services.Client
 
             });
 
-            hubConnection.On<string>("ReceiveGameStatus", (json) =>
+            hubConnection.On<GameStatusData>("ReceiveGameStatus", (data) =>
             {
-                var data = JsonConvert.DeserializeObject<GameStatusData>(json);
                 File.WriteAllText("test0.txt", data.ToString());
                 ReceiveGameStatusEvent?.Invoke(this, data);
             });
@@ -91,12 +90,19 @@ namespace Network.Services.Client
 
             hubConnection.On("ColorResponse", (int color) =>
             {
+                Console.WriteLine($"Пришел ответ на запрос цвета: {color}");
+                if(color == -1)
+
                 ColorResponse?.Invoke(this, color);
             });
         }
         public async Task MoveRequest(int source, int destination)
         {
             await hubConnection.InvokeAsync("MoveRequest", source, destination, _roomName);
+        }
+        public async Task GameDataRequest(string roomName)
+        {
+            await hubConnection.InvokeAsync("SendGameStatus", roomName);
         }
         public async Task CreateRoom(string roomName)
         {

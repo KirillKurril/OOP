@@ -19,5 +19,7 @@ namespace ServerDB.Repositories
         void RemovePlayer(string roomName, string playerName);
         void MakeMove(string roomName, int source, int dstination);
         List<string>? GetPlayers(string roomName);
+/*        void IncreaseCountPlayersAssignedColor(string roomName);
+        bool GetPlayersAssignedColorFullfill(string roomName);*/
     }
 }

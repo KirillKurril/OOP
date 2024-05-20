@@ -18,7 +18,6 @@ namespace Network.Services.Server
             string message ="";
             bool response = false;
 
-            //try
             {
                 if (_rooms.Contains(roomName))
                     throw new Exception("Room already exists!");
@@ -28,10 +27,6 @@ namespace Network.Services.Server
                 _rooms.AddPlayer(roomName, Context.ConnectionId);
                 message = "Room created successfully";
                 response = true;
-            }
-            //catch(Exception ex)
-            {
-                //message = ex.Message;
             }
 
             await Clients.Caller.SendAsync("CreateRoomAnswer", response, message);
@@ -102,26 +97,35 @@ namespace Network.Services.Server
         }
         public async Task ColorRequest(string roomName)
         {
+            Console.WriteLine($"\n\n\nПРИШЕЛ ЗАПРОС НА ЦВЕТ ОТ ИГРОКА: {Context.ConnectionId}\n\n\n");
             string response = string.Empty;
             try
             {
                 var players = _rooms.GetPlayers(roomName);
                 if (Context.ConnectionId == players[0])
+                {
                     await Clients.Caller.SendAsync("ColorResponse", 1);
+                }
                 else
+                {
                     await Clients.Caller.SendAsync("ColorResponse", -1);
-                var gameStat = _rooms.GetStatus(roomName);
-                Console.WriteLine(gameStat);
+                    await SendGameStatus(roomName);
+                }
+/*                {
+                        var gameStat = _rooms.GetStatus(roomName);
+                        Console.WriteLine(gameStat);
 
-                response = JsonConvert.SerializeObject(gameStat);
-                await Clients.Caller.SendAsync("GameStatusHandler", response);
+                        response = JsonConvert.SerializeObject(gameStat);
+                        await Clients.Caller.SendAsync("GameStatusHandler", response);
+                }*/
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine($"ОШИБКА ПРИ ОТПРАВКЕ ЦВЕТА {ex}");
                 await Clients.Caller.SendAsync("ColorResponse", 0);
             }
 
-                await Clients.Caller.SendAsync("Test", response);
+            //await Clients.Caller.SendAsync("Test", response);
             
         }
         public void WriteLog(string roomName, string message)

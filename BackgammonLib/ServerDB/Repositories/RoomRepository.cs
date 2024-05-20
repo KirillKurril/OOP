@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using ServerDB.DBContext;
 using ServerDB.Models;
 
@@ -20,7 +21,7 @@ namespace ServerDB.Repositories
         }
         public void Add(string roomName)
         {
-            var room = new Room(roomName);
+            var room = Room.CreateRoom(roomName);
             db.Rooms.Add(room);
             db.SaveChanges();
         }
@@ -57,7 +58,14 @@ namespace ServerDB.Repositories
         public void Dispose()
             => db.Dispose();
         public Room? GetRoom(string roomName)
-            => db.Rooms.Find(roomName);
+        {
+            return db.Rooms
+                .Include(r => r.NetGame)
+                    .ThenInclude(ng => ng.Board)
+                .Include(r => r.NetGame)
+                    .ThenInclude(ng => ng.Players)
+                .FirstOrDefault(r => r.Id == roomName);
+        }
         public IEnumerable<Room> GetRooms()
             => db.Rooms.ToList();
         public bool IsEmpty(string roomName)
@@ -83,6 +91,7 @@ namespace ServerDB.Repositories
         public GameStatusData? GetStatus(string roomName)
         {
             var room = GetRoom(roomName);
+            Console.WriteLine(room);
             return room != null ? room.NetGame.GetGameStatus() : null;
         }
         public int? GetCurColor(string roomName)

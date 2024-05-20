@@ -191,6 +191,9 @@
       },
       "System.Threading.Channels/8.0.0": {},
       "Entities/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
         "runtime": {
           "Entities.dll": {}
         }

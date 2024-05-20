@@ -16,12 +16,27 @@ namespace ServerDB.DBContext
 
         public RoomsDBContext(DbContextOptions options) : base(options) 
         {
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
-/*        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-                
-        }*/
+            modelBuilder.Entity<Room>()
+                .HasOne(r => r.NetGame)
+                .WithOne(ng => ng.Room)
+                .HasForeignKey<NetGame>(ng => ng.RoomId);
+
+            modelBuilder.Entity<NetGame>()
+                .HasOne(ng => ng.Board)
+                .WithOne(b => b.NetGame)
+                .HasForeignKey<GameBoard>(b => b.NetGameId);
+
+            modelBuilder.Entity<NetGame>()
+                .HasMany(ng => ng.Players)
+                .WithOne(p => p.NetGame)
+                .HasForeignKey(p => p.NetGameId);
+
+        }
         public void SaveData()
         {
             SaveChanges();

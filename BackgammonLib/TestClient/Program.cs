@@ -24,7 +24,7 @@ namespace TestClient
             client.JoinRoomResponseEvent += RoomConnectionHandler;
             client.RoomCompleted += RoomCompleteHandler;
             client.ColorResponse += ColorResponseHandler;
-            client.ReceiveGameStatusEvent += GameStatusHandler;
+            client.ReceiveGameStatusEvent += ReceiveGameStatusHandler;
             Task.Run(async () => await client.Connect());
             while (true)
             {
@@ -51,7 +51,7 @@ namespace TestClient
         {
             while (true)
             {
-                if (_color == gd.MoveColor && gd.DiceValues.Count != 0 )
+                if (_color == gd.MoveColor && gd.DiceValues.Count != 0)
                 {
                     Console.WriteLine("Теперь ваш ход ^^");
                     Console.WriteLine("Введите позицию первой шашки");
@@ -60,10 +60,12 @@ namespace TestClient
                     int dstination = int.Parse(Console.ReadLine());
                     Task.Run(async () => await client.MoveRequest(source, dstination));
                 }
+                else
+                    Console.WriteLine("Не твой ход");
             }
         }
 
-        private static void GameStatusHandler(object sender, GameStatusData data)
+        private static void ReceiveGameStatusHandler(object sender, GameStatusData data)
         {
             Console.WriteLine(data);
             gd = data;
@@ -73,6 +75,8 @@ namespace TestClient
         private static void RoomCompleteHandler(object? sender, EventArgs e)
         {
             Console.WriteLine($"Комната {client._roomName} успешно создана\n");
+            Console.WriteLine("Выполняется переход на страницу игры и запрашивается цвет");
+            Console.WriteLine("Вы запросили цвет");
             client.RequestColor();
         }
 
@@ -86,7 +90,6 @@ namespace TestClient
         {
             _color = color;
             Console.WriteLine($"Полученный цвет: {color}");
-         
         }
     }
 }

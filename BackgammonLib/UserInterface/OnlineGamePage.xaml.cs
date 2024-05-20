@@ -43,7 +43,7 @@ namespace UserInterface
             else
             {
                 position = Convert.ToInt32(((Button)sender).Name.Substring(1));
-                if (verifier.Color == Entities.Models.Colors.Black())
+                if (verifier.Color == Entities.Models.Colors.Black)
                     position = (position + 12) % 24;
             }
 
@@ -69,7 +69,7 @@ namespace UserInterface
             => verifier.Color = color;
         public void ReceiveGameDataHandler(object sender, GameStatusData data)
         {
-            verifier.Update(data.Status, data.DiceValues, data.MoveValues, data.ReachedHome, data.HatsOffToYou, data.Safemode);
+            verifier.Update(data.Status.ToArray(), data.DiceValues, data.MoveValues, data.ReachedHome, data.HatsOffToYou, data.Safemode);
             RefreshField(data.ExtraStatus);
             fieldEnabled = verifier.Color == data.MoveColor;
             whiteScore = data.Score.Item1;
@@ -79,7 +79,7 @@ namespace UserInterface
         
         public void EndGameHandler(object sender, EventArgs e)
         {
-            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Models.Colors.White()) ?
+            MessageBox.Show($"Congratulations!\n{((verifier.Color == Entities.Models.Colors.White) ?
            ("White") : ("Black"))}" +
            $" player win!");
 

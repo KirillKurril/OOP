@@ -8,41 +8,44 @@ namespace Entities.GameServices
 {
     public class NetGame
     {
+        public static NetGame CreateNetGame()
+        {
+            NetGame netGame = new NetGame();
+
+            netGame.Board = new GameBoard();
+            netGame.Players = new List<Player>(2);
+            netGame.Players.Add(new Player(Colors.White));
+            netGame.Players.Add(new Player(Colors.Black));
+            netGame.CurPlayerInd = 0;
+
+            netGame.MoveValues = new List<int>();
+            netGame.DiceValues = new List<int>();
+
+            netGame.Status = new List<int>(24);
+            netGame.StatusRefresh();
+
+            netGame.HatsOffToYou = false;
+
+            netGame.RollDices();
+            netGame.MoveValuesRefresh();
+
+            netGame.ReachedHomeRefresh();
+
+            return netGame;
+        }
         public int Id { get; set; }
         public int CurPlayerInd { get; set; }
-        public List<Player> Players { get; set; }
+        public List<Player> Players { get; set; } = null!;
         [NotMapped]
         public List<Cell> СurField
             => CurPlayerInd == 0 ? Board.WhiteField : Board.BlackField;
-        public GameBoard Board { get; set; }
+        public GameBoard Board { get; set; } = null!;
         public List<int> Status { get; set; } = [];
         public List<int> DiceValues { get; set; } = [];
         public List<int> MoveValues { get; set; } = [];   
         public bool HatsOffToYou { get; set; }
         public string RoomId { get; set; }
         public Room Room { get; set; } = null!;
-        public NetGame() { }
-        public NetGame(int init)
-        {
-            Board = new GameBoard();
-            Players = new List<Player>(2);
-            Players.Add(new Player(Colors.White));
-            Players.Add(new Player(Colors.Black));
-            CurPlayerInd = 0;
-
-            MoveValues = new List<int>();
-            DiceValues = new List<int>();
-
-            Status = new List<int>(24);
-            StatusRefresh();
-
-            HatsOffToYou = false;
-
-            RollDices();
-            MoveValuesRefresh();
-
-            ReachedHomeRefresh();
-        }
 
         public bool VerifyStartPosition(int startPosition)
         {
