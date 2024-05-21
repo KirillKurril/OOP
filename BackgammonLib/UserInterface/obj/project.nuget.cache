@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AHXSXE44+S2nikGLjWDVaotyOizSEhLPPpBilWoyRosjnaIdaUoutM90q5Wg8fOnT8TefP00hsm596wf0sGamA==",
+  "dgSpecHash": "xehNL1Kt1slkN8yYySK489soWqjmNVobDKOu9imo6gaSODg79kYQdhmOIQPCmyN3lN2TzHTyWko9m/Tf4fLWAw==",
   "success": true,
   "projectFilePath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\natak\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\natak\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.4\\microsoft.aspnetcore.connections.abstractions.8.0.4.nupkg.sha512",
     "C:\\Users\\natak\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\8.0.4\\microsoft.aspnetcore.http.connections.client.8.0.4.nupkg.sha512",
     "C:\\Users\\natak\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\8.0.4\\microsoft.aspnetcore.http.connections.common.8.0.4.nupkg.sha512",

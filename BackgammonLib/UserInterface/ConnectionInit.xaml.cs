@@ -9,11 +9,17 @@ namespace UserInterface
     {
         IClient _client;
         INavigationService _navigationService;
-        public ObservableCollection<object> DialogWindowElements { get; set; }
+        
+        public Visibility СreateOrJoinVisibility { get; set; } = Visibility.Visible;
+        public bool СreateOrJoinEnabled { get; set; } = true;
+        public Visibility СreateVisibility { get; set; } = Visibility.Collapsed;
+        public bool СreateEnabled { get; set; } = false;
+        public Visibility JoinVisibility { get; set; } = Visibility.Collapsed;
+        public bool JoinEnabled { get; set; } = false;
+        public Visibility BackaAndTextBoxVisibility { get; set; } = Visibility.Collapsed;
+        public bool BackaAndTextBoxEnabled { get; set; } = false;
         public ConnectionInit(IClient client, INavigationService navigationService)
         {
-            DialogWindowElements = new ObservableCollection<object>();
-            DialogWindowElements = BasicDialogCollection();
             InitializeComponent();
             _client = client;
             _navigationService = navigationService;
@@ -34,8 +40,6 @@ namespace UserInterface
             MessageBox.Show(message);
         }
 
-       
-
         public void CreateRoom(object sender, RoutedEventArgs e)
             => Task.Run(async () => 
             {
@@ -54,61 +58,35 @@ namespace UserInterface
        
 
         private void JoinRoomButton_Click(object sender, RoutedEventArgs e)
-        =>  DialogWindowElements = JoinDialogCollection();
+        {
+            СreateOrJoinVisibility = Visibility.Collapsed;
+            СreateOrJoinEnabled = false;
+            JoinVisibility = Visibility.Visible;
+            JoinEnabled = true;
+            BackaAndTextBoxVisibility = Visibility.Visible;
+            BackaAndTextBoxEnabled = true;
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            СreateOrJoinVisibility = Visibility.Visible;
+            СreateOrJoinEnabled = true;
+            JoinVisibility = Visibility.Collapsed;
+            JoinEnabled = false;
+            СreateVisibility = Visibility.Collapsed;
+            СreateEnabled = false;
+            BackaAndTextBoxVisibility = Visibility.Collapsed;
+            BackaAndTextBoxEnabled = false;
+        }
 
         private void CreateRoomButton_Click(object sender, RoutedEventArgs e)
-        =>  DialogWindowElements = CreateDialogCollection();
-        private ObservableCollection<object> BasicDialogCollection()
         {
-            var CreateRoomButton = new Button();
-            CreateRoomButton.Content = "Создать комнату";
-            CreateRoomButton.Style = (Style)FindResource("DialogButton");
-            CreateRoomButton.Click += CreateRoomButton_Click;
-            Grid.SetRow(CreateRoomButton, 0);
-
-            var JoinRoomButton = new Button();
-            JoinRoomButton.Content = "Присоединиться к комнате";
-            JoinRoomButton.Style = (Style)FindResource("DialogButton");
-            JoinRoomButton.Click += JoinRoomButton_Click;
-            Grid.SetRow(JoinRoomButton, 1);
-
-            var items = new ObservableCollection<object>() { CreateRoomButton, JoinRoomButton };
-
-            return items;
-        }
-
-        private ObservableCollection<object> CreateDialogCollection()
-        {
-            var textBox = new TextBox();
-            textBox.Name = "dialogTextBox";
-            textBox.Style = (Style)FindResource("RoomName");
-            Grid.SetRow(textBox, 0);
-
-            var ConfimButton = new Button();
-            ConfimButton.Style = (Style)FindResource("DialogButton");
-            ConfimButton.Content = "Подтвердить";
-            Grid.SetRow(ConfimButton, 1);
-            ConfimButton.Click += CreateRoom;
-
-            var items = new ObservableCollection<object>() {textBox, ConfimButton };
-
-            return items;
-        }
-        private ObservableCollection<object> JoinDialogCollection()
-        {
-            var textBox = new TextBox();
-            textBox.Style = (Style)FindResource("RoomName");
-            Grid.SetRow(textBox, 0);
-
-            var ConfimButton = new Button();
-            ConfimButton.Style = (Style)FindResource("DialogButton");
-            ConfimButton.Content = "Подтвердить";
-            Grid.SetRow(ConfimButton, 1);
-            ConfimButton.Click += JoinRoom;
-
-            var items = new ObservableCollection<object>() { textBox, ConfimButton };
-
-            return items;
+            СreateOrJoinVisibility = Visibility.Collapsed;
+            СreateOrJoinEnabled = false;
+            СreateVisibility = Visibility.Visible;
+            СreateEnabled = true;
+            BackaAndTextBoxVisibility = Visibility.Visible;
+            BackaAndTextBoxEnabled = true;
         }
     }
 }

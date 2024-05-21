@@ -46,29 +46,35 @@ namespace TestClient
                     Task.Run(async () => await client.JoinRoom(roomName));
                 }
             }
+            /* while (true)
+                 Thread.Sleep(300000);*/
+            MakeTurn();
         }
-        static void MakeTurn()
+        static async void MakeTurn()
         {
-            while(true)
-                if (_color == gd.MoveColor && gd.DiceValues.Count != 0)
+            await Task.Run(() =>
+            {
+                while(true)
                 {
-                    Console.WriteLine("Теперь ваш ход ^^");
-                    Console.WriteLine("Введите позицию первой шашки");
-                    int source = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Введите позицию второй шашки");
-                    int dstination = int.Parse(Console.ReadLine());
-                    Task.Run(async () => await client.MoveRequest(source, dstination));
+                    if (_color == gd.MoveColor && gd.DiceValues.Count != 0)
+                    {
+                        Console.WriteLine("Теперь ваш ход ^^");
+                        Console.WriteLine("Введите позицию первой шашки");
+                        int source = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Введите позицию второй шашки");
+                        int dstination = int.Parse(Console.ReadLine());
+                        Task.Run(async () => await client.MoveRequest(source, dstination));
+                    }
                 }
-
-            Console.WriteLine("Нажмите любую клавишу для выхода...");
-            Console.ReadKey();
+            });
+               
         }
 
         private static void ReceiveGameStatusHandler(object sender, GameStatusData data)
         {
             Console.WriteLine(data);
             gd = data;
-            MakeTurn();
+            //MakeTurn();
         }
 
         private static void RoomCompleteHandler(object? sender, EventArgs e)
