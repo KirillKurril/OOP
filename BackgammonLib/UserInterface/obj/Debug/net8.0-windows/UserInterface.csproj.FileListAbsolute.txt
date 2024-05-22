@@ -115,11 +115,7 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\BackgammonStyles.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\ConnectionInitStyles.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Styles\MenuStyles.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\BackgammonPage.g.cs
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ConnectionInit.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MenuPage.g.cs
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_Content.g.cs
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface_MarkupCompile.cache
@@ -171,11 +167,7 @@ C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.dll
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Client.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\Entities.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\App.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\BackgammonPage.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ConnectionInit.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\MenuPage.baml
-C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\OnlineGamePage.baml
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.g.resources
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.GeneratedMSBuildEditorConfig.editorconfig
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.AssemblyInfoInputs.cache
@@ -188,3 +180,12 @@ C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\refint\UserInter
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.pdb
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\UserInterface.genruntimeconfig.cache
 C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\ref\UserInterface.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\ConnectionInitView.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\MenuView.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\OfflineBackgammonView.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\OnlineBackgammonView.g.cs
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\ConnectionInitView.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\MenuView.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\OfflineBackgammonView.baml
+C:\Uni\OOP\BackgammonLib\UserInterface\obj\Debug\net8.0-windows\Pages\OnlineBackgammonView.baml

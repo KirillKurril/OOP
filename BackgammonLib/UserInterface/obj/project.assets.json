@@ -2257,7 +2257,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\natak\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -2266,14 +2266,14 @@
       "projectUniqueName": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
       "projectName": "UserInterface",
       "projectPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\UserInterface.csproj",
-      "packagesPath": "C:\\Users\\natak\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Uni\\OOP\\BackgammonLib\\UserInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\natak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
