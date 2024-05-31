@@ -10,12 +10,18 @@
     <Compile Update="Backgammon.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CustomMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Backgammon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomMessageBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

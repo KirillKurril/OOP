@@ -27,6 +27,7 @@ namespace UserInterface
             InitializeComponent();
             game = new Game();
             firstChosenPosition = -1;
+            HideThrowButton();
             Refresh();
         }
         private void Refresh()
@@ -50,8 +51,57 @@ namespace UserInterface
                     stackPanel.Children.Add(piece);
                 }
             }
-            stat.Text = string.Join(" ", game.GetDiceValues());
-            stat.Text += $"\n\nwhite score:\n{game.GetScore().Item1}\n\nblack score:\n{game.GetScore().Item2}\n\nNow move\n{game.GetPlayerColor()}";
+
+            try
+            {
+                var diceValues = game.GetDiceValues();
+
+                Image dice1 = (Image)FindName("DiceOneImage");
+                if (dice1 != null)
+                {
+                    string firstDiceImagePath = $"pack://application:,,,/Sprites/dices/dice{diceValues[0]}.png";
+                    Uri imageUri = new Uri(firstDiceImagePath, UriKind.Absolute);
+                    dice1.Source = new BitmapImage(imageUri);
+                }
+
+                Image dice2 = (Image)FindName("DiceTwoImage");
+                if (dice2 != null && diceValues.Count > 1)
+                {
+                    string secondDiceImagePath = $"pack://application:,,,/Sprites/dices/dice{diceValues[1]}.png";
+                    Uri imageUri = new Uri(secondDiceImagePath, UriKind.Absolute);
+                    dice2.Source = new BitmapImage(imageUri);
+                }
+                else if (dice2 != null)
+                {
+                    dice2.Source = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error setting image source: {ex.Message}");
+            }
+
+            Label whiteScoreLabel = (Label)FindName("WhiteScoreLabel");
+            whiteScoreLabel.Content = game.GetScore().Item1.ToString();
+
+            Label blackScoreLabel = (Label)FindName("BlackScoreLabel");
+            blackScoreLabel.Content = game.GetScore().Item2.ToString();
+
+            Ellipse currentMoveIndicator = (Ellipse)FindName("CurrentMoveIndicator");
+            currentMoveIndicator.Fill = game.GetCurColor() == Entities.Colors.White() ? Brushes.White : Brushes.Black;
+
+            if (game.CheckEndGame())
+            {
+                EndGame();
+                return;
+            }
+
+            if (!game.MovsAvalibleExist())
+            {
+                game.NewTurn();
+                Refresh();
+            }
+
 
         }
         private void PositionSelected(object sender, RoutedEventArgs e)
@@ -89,18 +139,6 @@ namespace UserInterface
                 else 
                     return;
 
-                if (game.CheckEndGame())
-                {
-                    EndGame();
-                    return;
-                }
-
-                if (!game.MovsAvalibleExist())
-                {
-                    game.NewTurn();
-                    Refresh();
-                }
-                
             }
             else
             {
@@ -127,12 +165,14 @@ namespace UserInterface
         }
         private void EndGame()
         {
-            MessageBox.Show($"Congratulations!\n{((game.GetPlayerColor() == Entities.Colors.White()) ?
-                ("White") : ("Black"))}" +
-                $" player win!");
-            game = new Game();
-            firstChosenPosition = -1;
-            Refresh();
+            string endgameMessage = 
+                $"{((game.GetPlayerColor() == Entities.Colors.White()) ?
+                ("Белый")
+                : ("Черный"))}" +
+                $" игрок победил!";
+            CustomMessageBox messageBox = new CustomMessageBox(endgameMessage);
+            messageBox.Closed += (sender, e) => NavigationService.GoBack();
+            messageBox.Show();
         }
     }
 }

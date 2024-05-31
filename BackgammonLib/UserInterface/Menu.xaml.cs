@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace UserInterface
 {
-    /// <summary>
-    /// Interaction logic for Menu.xaml
-    /// </summary>
     public partial class Menu : Page
     {
         public Menu()

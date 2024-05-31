@@ -1,0 +1,16 @@
+C:\Uni\OOP\BackgammonLib\ServerDB\bin\Release\net8.0\ServerDB.deps.json
+C:\Uni\OOP\BackgammonLib\ServerDB\bin\Release\net8.0\ServerDB.dll
+C:\Uni\OOP\BackgammonLib\ServerDB\bin\Release\net8.0\ServerDB.pdb
+C:\Uni\OOP\BackgammonLib\ServerDB\bin\Release\net8.0\Entities.dll
+C:\Uni\OOP\BackgammonLib\ServerDB\bin\Release\net8.0\Entities.pdb
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.csproj.AssemblyReference.cache
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.AssemblyInfoInputs.cache
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.AssemblyInfo.cs
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.csproj.CoreCompileInputs.cache
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.sourcelink.json
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.csproj.Up2Date
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.dll
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\refint\ServerDB.dll
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ServerDB.pdb
+C:\Uni\OOP\BackgammonLib\ServerDB\obj\Release\net8.0\ref\ServerDB.dll

@@ -10,12 +10,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Pages\**" />
+    <Page Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Sprites\dices\dice1.png" />
+    <None Remove="Sprites\dices\dice2.png" />
+    <None Remove="Sprites\dices\dice3.png" />
+    <None Remove="Sprites\dices\dice4.png" />
+    <None Remove="Sprites\dices\dice5.png" />
+    <None Remove="Sprites\dices\dice6.png" />
     <None Remove="Sprites\field.png" />
     <None Remove="Sprites\MainPage.png" />
+    <None Remove="Sprites\message_box.png" />
+    <None Remove="Sprites\message_box2.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Sprites\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Sprites\dices\dice2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -24,16 +45,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Sprites\dices\dice1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\dices\dice3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\dices\dice4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\dices\dice5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\dices\dice6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Sprites\field.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Sprites\MainPage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\" />
+    <Resource Include="Sprites\message_box.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sprites\message_box2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

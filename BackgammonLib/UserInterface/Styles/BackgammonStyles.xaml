@@ -7,8 +7,61 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="ChoiceButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
     </Style>
 
+    <Style  x:Key="InfoLabel" TargetType="Label">
+        <Setter Property="Foreground" Value="#380000"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
+    <Style  x:Key="InfoText" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Foreground" Value="#380000"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
+    <Style x:Key="CustomWindowStyle" TargetType="Window">
+        <Setter Property="WindowState" Value="Normal"/>
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="ResizeMode" Value="NoResize"/>
+        <Setter Property="Height" Value="300"/>
+        <Setter Property="Width" Value="600"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="../Sprites/message_box2.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MessageBoxButton" TargetType="Button">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Margin" Value="0,0,0,35"/>
+        <Setter Property="Background" Value="#491c0c"/>
+        <Setter Property="Foreground" Value="#ecd4a6"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                             BorderBrush="#2c1107"
+                             BorderThickness="{TemplateBinding BorderThickness}"
+                             CornerRadius="20">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

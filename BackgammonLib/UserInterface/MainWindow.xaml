@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserInterface"
         mc:Ignorable="d"
-        Title="" Height="789" Width="1024">
+        Height="789"
+        Width="1024"
+        WindowState="Maximized">
     <Grid>
         <Frame x:Name="mainFrame"/>
     </Grid>

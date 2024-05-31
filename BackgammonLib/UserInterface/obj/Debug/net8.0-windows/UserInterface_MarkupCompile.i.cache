@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Uni\OOP\BackgammonLib\UserInterface\App.xaml
-5-192305613
+61816713299
 1-1935209953
-8718632350
-200-1432777825
-Backgammon.xaml;MainWindow.xaml;Menu.xaml;Styles\BackgammonStyles.xaml;Styles\MenuStyles.xaml;
+9-980927086
+2001565930339
+Backgammon.xaml;CustomMessageBox.xaml;MainWindow.xaml;Menu.xaml;Styles\BackgammonStyles.xaml;Styles\MenuStyles.xaml;
 
-True
+False
 

@@ -22,7 +22,7 @@ namespace BackgammonEntities
         }
 
 
-        public Player(int color_, int score = 360)
+        public Player(int color_, int score = 1)
             => (Color, Score, SafeMode) = (color_, score, true);
 
     }
