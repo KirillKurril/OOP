@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -33,11 +25,11 @@ namespace UserInterface
         private void Refresh()
         {
             List<(int, int)> positionsInfo = game.GetDetailedReport();
-            for(int i = 0; i < 24; ++i)
+            for (int i = 0; i < 24; ++i)
             {
                 StackPanel stackPanel = (StackPanel)FindName($"S{i}");
                 stackPanel.Children.Clear();
-                for(int j = 0; j < positionsInfo[i].Item2; ++j)
+                for (int j = 0; j < positionsInfo[i].Item2; ++j)
                 {
                     Ellipse piece = new Ellipse();
                     piece.Width = 20;
@@ -110,11 +102,11 @@ namespace UserInterface
             bool startingPositionSelected = firstChosenPosition != -1;
 
             if (((Button)sender).Name == "Throw")
-                    position = 25;
+                position = 25;
             else
             {
                 position = Convert.ToInt32(((Button)sender).Name.Substring(1));
-                
+
                 if (game.GetPlayerColor() == Entities.Colors.Black())
                     position = (position + 12) % 24;
             }
@@ -136,7 +128,7 @@ namespace UserInterface
                     if (Throw.Visibility == Visibility.Visible)
                         HideThrowButton();
                 }
-                else 
+                else
                     return;
 
             }
@@ -165,7 +157,7 @@ namespace UserInterface
         }
         private void EndGame()
         {
-            string endgameMessage = 
+            string endgameMessage =
                 $"{((game.GetPlayerColor() == Entities.Colors.White()) ?
                 ("Белый")
                 : ("Черный"))}" +
