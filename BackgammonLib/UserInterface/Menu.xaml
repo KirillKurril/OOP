@@ -30,11 +30,11 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Нарды" 
+            <Button Grid.Row="0" Content="Локальная игра" 
                     Style="{StaticResource MenuButton}"
                     Click="GoToBackgammon"/>
             <Button Grid.Row="2" Content="Анекдоты" Style="{StaticResource MenuButton}"/>
-            <Button Grid.Row="4" Content="Киндзмараули" Style="{StaticResource MenuButton}"/>
+            <Button Grid.Row="4" Content="Сетевая игра" Style="{StaticResource MenuButton}"/>
         </Grid>
     </Grid>
 </Page>

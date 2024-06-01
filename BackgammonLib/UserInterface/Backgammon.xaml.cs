@@ -22,6 +22,31 @@ namespace UserInterface
             HideThrowButton();
             Refresh();
         }
+
+        public CustomMessageBox CustomMessageBox
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Menu Menu
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Game Game
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void Refresh()
         {
             List<(int, int)> positionsInfo = game.GetDetailedReport();
